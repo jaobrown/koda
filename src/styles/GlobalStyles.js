@@ -1,12 +1,16 @@
 import { createGlobalStyle } from "styled-components"
-import MajestiBold from '../../public/static/fonts/Majesti-Bold.otf'
-import MajestiBookItalic from '../../public/static/fonts/Majesti-BookItalic.otf'
-import MajestiHeavy from '../../public/static/fonts/Majesti-Heavy.otf'
-import MajestiLightItalic from '../../public/static/fonts/Majesti-LightItalic.otf'
-import SoinSansMedium from '../../public/static/fonts/SoinSansNeue-Medium.otf'
-import SoinSansRoman from '../../public/static/fonts/SoinSansNeue-Roman.otf'
+import MajestiBold from "../../public/static/fonts/Majesti-Bold.otf"
+import MajestiBookItalic from "../../public/static/fonts/Majesti-BookItalic.otf"
+import MajestiHeavy from "../../public/static/fonts/Majesti-Heavy.otf"
+import MajestiLightItalic from "../../public/static/fonts/Majesti-LightItalic.otf"
+import SoinSansMedium from "../../public/static/fonts/SoinSansNeue-Medium.otf"
+import SoinSansRoman from "../../public/static/fonts/SoinSansNeue-Roman.otf"
 
 export const GlobalStyle = createGlobalStyle`
+  body {
+    margin: 0;
+    padding: 0;
+  }
   @font-face {
     font-family: "Majesti";
     src: url('${MajestiHeavy}') format("opentype");
@@ -45,14 +49,17 @@ export const GlobalStyle = createGlobalStyle`
   }
 `
 // global color variables
-export const darkgray = "#3A3A3A"
-export const alexwhite = "#fff"
-export const red = "#7C3A2B"
-export const orange = "#B26C29"
-export const teal = "#1D5562"
-export const blue = "#263752"
-export const lightgreen = "#E7E6D7"
-export const darkgreen = "#969A8A"
-export const tan = "#C0B8AD"
-export const lighttan = "#E0D5BD"
-export const coral = "#D6AF8F"
+
+export const colors = {
+  darkgray: "#3A3A3A",
+  alexwhite: "#fff",
+  red: "#7C3A2B",
+  orange: "#B26C29",
+  teal: "#1D5562",
+  blue: "#263752",
+  lightgreen: "#E7E6D7",
+  darkgreen: "#969A8A",
+  tan: "#C0B8AD",
+  lighttan: "#E0D5BD",
+  coral: "#D6AF8F",
+}

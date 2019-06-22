@@ -1,11 +1,10 @@
 import React from "react"
 import { window } from "browser-monads"
 import logo from "../../images/logo.png"
-import {NavLink} from './NavStyles';
+import {NavLink, NavBar} from './NavStyles';
 
 const Nav = () => (
-  <nav>
-    <div className="nav__items">
+  <NavBar>
       <NavLink
         className={
           window.location.href.indexOf("about") > 0
@@ -45,7 +44,7 @@ const Nav = () => (
           src={logo}
           alt="travel blog logo"
           // come back and fix this
-          style={{ width: "200px" }}
+          style={{ width: "200px", marginTop: '50px' }}
           className="nav__item--logo"
         />
       </NavLink>
@@ -80,8 +79,7 @@ const Nav = () => (
       >
         contact
       </NavLink>
-    </div>
-  </nav>
+  </NavBar>
 )
 
 export default Nav

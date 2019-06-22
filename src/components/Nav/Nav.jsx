@@ -7,9 +7,6 @@ import logo from "../../images/logo.png"
 const Nav = () => (
   <nav>
     <div className="nav__items">
-      <a className="nav__item--left" href="/">
-        <img src={logo} alt="travel blog logo" className="nav__item--logo" />
-      </a>
       <Link
         className={
           window.location.href.indexOf("about") > 0
@@ -41,6 +38,15 @@ const Nav = () => (
       >
         services
       </Link>
+      <a className="nav__item--left" href="/">
+        <img
+          src={logo}
+          alt="travel blog logo"
+          // come back and fix this
+          style={{ width: "200px" }}
+          className="nav__item--logo"
+        />
+      </a>
       <Link
         className={
           window.location.href.indexOf("process") > 0

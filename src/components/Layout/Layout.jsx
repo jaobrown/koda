@@ -1,4 +1,5 @@
 import React from "react"
+import {GlobalStyle} from '../../styles/GlobalStyles'
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 // import "./layout.css"
@@ -16,6 +17,7 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
+      <GlobalStyle/>
         <main>{children}</main>
       </>
     )}

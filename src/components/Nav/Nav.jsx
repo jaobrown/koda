@@ -1,13 +1,12 @@
 import React from "react"
-import { Link } from "gatsby"
 import { window } from "browser-monads"
 import logo from "../../images/logo.png"
-// import "./nav.css"
+import {NavLink} from './NavStyles';
 
 const Nav = () => (
   <nav>
     <div className="nav__items">
-      <Link
+      <NavLink
         className={
           window.location.href.indexOf("about") > 0
             ? "nav__item--link active"
@@ -16,8 +15,8 @@ const Nav = () => (
         to="/about"
       >
         about
-      </Link>
-      <Link
+      </NavLink>
+      <NavLink
         className={
           window.location.href.indexOf("work") > 0 ||
           window.location.href.indexOf("category") > 0
@@ -27,8 +26,8 @@ const Nav = () => (
         to="/portfolio"
       >
         portfolio
-      </Link>
-      <Link
+      </NavLink>
+      <NavLink
         className={
           window.location.href.indexOf("services") > 0
             ? "nav__item--link active"
@@ -37,8 +36,11 @@ const Nav = () => (
         to="/services"
       >
         services
-      </Link>
-      <a className="nav__item--left" href="/">
+      </NavLink>
+      <NavLink
+        className="nav__item-center"
+        to="/"
+      >
         <img
           src={logo}
           alt="travel blog logo"
@@ -46,8 +48,8 @@ const Nav = () => (
           style={{ width: "200px" }}
           className="nav__item--logo"
         />
-      </a>
-      <Link
+      </NavLink>
+      <NavLink
         className={
           window.location.href.indexOf("process") > 0
             ? "nav__item--link active"
@@ -56,8 +58,8 @@ const Nav = () => (
         to="/process"
       >
         process
-      </Link>
-      <Link
+      </NavLink>
+      <NavLink
         className={
           window.location.href.indexOf("blog") > 0 ||
           window.location.href.indexOf("category") > 0
@@ -67,8 +69,8 @@ const Nav = () => (
         to="/blog"
       >
         blog
-      </Link>
-      <Link
+      </NavLink>
+      <NavLink
         className={
           window.location.href.indexOf("contact") > 0
             ? "nav__item--link active"
@@ -77,7 +79,7 @@ const Nav = () => (
         to="/contact"
       >
         contact
-      </Link>
+      </NavLink>
     </div>
   </nav>
 )

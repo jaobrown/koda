@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "alex-brown-website",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Website designed by Alex Brown",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Jared Brown <jared@jaredbrown.io>",
   "dependencies": {
     "browser-monads": "^1.0.0",
     "gatsby": "^2.10.0",
@@ -40,9 +40,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/jaobrown/alex"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/jaobrown/alex/issues"
   }
 }

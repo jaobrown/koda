@@ -2,28 +2,28 @@ import React from "react"
 
 import Layout from "../components/Layout/Layout"
 import SEO from "../utils/Seo"
-import {StyleGuideWrapper} from "../styles/StyleGuideStyles"
+import { StyleGuideWrapper, StyledGuideHr } from "../styles/StyleGuideStyles"
+import { colors as ThemeColors} from "../styles/GlobalStyles"
+import { Text, Heading1, Heading2, Heading3 } from "../styles/Typography"
 
 const StyleGuidePage = () => (
   <Layout>
     <SEO title="Style Guide" />
     <StyleGuideWrapper>
-      <h1>1. Heading One</h1>
-      <h2>2. Heading Two</h2>
-      <h3>3. Heading Three</h3>
-      <h4>4. Heading Four</h4>
-      <h5>5. Heading Five</h5>
-      <h6>6. Heading Six</h6>
-      <p>
-        P – Body Copy <br /> Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Explicabo pariatur possimus, ad deleniti laboriosam neque labore
-        cum voluptates adipisci dolorum minus, accusamus dolorem odit asperiores
-        natus maiores? Labore, illum! Magni iusto molestias et est, id officia
-        soluta neque distinctio consequuntur!
-      </p>
-      <br />
-      <hr />
-      <br />
+      <Heading1>STYLE GUIDE</Heading1>
+      <StyledGuideHr />
+      <Heading3 color={ThemeColors.orange}>Typography Baseline</Heading3>
+      <Heading1>1. Heading One</Heading1>
+      <Heading2>2. Heading Two</Heading2>
+      <Heading3>3. View Our Services</Heading3>
+      <Text>P – Body Copy</Text>
+      <Text style={{ width: "30%" }}>
+        A little bit about me as a designer, what I’m known for. A little bit
+        about me as a designer, what I’m known for. A little bit about me as a
+        designer, what I’m known, A little bit about me as a designer, what I’m
+        known for. A little bit about me as a designer, what I’m known for
+      </Text>
+      <StyledGuideHr />
     </StyleGuideWrapper>
   </Layout>
 )

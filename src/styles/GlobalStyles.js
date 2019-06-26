@@ -6,11 +6,36 @@ import MajestiLightItalic from "../../public/static/fonts/Majesti-LightItalic.ot
 import SoinSansMedium from "../../public/static/fonts/SoinSansNeue-Medium.otf"
 import SoinSansRoman from "../../public/static/fonts/SoinSansNeue-Roman.otf"
 
+// global color variables
+
+export const colors = {
+  darkgray: "#3A3A3A",
+  alexwhite: "#fff",
+  red: "#7C3A2B",
+  orange: "#B26C29",
+  teal: "#1D5562",
+  blue: "#263752",
+  lightgreen: "#E7E6D7",
+  darkgreen: "#969A8A",
+  tan: "#C0B8AD",
+  lighttan: "#E0D5BD",
+  coral: "#D6AF8F",
+}
+
 export const GlobalStyle = createGlobalStyle`
+  ::selection {
+    color: white;
+    background-color: ${colors.orange};
+  } 
   body {
     margin: 0;
     padding: 0;
     font-size: 10px;
+    color: ${colors.darkgray}
+  }
+  * {
+    margin: 0;
+    padding: 0;
   }
   @font-face {
     font-family: "Majesti";
@@ -49,18 +74,3 @@ export const GlobalStyle = createGlobalStyle`
     font-style: normal;
   }
 `
-// global color variables
-
-export const colors = {
-  darkgray: "#3A3A3A",
-  alexwhite: "#fff",
-  red: "#7C3A2B",
-  orange: "#B26C29",
-  teal: "#1D5562",
-  blue: "#263752",
-  lightgreen: "#E7E6D7",
-  darkgreen: "#969A8A",
-  tan: "#C0B8AD",
-  lighttan: "#E0D5BD",
-  coral: "#D6AF8F",
-}

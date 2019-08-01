@@ -1,3 +1,5 @@
-Koda Creative
+#Koda Creative
 
-WIP - initial scaffold of Koda Creative site with Gatsbyjs.
+###WIP
+
+Initial scaffold of Koda Creative site with Gatsbyjs.

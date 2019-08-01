@@ -1,9 +1,9 @@
 {
-  "name": "alex-brown-website",
+  "name": "koda-creative-website",
   "private": true,
   "description": "Website designed by Alex Brown",
-  "version": "0.1.0",
-  "author": "Jared Brown <jared@jaredbrown.io>",
+  "version": "0.0.1",
+  "author": "Jared Brown <joo.brown72@gmail.com>",
   "dependencies": {
     "browser-monads": "^1.0.0",
     "gatsby": "^2.10.0",
@@ -40,9 +40,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jaobrown/alex"
+    "url": "https://github.com/jaobrown/koda"
   },
   "bugs": {
-    "url": "https://github.com/jaobrown/alex/issues"
+    "url": "https://github.com/jaobrown/koda/issues"
   }
 }

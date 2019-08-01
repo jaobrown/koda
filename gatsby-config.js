@@ -4,7 +4,7 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: `Alex Brown – Indianapolis, IN – Designer, Videographer`,
+    title: `Brand Strategy || Indianapolis, IN || Koda`,
     description: `Alex does insanely good work, for insanely cool cats.`,
     author: `@jaobrown`,
   },

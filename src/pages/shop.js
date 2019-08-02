@@ -2,13 +2,14 @@ import React from "react"
 import Layout from "../components/Layout/Layout"
 import Nav from "../components/Nav/Nav"
 import SEO from '../utils/Seo'
+import {Heading1} from '../styles/Typography'
 
-const PortfolioPage = () => (
+const ShopPage = () => (
   <Layout>
-    <SEO title="Portfolio" />
+    <SEO title="Shop" />
     <Nav />
-    <h1>Portfolio</h1>
+    <Heading1>Shop</Heading1>
   </Layout>
 )
 
-export default PortfolioPage
+export default ShopPage

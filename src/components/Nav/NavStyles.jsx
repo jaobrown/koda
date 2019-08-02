@@ -14,7 +14,7 @@ export const NavBar = styled.nav`
 export const NavLink = styled(Link)`
     font-family: 'Soin Sans', 'serif';
     font-size: 15px;
-    font-weight: bold;
+    font-weight: normal;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 1px;

@@ -2,13 +2,14 @@ import React from "react"
 import Layout from "../components/Layout/Layout"
 import Nav from "../components/Nav/Nav"
 import SEO from '../utils/Seo'
+import {Heading1} from '../styles/Typography'
 
-const ProcessPage = () => (
+const WorkPage = () => (
   <Layout>
-    <SEO title="Process" />
+    <SEO title="Work" />
     <Nav />
-    <h1>Process</h1>
+    <Heading1>Work</Heading1>
   </Layout>
 )
 
-export default ProcessPage
+export default WorkPage

@@ -32,7 +32,7 @@ export const Heading2 = styled.h2`
 `
 
 export const Heading1 = styled.h1`
-    font-size: 2rem;
+    font-size: 3rem;
     font-family: 'Majesti', 'serif';
     font-weight: bold;
     margin-bottom: 3rem;

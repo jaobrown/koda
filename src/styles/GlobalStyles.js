@@ -1,10 +1,11 @@
 import { createGlobalStyle } from "styled-components"
-import MajestiBold from "../../public/static/fonts/Majesti-Bold.otf"
-import MajestiBookItalic from "../../public/static/fonts/Majesti-BookItalic.otf"
-import MajestiHeavy from "../../public/static/fonts/Majesti-Heavy.otf"
-import MajestiLightItalic from "../../public/static/fonts/Majesti-LightItalic.otf"
-import SoinSansMedium from "../../public/static/fonts/SoinSansNeue-Medium.otf"
-import SoinSansRoman from "../../public/static/fonts/SoinSansNeue-Roman.otf"
+import MajestiBold from "../assets/fonts/Majesti-Bold.otf"
+import MajestiBookItalic from "../assets/fonts/Majesti-BookItalic.otf"
+import MajestiHeavy from "../assets/fonts/Majesti-Heavy.otf"
+import MajestiLightItalic from "../assets/fonts/Majesti-LightItalic.otf"
+import SoinSansMedium from "../assets/fonts/SoinSansNeue-Medium.otf"
+import SoinSansRoman from "../assets/fonts/SoinSansNeue-Roman.otf"
+import SoinSansBold from "../assets/fonts/SoinSansNeue-Bold.otf"
 
 // global color variables
 
@@ -58,18 +59,24 @@ export const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family: "Majesti";
     src: url('${MajestiLightItalic}') format("opentype");
-    font-weight: lighter;
+    font-weight: light;
     font-style: italic;
   }
   @font-face {
     font-family: "Soin Sans";
     src: url('${SoinSansRoman}') format("opentype");
-    font-weight: normal;
+    font-weight: light;
     font-style: normal;
   }
   @font-face {
     font-family: "Soin Sans";
     src: url('${SoinSansMedium}') format("opentype");
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Soin Sans";
+    src: url('${SoinSansBold}') format("opentype");
     font-weight: bold;
     font-style: normal;
   }

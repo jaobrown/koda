@@ -59,13 +59,13 @@ export const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family: "Majesti";
     src: url('${MajestiLightItalic}') format("opentype");
-    font-weight: light;
+    font-weight: lighter;
     font-style: italic;
   }
   @font-face {
     font-family: "Soin Sans";
     src: url('${SoinSansRoman}') format("opentype");
-    font-weight: light;
+    font-weight: 100;
     font-style: normal;
   }
   @font-face {

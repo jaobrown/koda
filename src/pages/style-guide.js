@@ -25,10 +25,7 @@ const StyleGuidePage = () => (
       <Heading3>h3 Heading Three</Heading3>
       <Text>P – Body Copy</Text>
       <Text style={{ width: "520px" }}>
-        A little bit about me as a designer, what I’m known for. A little bit
-        about me as a designer, what I’m known for. A little bit about me as a
-        designer, what I’m known, A little bit about me as a designer, what I’m
-        known for. A little bit about me as a designer, what I’m known for
+        Whether a small business or entrepreneur, we want to give you the tools and deliverables you need to attract your ideal customer, stand out, and increase revenue. Through brand strategy and identity design, we put in the work, so you can focus on what you need to so your dream becomes a reality.
       </Text>
       <StyledGuideHr />
       <Heading3 color={ThemeColors.orange}>Colors</Heading3>
@@ -51,7 +48,7 @@ const StyleGuidePage = () => (
       <Text>Utility Colors</Text>
       <ColorDivRow>
         <ColorDiv bg={ThemeColors.darkgray} />
-        <ColorDiv style={{border: `1px solid ${ThemeColors.darkgray}`}}bg={ThemeColors.alexwhite} />
+        <ColorDiv style={{ border: `1px solid ${ThemeColors.darkgray}` }} bg={ThemeColors.alexwhite} />
       </ColorDivRow>
     </StyleGuideWrapper>
   </Layout>

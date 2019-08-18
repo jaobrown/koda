@@ -1,6 +1,7 @@
 import React from "react"
 import { window } from "browser-monads"
-import logo from "../../images/logo.png"
+// import logo from "../../images/logo.png"
+import {Heading2} from '../../styles/Typography';
 import { NavLink, NavBar } from './NavStyles';
 
 const Nav = () => (
@@ -39,14 +40,10 @@ const Nav = () => (
     <NavLink
       className="nav__item-center"
       to="/"
+      style={{display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column'}}
     >
-      <img
-        src={logo}
-        alt="logo logo logo"
-        // come back and fix this
-        style={{ width: "200px", marginTop: '50px' }}
-        className="nav__item--logo"
-      />
+      <Heading2 style={{marginBottom: '-8px', textTransform: 'capitalize', fontSize: '4rem'}}>Koda</Heading2>
+      <span style={{fontSize: '11px'}}>a creative studio</span>
     </NavLink>
     <NavLink
       className={
@@ -83,3 +80,4 @@ const Nav = () => (
 )
 
 export default Nav
+ 

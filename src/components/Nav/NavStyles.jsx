@@ -4,11 +4,12 @@ import {colors} from '../../styles/GlobalStyles';
 
 export const NavBar = styled.nav`
     max-width: 100vw;
-    height: 100px;
-    padding: 0 180px;
+    height: 124px;
+    padding: 0 12%;
     display: flex;
     justify-content: space-around;
     align-items: center;
+
 `
 
 export const NavLink = styled(Link)`
@@ -19,4 +20,7 @@ export const NavLink = styled(Link)`
     text-transform: uppercase;
     letter-spacing: 1px;
     color: ${colors.darkgray};
+    @media screen and (max-width: 500px) {
+        display: none;
+    }
 `

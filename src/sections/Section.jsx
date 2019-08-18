@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StyledSection = styled.section`
-    padding: ${props => props.padding || "1rem"};
+    padding: ${props => props.padding || "2rem"};
     margin: ${props => props.margin || "0"};
     background-color: ${props => props.backgroundColor || "#ffffff"};
 `

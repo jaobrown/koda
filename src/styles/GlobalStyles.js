@@ -11,6 +11,7 @@ import SoinSansBold from "../assets/fonts/SoinSansNeue-Bold.otf"
 
 export const colors = {
   darkgray: "#3A3A3A",
+  gray: "#707070",
   alexwhite: "#fff",
   red: "#7C3A2B",
   orange: "#B26C29",

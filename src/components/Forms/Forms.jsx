@@ -5,12 +5,18 @@ import { colors } from '../../styles/GlobalStyles'
 const Form = styled.form`
     width: 100%;
     /* background-color: orangered; */
+
+    @media (min-width: 767px) {
+        max-width: 600px;
+        margin: 0 auto;
+    }
 `
 
 const InputGroup = styled.div`
     width: 100%;
     /* background-color: yellowgreen; */
     margin-bottom: 1.3rem;
+    border-radius: 100px;
 
     label {
         display: block;
@@ -35,15 +41,15 @@ const InputGroup = styled.div`
         select {
             font-family: 'Majesti', 'serif' !important;
         }
-        
-        ::placeholder {
-            font-family: 'Majesti', 'serif';
-        }
     }
 `
 
 const SignUpForm = styled.form`
     width: 100%;
+    @media (min-width: 767px) {
+        max-width: 600px;
+        margin: 0 auto;
+    }
 `
 
 const SignUpInputGroup = styled.div`
@@ -68,14 +74,6 @@ const SignUpInputGroup = styled.div`
         background: white;
         padding-left: .8rem;
         box-sizing: border-box;
-
-        select {
-            font-family: 'Majesti', 'serif' !important;
-        }
-        
-        ::placeholder {
-            font-family: 'Majesti', 'serif';
-        }
     }
 `
 
@@ -142,9 +140,7 @@ export const SignUp = () => {
                 <label>Email</label>
                 <input name="email" type="text" placeholder="example@example.com" />
             </SignUpInputGroup>
-            <SignUpInputGroup>
                 <Pill type="submit" borderColor={colors.darkgray}>sign up</Pill>
-            </SignUpInputGroup>
         </SignUpForm>
     )
 }

@@ -1,12 +1,12 @@
 import React from "react"
-import { window } from "browser-monads"
+// import { window } from "browser-monads"
 // import logo from "../../images/logo.png"
 import {Heading2} from '../../styles/Typography';
 import { NavLink, NavBar } from './NavStyles';
 
 const Nav = () => (
   <NavBar>
-    <NavLink
+    {/* <NavLink
       className={
         window.location.href.indexOf("about") > 0
           ? "nav__item--link active"
@@ -36,7 +36,7 @@ const Nav = () => (
       to="/services"
     >
       services
-      </NavLink>
+      </NavLink> */}
     <NavLink
       className="nav__item-center"
       to="/"
@@ -45,7 +45,7 @@ const Nav = () => (
       <Heading2 style={{marginBottom: '-8px', textTransform: 'capitalize', fontSize: '4rem'}}>Koda</Heading2>
       <span style={{fontSize: '11px'}}>a creative studio</span>
     </NavLink>
-    <NavLink
+    {/* <NavLink
       className={
         window.location.href.indexOf("blog") > 0 ||
           window.location.href.indexOf("category") > 0
@@ -75,7 +75,7 @@ const Nav = () => (
       to="/contact"
     >
       contact
-      </NavLink>
+      </NavLink> */}
   </NavBar>
 )
 

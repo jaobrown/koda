@@ -1,8 +1,8 @@
 import { Link } from 'gatsby'
 import styled from 'styled-components'
-import { Section } from '../sections/Section'
-import { Text, Heading3 } from '../styles/Typography'
-import { colors } from '../styles/GlobalStyles'
+import { Section } from '../../sections/Section'
+import { Text, Heading3 } from '../../styles/Typography'
+import { colors } from '../../styles/GlobalStyles'
 
 export const ShapeGroup1 = styled.div`
   height: 3px;

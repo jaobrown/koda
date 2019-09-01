@@ -8,7 +8,7 @@ import { Heading1, Heading2, Text, Heading3 } from '../styles/Typography'
 import { ContactForm, SignUp } from '../components/Forms/Forms'
 import { colors } from '../styles/GlobalStyles'
 
-import { Pill, ServiceTextWrapper, ServicesText, ContactSection, ContactWrapper, ContactTextWrapper, ContactText, Footer, Social, FooterContactGroup, FooterContactGroupWrapper, FooterContactTitle } from './index-styles'
+import { Pill, ServiceTextWrapper, ServicesText, ContactSection, ContactWrapper, ContactTextWrapper, ContactText, Footer, Social, FooterContactGroup, FooterContactGroupWrapper, FooterContactTitle } from '../components/Styled/index-styles'
 
 import styles from '../assets/svg/svg.module.css'
 

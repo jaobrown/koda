@@ -1,0 +1,191 @@
+.lightLines {
+    position: absolute;
+    top: 14%;
+    left: 23%;
+    z-index: -1;
+}
+
+.blueCircle1 {
+    position: absolute;
+    bottom: 30%;
+    left: 23%;
+    z-index: -1;
+}
+
+.orangeDrop1 {
+    position: absolute;
+    right: 20%;
+    bottom: 15%;
+    z-index: -1;
+}
+
+@media (max-width: 870px) {
+    .blueCircle1 {
+        left: 13%;
+    }   
+}
+
+@media (max-width: 650px) {
+    .blueCircle1 {
+        left: 5%;
+    }   
+
+    .orangeDrop1 {
+        right: 5%;
+        bottom: 10%;
+    }
+}
+
+@media (max-width: 500px) {
+    .blueCircle1, .orangeDrop1 {
+       display: none;
+    }   
+}
+
+.redDrop1 {
+    position: absolute;
+    right: -40px;
+    top: 11%;
+    z-index: -1;
+}
+
+@media (max-width: 767px) {
+    .redDrop1 {
+       display: none;
+    }   
+}
+
+.orangeCircle1 {
+    position: absolute;
+    bottom: 15%;
+    left: 12%;
+    z-index: -1;
+}
+
+.blueLines {
+    position: absolute;
+    bottom: 23%;
+    left: -6%;
+    z-index: -1;
+}
+
+@media (max-width: 1160px) {
+    .orangeCircle1 {
+        left: 5%;
+    }
+    
+    .blueLines {
+        bottom: 20%;
+        left: -16%;
+    } 
+}
+
+@media (max-width: 950px) {
+    .orangeCircle1 {
+        left: 0%;
+    }
+    
+    .blueLines {
+        bottom: 20%;
+        left: -26%;
+    } 
+}
+
+@media (max-width: 840px) {
+    .orangeCircle1, .blueLines {
+        display: none;
+    }
+}
+
+.whiteLines1 {
+    position: absolute;
+    left: -10px;
+    top: 20%;
+    z-index: -1;
+}
+
+.redDrop2 {
+    position: absolute;
+    left: 15%;
+    top: 45%;
+    z-index: -1;
+}
+
+.blueCircle2 {
+    position: absolute;
+    bottom: 20%;
+    right: -50px;
+    z-index: -1;
+}
+
+.whiteLines2 {
+    position: absolute;
+    right: -10px;
+    bottom: 25%;
+    z-index: -1;
+}
+
+@media (max-width: 1160px) {
+    
+    .redDrop2 {
+        left: 5%;
+        top: 45%;
+    }
+    
+    .blueCircle2 {
+        bottom: 20%;
+        right: -50px;
+    }
+    
+    .whiteLines2 {
+        right: -100px;
+        bottom: 25%;
+    }
+}
+
+@media (max-width: 950px) {
+    .whiteLines1 {
+        left: -150px;
+        top: 20%;
+    }    
+
+    .redDrop2 {
+        left: -5%;
+        top: 45%;
+    }
+    
+    .blueCircle2 {
+        bottom: 20%;
+        right: -50px;
+    }
+    
+    .whiteLines2 {
+        right: -200px;
+        bottom: 25%;
+    }
+}
+
+@media (max-width: 767px) {
+    .whiteLines1 {
+        display: none;
+    }    
+
+    .redDrop2 {
+        left: 70%;
+        top: 75%;
+        transform: rotate(180deg);
+    }
+    
+    .blueCircle2 {
+        bottom: 15%;
+        height: 125px;
+        right: 35%;
+    }
+    
+    .whiteLines2 {
+        right: 40%;
+        bottom: 15%;
+        transform: rotate(90deg);
+        width: 30%;
+    }
+}

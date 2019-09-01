@@ -8,20 +8,32 @@ import { Heading1, Heading2, Text, Heading3 } from '../styles/Typography'
 import { ContactForm, SignUp } from '../components/Forms/Forms'
 import { colors } from '../styles/GlobalStyles'
 
-import {ShapeGroup1, Pill, ServiceTextWrapper, ServicesText, ContactSection, ContactWrapper, ContactTextWrapper, ContactText, Footer, Social, FooterContactGroup, FooterContactGroupWrapper, FooterContactTitle} from './index-styles'
+import { Pill, ServiceTextWrapper, ServicesText, ContactSection, ContactWrapper, ContactTextWrapper, ContactText, Footer, Social, FooterContactGroup, FooterContactGroupWrapper, FooterContactTitle } from './index-styles'
+
+import styles from '../assets/svg/svg.module.css'
 
 const IndexPage = (props) => (
   <Layout>
     <SEO title="Home" />
     <Nav />
-    <Section backgroundColor="#F7F7F7" padding="2rem 1rem" lgPadding="2rem 6rem" xlPadding="2rem 18rem">
-      <ShapeGroup1></ShapeGroup1>
-      <ShapeGroup1></ShapeGroup1>
-      <ShapeGroup1></ShapeGroup1>
-      <Heading1 color={colors.darkgray} style={{ textAlign: 'center', fontSize: '3.5rem', margin: '3rem 0' }}>The creative studio you’ve been waiting for.</Heading1>
-      <Text style={{ textTransform: 'uppercase', textAlign: 'center', fontSize: '1.1rem' }}>Full Website Coming Soon</Text>
+    <Section backgroundColor="#F7F7F7" padding="5rem 1rem 3rem 1rem" lgPadding="5rem 6rem 3rem 6rem" xlPadding="5rem 18rem 3rem 18rem">
+      <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 0 357.354 45.152" fill="#cec8c0" className={styles.lightLines}>
+        <g transform="translate(-2615.609 370.543) rotate(-90)">
+          <path d="M354.149,6.343H3.2A3.19,3.19,0,0,1,0,3.172,3.19,3.19,0,0,1,3.2,0H354.149a3.19,3.19,0,0,1,3.2,3.172A3.19,3.19,0,0,1,354.149,6.343Z" transform="translate(370.543 2615.609) rotate(90)" />
+          <path d="M354.149,6.343H3.2A3.19,3.19,0,0,1,0,3.172,3.19,3.19,0,0,1,3.2,0H354.149a3.19,3.19,0,0,1,3.2,3.172A3.19,3.19,0,0,1,354.149,6.343Z" transform="translate(350.883 2615.609) rotate(90)" />
+          <path d="M354.149,6.343H3.2A3.19,3.19,0,0,1,0,3.172,3.19,3.19,0,0,1,3.2,0H354.149a3.19,3.19,0,0,1,3.2,3.172A3.19,3.19,0,0,1,354.149,6.343Z" transform="translate(331.735 2615.609) rotate(90)" />
+        </g>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" height="100px" viewBox="0 0 167.23 167.227" fill="#1d5562" className={styles.blueCircle1}>
+        <path d="M371.042,274.771a83.614,83.614,0,1,0,83.614,83.614A83.615,83.615,0,0,0,371.042,274.771Zm0,149.5a65.889,65.889,0,1,1,65.887-65.89A65.89,65.89,0,0,1,371.042,424.275Z" transform="translate(-287.425 -274.771)" />
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" height="200px" viewBox="0 0 93.748 322.397" fill="#b26c29" className={styles.orangeDrop1}>
+        <path d="M839.623,387.548H563.944a46.8,46.8,0,0,1-46.718-46.875h0A46.8,46.8,0,0,1,564.1,293.955l182.087-.155a93.59,93.59,0,0,1,93.437,93.748Z" transform="translate(387.548 -517.226) rotate(90)" />
+      </svg>
+      <Heading1 color={colors.darkgray} style={{ textAlign: 'center', fontSize: '3.5rem', margin: '3rem 0' }}>Humbly helping build better brands</Heading1>
+      <Text style={{ textTransform: 'uppercase', textAlign: 'center', fontSize: '1.1rem', letterSpacing: '2px' }}>Full site coming soon</Text>
       <div style={{ width: '100%', display: 'flex', justifyContent: 'center', marginBottom: '30px' }}>
-        <Pill to="/about/">start your project now</Pill>
+        <Pill to="/about/">talk to us about your business</Pill>
       </div>
     </Section>
     <Section padding="5rem 1rem">
@@ -32,23 +44,56 @@ const IndexPage = (props) => (
       </ServiceTextWrapper>
     </Section>
     <ContactSection backgroundColor="#f7f7f7" padding="3rem 2rem" tabletPadding="3rem 8rem" lgPadding="3rem 12rem" xlPadding="3rem 8rem">
+      <svg xmlns="http://www.w3.org/2000/svg" height="75px" viewBox="0 0 402.381 131.085" fill="#7c3a2b" className={styles.redDrop1}>
+        <path d="M955.941,424.619l-337.229-.562a65.259,65.259,0,0,1-65.152-65.371h0a65.262,65.262,0,0,1,65.368-65.152l206.708.346a130.519,130.519,0,0,1,130.3,130.74Z" transform="translate(-553.561 -293.534)" />
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" height="115px" viewBox="0 0 213.95 213.946" fill="#b26c29" className={styles.orangeCircle1}>
+        <path d="M394.4,274.771A106.973,106.973,0,1,0,501.375,381.744,106.975,106.975,0,0,0,394.4,274.771Zm0,191.271a84.3,84.3,0,1,1,84.294-84.3A84.3,84.3,0,0,1,394.4,466.042Z" transform="translate(-287.425 -274.771)" />
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 0 353.641 45.152" fill="#1d5562" className={styles.blueLines}>
+        <g transform="translate(-2615.609 370.543) rotate(-90)">
+          <path d="M350.469,6.343H3.172A3.172,3.172,0,0,1,3.172,0h347.3a3.172,3.172,0,0,1,0,6.343Z" transform="translate(370.543 2615.609) rotate(90)" />
+          <path d="M350.469,6.343H3.172A3.172,3.172,0,0,1,3.172,0h347.3a3.172,3.172,0,0,1,0,6.343Z" transform="translate(350.883 2615.609) rotate(90)" />
+          <path d="M350.469,6.343H3.172A3.172,3.172,0,0,1,3.172,0h347.3a3.172,3.172,0,0,1,0,6.343Z" transform="translate(331.735 2615.609) rotate(90)" />
+        </g>
+      </svg>
       <ContactWrapper>
         <ContactTextWrapper >
           <Heading3 fontWeight="lighter" fontSize="1.1rem" mb="2rem">contact</Heading3>
-          <ContactText mb="3rem">Let’s talk about your project — it’s time to bring your vision to life.</ContactText>
+          <ContactText mb="3rem">Let’s talk about your project — it’s time to bring your vision to&nbsp;life.</ContactText>
         </ContactTextWrapper>
         <ContactForm />
       </ContactWrapper>
     </ContactSection>
     <Section padding="3rem 2rem">
-      <Heading2 mb="1rem" fontSize="35px" textAlign="center">Follow us on Instagram</Heading2>
+      <Heading2 mb="1rem" fontSize="28px" textAlign="center">Follow us on Instagram</Heading2>
       <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
         <Pill to="/about/">@kodastudio</Pill>
       </div>
     </Section>
     <Section backgroundColor="#C2CBCE" padding="3rem 2rem" tabletPadding="3rem 8rem" lgPadding="3rem 12rem">
-      <Heading2 mb="1rem" fontSize="35px" textAlign="center">Notify me.</Heading2>
-      <Text fontSize="1.1rem" textAlign="center" mb="2rem">Be the first know when the full website has been launched.</Text>
+      <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 0 477.033 45.152" fill="#fff" className={styles.whiteLines1}>
+        <g transform="translate(-2615.609 370.543) rotate(-90)">
+          <path d="M472.755,6.343H4.278C1.917,6.343,0,4.922,0,3.172S1.917,0,4.278,0H472.755c2.362,0,4.278,1.421,4.278,3.172S475.117,6.343,472.755,6.343Z" transform="translate(370.543 2615.609) rotate(90)" />
+          <path d="M472.755,6.343H4.278C1.917,6.343,0,4.922,0,3.172S1.917,0,4.278,0H472.755c2.362,0,4.278,1.421,4.278,3.172S475.117,6.343,472.755,6.343Z" transform="translate(350.883 2615.609) rotate(90)" />
+          <path d="M472.755,6.343H4.278C1.917,6.343,0,4.922,0,3.172S1.917,0,4.278,0H472.755c2.362,0,4.278,1.421,4.278,3.172S475.117,6.343,472.755,6.343Z" transform="translate(331.735 2615.609) rotate(90)" />
+        </g>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 0 192.308 55.92" fill="#7b3a2b" className={styles.redDrop2}>
+        <path d="M709.533,349.72H545.093a27.913,27.913,0,0,1-27.867-27.961h0a27.914,27.914,0,0,1,27.959-27.867L653.8,293.8a55.826,55.826,0,0,1,55.734,55.92Z" transform="translate(709.533 349.72) rotate(180)"/>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" height="175px" viewBox="0 0 261.505 261.5" fill="#263752" className={styles.blueCircle2}>
+        <path d="M418.18,274.771a130.75,130.75,0,1,0,130.75,130.75A130.752,130.752,0,0,0,418.18,274.771Zm0,233.785A103.033,103.033,0,1,1,521.21,405.521,103.034,103.034,0,0,1,418.18,508.556Z" transform="translate(-287.425 -274.771)"/>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 0 477.033 45.152" fill="#fff" className={styles.whiteLines2}>
+        <g transform="translate(-2615.609 370.543) rotate(-90)">
+          <path d="M472.755,6.343H4.278C1.917,6.343,0,4.922,0,3.172S1.917,0,4.278,0H472.755c2.362,0,4.278,1.421,4.278,3.172S475.117,6.343,472.755,6.343Z" transform="translate(370.543 2615.609) rotate(90)" />
+          <path d="M472.755,6.343H4.278C1.917,6.343,0,4.922,0,3.172S1.917,0,4.278,0H472.755c2.362,0,4.278,1.421,4.278,3.172S475.117,6.343,472.755,6.343Z" transform="translate(350.883 2615.609) rotate(90)" />
+          <path d="M472.755,6.343H4.278C1.917,6.343,0,4.922,0,3.172S1.917,0,4.278,0H472.755c2.362,0,4.278,1.421,4.278,3.172S475.117,6.343,472.755,6.343Z" transform="translate(331.735 2615.609) rotate(90)" />
+        </g>
+      </svg>
+      <Heading2 mb="1rem" fontSize="28px" textAlign="center">Notify me</Heading2>
+      <Text fontSize="1.1rem" textAlign="center" mb="2rem" lineHeight="1.5rem">Be the first know when the full website <br/>has been launched.</Text>
       <SignUp />
     </Section>
     <Footer backgroundColor={colors.darkgray} padding="3rem 2rem">

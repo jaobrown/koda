@@ -19,20 +19,28 @@ export const Pill = styled(Link)`
   font-family: 'Soin Sans', 'sans serif';
   font-weight: normal;
   border: 2px solid ${colors.red};
-  padding: .65rem 1rem;
+  padding: .45rem 1rem;
   border-radius: 100px;
   text-align: center;
+
+  transition: .2s ease-in-out;
+  cursor: pointer;
+
+  :hover {
+    background-color: ${props => props.borderColor || colors.red};
+    color: #ffffff;
+  }
 `
 
 export const ServiceTextWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
 
   @media (min-width: 1023px) {
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
   } 
 `
 

@@ -4,7 +4,7 @@ import {colors} from '../../styles/GlobalStyles';
 
 export const NavBar = styled.nav`
     max-width: 100vw;
-    height: 124px;
+    height: 160px;
     padding: 0 12%;
     display: flex;
     justify-content: space-around;

@@ -19,7 +19,7 @@ export const Pill = styled(Link)`
   font-family: 'Soin Sans', 'sans serif';
   font-weight: normal;
   border: 2px solid ${colors.red};
-  padding: .45rem 1rem;
+  padding: .7rem 1rem;
   border-radius: 100px;
   text-align: center;
 

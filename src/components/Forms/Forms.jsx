@@ -126,7 +126,7 @@ export const ContactForm = () => {
             </InputGroup>
             <InputGroup>
                 <label>What services are you interested in?</label>
-                <input name="services" type="text" placeholder="Brand strategy, visual identity, web development..." />
+                <input name="services" type="text" placeholder="Brand strategy and identity, rebrand, web development..." />
                 {/* <select name="service[]" form="contact">
                     <option value="select">Select</option>
                     <option value="strategy">Brand Strategy</option>

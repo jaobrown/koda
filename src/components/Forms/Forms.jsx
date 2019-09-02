@@ -110,7 +110,7 @@ const Pill = styled.button`
 
 export const ContactForm = () => {
     return (
-        <Form method="post" name="contact" data-netlify="true" netlify-honeypot="bot">
+        <Form method="post" name="contact" action="POST" data-netlify="true" netlify-honeypot="bot">
             <input type="hidden" name="form-name" value="contact" />
             <InputGroup style={{ display: 'none' }}>
                 <label>Don't fill this out, human</label>
@@ -147,7 +147,7 @@ export const ContactForm = () => {
 
 export const SignUp = () => {
     return (
-        <SignUpForm method="post" name="signup" data-netlify="true" netlify-honeypot="bot">
+        <SignUpForm method="post" name="signup" action="POST" data-netlify="true" netlify-honeypot="bot">
             <input type="hidden" name="form-name" value="signup" />
             <SignUpInputGroup style={{ display: 'none' }}>
                 <label>Don't fill this out, human</label>

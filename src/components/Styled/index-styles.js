@@ -14,6 +14,7 @@ export const ShapeGroup1 = styled.div`
 
 export const Pill = styled(Link)`
   color: ${colors.darkgray};
+  background-color: transparent;
   text-decoration: none;
   font-size: 13px;
   font-family: 'Soin Sans', 'sans serif';
@@ -35,6 +36,7 @@ export const Pill = styled(Link)`
 export const AnchorPill = styled.a`
   color: ${colors.darkgray};
   text-decoration: none;
+  background-color: transparent;
   font-size: 13px;
   font-family: 'Soin Sans', 'sans serif';
   font-weight: normal;
@@ -54,6 +56,7 @@ export const AnchorPill = styled.a`
 
 export const ButtonPill = styled.button`
   color: ${colors.darkgray};
+  background-color: transparent;
   text-decoration: none;
   font-size: 13px;
   font-family: 'Soin Sans', 'sans serif';

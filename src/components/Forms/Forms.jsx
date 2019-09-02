@@ -118,20 +118,21 @@ export const ContactForm = () => {
             </InputGroup>
             <InputGroup>
                 <label>First Name + Last Name</label>
-                <input name="name" type="text" placeholder="Your full name" />
+                <input name="name" type="text" placeholder="Your full name" required/>
             </InputGroup>
             <InputGroup>
                 <label>Email</label>
-                <input name="email" type="text" placeholder="example@example.com" />
+                <input name="email" type="text" placeholder="example@example.com" required />
             </InputGroup>
             <InputGroup>
                 <label>What services are you interested in?</label>
-                <select name="service[]" form="contact">
+                <input name="services" type="text" placeholder="Brand strategy, visual identity, web development..." />
+                {/* <select name="service[]" form="contact">
                     <option value="select">Select</option>
                     <option value="strategy">Brand Strategy</option>
                     <option value="development">Custom Web Development</option>
                     <option value="design">Visual Design</option>
-                </select>
+                </select> */}
             </InputGroup>
             <InputGroup>
                 <label>How did you hear about us?</label>

@@ -1,5 +1,5 @@
 import React from "react"
-
+import animateScrollTo from 'animated-scroll-to';
 import Layout from "../components/Layout/Layout"
 import Nav from "../components/Nav/Nav"
 import SEO from "../utils/Seo"
@@ -8,11 +8,11 @@ import { Heading1, Heading2, Text, Heading3 } from '../styles/Typography'
 import { ContactForm, SignUp } from '../components/Forms/Forms'
 import { colors } from '../styles/GlobalStyles'
 
-import { Pill, ServiceTextWrapper, ServicesText, ContactSection, ContactWrapper, ContactTextWrapper, ContactText, Footer, Social, FooterContactGroup, FooterContactGroupWrapper, FooterContactTitle } from '../components/Styled/index-styles'
+import { ButtonPill, AnchorPill, ServiceTextWrapper, ServicesText, ContactSection, ContactWrapper, ContactTextWrapper, ContactText, Footer, Social, FooterContactGroup, FooterContactGroupWrapper, FooterContactTitle } from '../components/Styled/index-styles'
 
 import styles from '../assets/svg/svg.module.css'
 
-const IndexPage = (props) => (
+const IndexPage = () => (
   <Layout>
     <SEO title="Koda Studio" />
     <Nav />
@@ -33,7 +33,7 @@ const IndexPage = (props) => (
       <Heading1 color={colors.darkgray} style={{ textAlign: 'center', fontSize: '3.5rem', margin: '3rem 0' }}>Humbly helping build better brands</Heading1>
       <Text style={{ textTransform: 'uppercase', textAlign: 'center', fontSize: '1.1rem', letterSpacing: '2px' }}>Full site coming soon</Text>
       <div style={{ width: '100%', display: 'flex', justifyContent: 'center', marginBottom: '30px' }}>
-        <Pill to="/about/">talk to us about your business</Pill>
+        <ButtonPill onClick={() => animateScrollTo(700)}>talk to us about your business</ButtonPill>
       </div>
     </Section>
     <Section padding="5rem 1rem">
@@ -43,7 +43,7 @@ const IndexPage = (props) => (
         <ServicesText mb="0">Visual Design</ServicesText>
       </ServiceTextWrapper>
     </Section>
-    <ContactSection backgroundColor="#f7f7f7" padding="3rem 2rem" tabletPadding="3rem 8rem" lgPadding="3rem 12rem" xlPadding="3rem 8rem">
+    <ContactSection backgroundColor="#f7f7f7" padding="3rem 2rem" tabletPadding="3rem 8rem" lgPadding="3rem 12rem" xlPadding="3rem 8rem"  className="contact-section">
       <svg xmlns="http://www.w3.org/2000/svg" height="75px" viewBox="0 0 402.381 131.085" fill="#7c3a2b" className={styles.redDrop1}>
         <path d="M955.941,424.619l-337.229-.562a65.259,65.259,0,0,1-65.152-65.371h0a65.262,65.262,0,0,1,65.368-65.152l206.708.346a130.519,130.519,0,0,1,130.3,130.74Z" transform="translate(-553.561 -293.534)" />
       </svg>
@@ -68,7 +68,7 @@ const IndexPage = (props) => (
     <Section padding="3rem 2rem">
       <Heading2 mb="1rem" fontSize="28px" textAlign="center">Follow us on Instagram</Heading2>
       <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
-        <Pill to="/about/">@kodastudio</Pill>
+        <AnchorPill href="https://www.instagram.com/koda.studio" target="_blank" rel="noopener noreferrer">@koda.studio</AnchorPill>
       </div>
     </Section>
     <Section backgroundColor="#C2CBCE" padding="3rem 2rem" tabletPadding="3rem 8rem" lgPadding="3rem 12rem">

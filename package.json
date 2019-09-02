@@ -5,6 +5,7 @@
   "version": "0.0.1",
   "author": "Jared Brown <joo.brown72@gmail.com>",
   "dependencies": {
+    "animated-scroll-to": "^1.2.2",
     "browser-monads": "^1.0.0",
     "gatsby": "^2.10.0",
     "gatsby-image": "^2.2.1",

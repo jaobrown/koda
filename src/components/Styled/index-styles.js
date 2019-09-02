@@ -32,6 +32,46 @@ export const Pill = styled(Link)`
   }
 `
 
+export const AnchorPill = styled.a`
+  color: ${colors.darkgray};
+  text-decoration: none;
+  font-size: 13px;
+  font-family: 'Soin Sans', 'sans serif';
+  font-weight: normal;
+  border: 2px solid ${colors.red};
+  padding: .7rem 1rem;
+  border-radius: 100px;
+  text-align: center;
+
+  transition: .2s ease-in-out;
+  cursor: pointer;
+
+  :hover {
+    background-color: ${props => props.borderColor || colors.red};
+    color: #ffffff;
+  }
+`
+
+export const ButtonPill = styled.button`
+  color: ${colors.darkgray};
+  text-decoration: none;
+  font-size: 13px;
+  font-family: 'Soin Sans', 'sans serif';
+  font-weight: normal;
+  border: 2px solid ${colors.red};
+  padding: .7rem 1rem;
+  border-radius: 100px;
+  text-align: center;
+
+  transition: .2s ease-in-out;
+  cursor: pointer;
+
+  :hover {
+    background-color: ${props => props.borderColor || colors.red};
+    color: #ffffff;
+  }
+`
+
 export const ServiceTextWrapper = styled.div`
   display: flex;
   flex-direction: column;

@@ -5,7 +5,7 @@ require('dotenv').config({
 module.exports = {
   siteMetadata: {
     title: `Brand Strategy || Indianapolis, IN || Koda`,
-    description: `Alex does insanely good work, for insanely cool cats.`,
+    description: `Koda is a brand strategy and visual identity design studio focused on humbly helping build better brands.`,
     author: `@jaobrown`,
   },
   plugins: [
@@ -35,13 +35,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `alex-brown`,
-        short_name: `alex`,
+        name: `koda-studio`,
+        short_name: `koda`,
         start_url: `/`,
         background_color: `#B26C29`,
         theme_color: `#B26C29`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/assets/png/favicon.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

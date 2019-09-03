@@ -93,7 +93,6 @@ const Pill = styled.button`
   font-size: 13px;
   font-family: 'Soin Sans', 'sans serif';
   font-weight: normal;
-  letter-spacing: 1px;
   border: 2px solid ${props => props.borderColor || colors.red};
   padding: 0 1rem;
   border-radius: 100px;

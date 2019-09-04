@@ -24,6 +24,14 @@
         transform: translate3d(0, 0, 0);
     }
 }
+@keyframes HorizontalBackwards100 {
+    from {
+        transform: translate3d(-200px, 0, 0);
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
 
 @keyframes Vertical200 {
     from {
@@ -52,15 +60,6 @@
     }
 }
 
-@keyframes Rotate {
-    from {
-        transform: rotate(0);
-    }
-    to {
-        transform: rotate(180deg);
-    }
-}
-
 .lightLines {
     position: absolute;
     top: 14%;
@@ -85,7 +84,7 @@
     bottom: 15%;
     z-index: -1;
 
-    animation: Rotate 30s linear infinite alternate;
+    animation: HorizontalBackwards100 30s linear infinite alternate;
 }
 
 @media (max-width: 870px) {
@@ -186,7 +185,7 @@
     top: 45%;
     z-index: -1;
 
-    animation: Rotate 30s linear infinite alternate;
+    animation: Vertical100 30s linear infinite alternate;
 }
 
 .blueCircle2 {

@@ -100,11 +100,12 @@ const Pill = styled.button`
   background-color: transparent;
   transition: .2s ease-in-out;
   cursor: pointer;
-
-  :hover {
-    background-color: ${props => props.borderColor || colors.red};
-    color: #ffffff;
-  }
+    @media (min-width: 500px) {
+        :hover {
+            background-color: ${props => props.borderColor || colors.red};
+            color: #ffffff;
+        }
+    }
 `
 
 export const ContactForm = () => {
@@ -112,20 +113,20 @@ export const ContactForm = () => {
         <Form method="post" name="contact" action="POST" data-netlify="true" netlify-honeypot="bot">
             <input type="hidden" name="form-name" value="contact" />
             <InputGroup style={{ display: 'none' }}>
-                <label>Don't fill this out, human</label>
-                <input name="bot" />
+                <label for="bot">Don't fill this out, human</label>
+                <input id="bot" name="bot" />
             </InputGroup>
             <InputGroup>
-                <label>First Name + Last Name</label>
-                <input name="name" type="text" placeholder="Your full name" required/>
+                <label for="firstNameLastName">First Name + Last Name</label>
+                <input id="firstNameLastName" name="name" type="text" placeholder="Your full name" required />
             </InputGroup>
             <InputGroup>
-                <label>Email</label>
-                <input name="email" type="text" placeholder="example@example.com" required />
+                <label for="email">Email</label>
+                <input id="email" name="email" type="text" placeholder="example@example.com" required />
             </InputGroup>
             <InputGroup>
-                <label>What services are you interested in?</label>
-                <input name="services" type="text" placeholder="Brand strategy and identity, rebrand, web development..." />
+                <label for="services">What services are you interested in?</label>
+                <input id="services" name="services" type="text" placeholder="Brand strategy and identity, rebrand, web development..." />
                 {/* <select name="service[]" form="contact">
                     <option value="select">Select</option>
                     <option value="strategy">Brand Strategy</option>
@@ -134,8 +135,8 @@ export const ContactForm = () => {
                 </select> */}
             </InputGroup>
             <InputGroup>
-                <label>How did you hear about us?</label>
-                <input name="referral" type="text" placeholder="Social Media, etc..." />
+                <label for="refferal">How did you hear about us?</label>
+                <input id="refferal" name="referral" type="text" placeholder="Social Media, etc..." />
             </InputGroup>
             <InputGroup>
                 <Pill type="submit">submit</Pill>
@@ -153,8 +154,8 @@ export const SignUp = () => {
                 <input name="bot" />
             </SignUpInputGroup>
             <SignUpInputGroup style={{ marginBottom: '1rem' }}>
-                <label>Email</label>
-                <input name="email" type="text" placeholder="example@example.com" />
+                <label for="emailSignUp">Email</label>
+                <input id="emailSignUp" name="email" type="text" placeholder="example@example.com" />
             </SignUpInputGroup>
             <Pill type="submit" borderColor={colors.darkgray} className="sign-up__pill">sign&nbsp;up</Pill>
         </SignUpForm>

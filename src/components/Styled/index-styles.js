@@ -27,9 +27,11 @@ export const Pill = styled(Link)`
   transition: .2s ease-in-out;
   cursor: pointer;
 
-  :hover {
-    background-color: ${props => props.borderColor || colors.red};
-    color: #ffffff;
+  @media (min-width: 500px) {
+    :hover {
+      background-color: ${props => props.borderColor || colors.red};
+      color: #ffffff;
+    } 
   }
 `
 
@@ -48,9 +50,11 @@ export const AnchorPill = styled.a`
   transition: .2s ease-in-out;
   cursor: pointer;
 
+  @media (min-width: 500px) {
   :hover {
     background-color: ${props => props.borderColor || colors.red};
     color: #ffffff;
+  }
   }
 `
 
@@ -68,10 +72,11 @@ export const ButtonPill = styled.button`
 
   transition: .2s ease-in-out;
   cursor: pointer;
-
+  @media (min-width: 500px) {
   :hover {
     background-color: ${props => props.borderColor || colors.red};
     color: #ffffff;
+  }
   }
 `
 

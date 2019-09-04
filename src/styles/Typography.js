@@ -12,6 +12,7 @@ export const Text = styled.p`
     margin-bottom: ${props => props.mb || '3rem;'};
     color: ${props => props.color};
     text-align: ${props => props.textAlign || 'left'};
+    font-display: fallback;
 `
 
 export const Heading3 = styled.h3`
@@ -23,6 +24,7 @@ export const Heading3 = styled.h3`
     margin-bottom: ${props => props.mb || '3rem;'};
     color: ${props => props.color};
     text-align: ${props => props.textAlign || 'left'};
+    font-display: fallback;
 `
 
 export const Heading2 = styled.h2`
@@ -32,6 +34,7 @@ export const Heading2 = styled.h2`
     margin-bottom: ${props => props.mb || '3rem;'};
     color: ${props => props.color};
     text-align: ${props => props.textAlign || 'left'};
+    font-display: fallback;
 `
 
 export const Heading1 = styled.h1`
@@ -41,4 +44,5 @@ export const Heading1 = styled.h1`
     margin-bottom: ${props => props.mb || '3rem;'};
     color: ${props => props.color};
     text-align: ${props => props.textAlign || 'left'};
+    font-display: fallback;
 `

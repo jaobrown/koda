@@ -1,7 +1,3 @@
-require('dotenv').config({
-  path: `.env.${process.env.NODE_ENV}`,
-})
-
 module.exports = {
   siteMetadata: {
     title: `Brand Strategy and Visual Identity | Indianapolis, IN || Koda`,
@@ -10,13 +6,6 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-source-contentful`,
-      options: {
-        spaceId: `6zmln2nwz8em`,
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-      },
-    },
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {
@@ -27,7 +16,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/src/assets/images`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -38,8 +27,8 @@ module.exports = {
         name: `koda-studio`,
         short_name: `koda`,
         start_url: `/`,
-        background_color: `#B26C29`,
-        theme_color: `#B26C29`,
+        background_color: `#3A3A3A`,
+        theme_color: `#3A3A3A`,
         display: `minimal-ui`,
         icon: `src/assets/png/favicon.png`, // This path is relative to the root of the site.
       },

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { colors } from '../../styles/GlobalStyles'
+import { colors } from '../../utils'
 
 const Form = styled.form`
     width: 100%;
@@ -113,19 +113,19 @@ export const ContactForm = () => {
         <Form method="post" name="contact" action="POST" data-netlify="true" netlify-honeypot="bot">
             <input type="hidden" name="form-name" value="contact" />
             <InputGroup style={{ display: 'none' }}>
-                <label for="bot">Don't fill this out, human</label>
+                <label htmlFor="bot">Don't fill this out, human</label>
                 <input id="bot" name="bot" />
             </InputGroup>
             <InputGroup>
-                <label for="firstNameLastName">First Name + Last Name</label>
+                <label htmlFor="firstNameLastName">First Name + Last Name</label>
                 <input id="firstNameLastName" name="name" type="text" placeholder="Your full name" required />
             </InputGroup>
             <InputGroup>
-                <label for="email">Email</label>
+                <label htmlFor="email">Email</label>
                 <input id="email" name="email" type="text" placeholder="example@example.com" required />
             </InputGroup>
             <InputGroup>
-                <label for="services">What services are you interested in?</label>
+                <label htmlFor="services">What services are you interested in?</label>
                 <input id="services" name="services" type="text" placeholder="Brand strategy and identity, rebrand, web development..." />
                 {/* <select name="service[]" form="contact">
                     <option value="select">Select</option>
@@ -135,7 +135,7 @@ export const ContactForm = () => {
                 </select> */}
             </InputGroup>
             <InputGroup>
-                <label for="refferal">How did you hear about us?</label>
+                <label htmlFor="refferal">How did you hear about us?</label>
                 <input id="refferal" name="referral" type="text" placeholder="Social Media, etc..." />
             </InputGroup>
             <InputGroup>
@@ -154,7 +154,7 @@ export const SignUp = () => {
                 <input name="bot" />
             </SignUpInputGroup>
             <SignUpInputGroup style={{ marginBottom: '1rem' }}>
-                <label for="emailSignUp">Email</label>
+                <label htmlFor="emailSignUp">Email</label>
                 <input id="emailSignUp" name="email" type="text" placeholder="example@example.com" />
             </SignUpInputGroup>
             <Pill type="submit" borderColor={colors.darkgray} className="sign-up__pill">sign&nbsp;up</Pill>

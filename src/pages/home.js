@@ -4,10 +4,8 @@ import styled from 'styled-components'
 
 import Layout from "../components/Layout/Layout"
 import Nav from "../components/Nav/Nav"
-import SEO from "../utils/Seo"
-import { Section } from '../sections/Section'
-import { Heading1, Heading2, Text } from '../styles/Typography'
-import { colors } from '../styles/GlobalStyles'
+import { Section } from '../elements'
+import { Heading1, Heading2, Text, colors, SEO } from '../utils'
 
 const ShapeGroup1 = styled.div`
   height: 3px;

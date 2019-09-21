@@ -1,7 +1,7 @@
 import React from "react"
 // import { window } from "browser-monads"
 // import logo from "../../images/logo.png"
-import {Heading2} from '../../styles/Typography';
+import {Heading2} from '../../utils';
 import { NavLink, NavBar } from './NavStyles';
 
 const Nav = () => (

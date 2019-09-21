@@ -1,8 +1,7 @@
 import { Link } from 'gatsby'
 import styled from 'styled-components'
-import { Section } from '../../sections/Section'
-import { Text, Heading3 } from '../../styles/Typography'
-import { colors } from '../../styles/GlobalStyles'
+import { Section } from '../../elements'
+import { colors, Text, Heading3 } from '../../utils';
 
 export const ShapeGroup1 = styled.div`
   height: 3px;
@@ -140,48 +139,5 @@ export const ContactText = styled(Text)`
   }
   @media (min-width: 1160px) {
     max-width: 70%;
-  }
-`
-
-export const Footer = styled(Section)`
-  
-`
-
-export const Social = styled.div`
-  margin: 0 auto 3rem auto;
-  width: 130px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-`
-
-export const FooterContactGroupWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  @media (min-width: 767px) {
-    flex-direction: row;
-    justify-content: space-around;
-  } 
-`
-
-export const FooterContactGroup = styled.div`
-   width: 100%;
-`
-
-export const FooterContactTitle = styled(Heading3)`
-  position: relative;
-
-  ::after {
-    content: '';
-    position: absolute;
-    bottom: -8px;
-    height: 2px;
-    background-color: ${colors.alexwhite};
-    width: 80px;
-    left: 50%;
-    transform: translateX(-50%);
   }
 `

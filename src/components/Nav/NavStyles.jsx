@@ -1,6 +1,6 @@
 import styled  from "styled-components";
 import { Link } from "gatsby"
-import {colors} from '../../styles/GlobalStyles';
+import {colors} from '../../utils';
 
 export const NavBar = styled.nav`
     max-width: 100vw;

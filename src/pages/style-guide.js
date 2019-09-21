@@ -1,15 +1,13 @@
 import React from "react"
 
 import Layout from "../components/Layout/Layout"
-import SEO from "../utils/Seo"
 import {
   StyleGuideWrapper,
   StyledGuideHr,
   ColorDivRow,
   ColorDiv,
-} from "../styles/StyleGuideStyles"
-import { colors as ThemeColors } from "../styles/GlobalStyles"
-import { Text, Heading1, Heading2, Heading3 } from "../styles/Typography"
+} from "../utils/StyleGuideStyles"
+import { SEO, Text, Heading1, Heading2, Heading3, colors as ThemeColors } from "../utils"
 
 const StyleGuidePage = () => (
   <Layout>

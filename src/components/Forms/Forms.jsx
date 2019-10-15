@@ -166,8 +166,8 @@ export const SignUp = () => {
 
 export const AlecYoderForm = () => {
     return (
-        <Form method="post" name="contact" action="POST" data-netlify="true" netlify-honeypot="bot">
-            <input type="hidden" name="form-name" value="contact" />
+        <Form method="post" name="alec-yoder" action="POST" data-netlify="true" netlify-honeypot="bot">
+            <input type="hidden" name="form-name" value="alec-yoder" />
             <InputGroup style={{ display: 'none' }}>
                 <label htmlFor="bot">Don't fill this out, human</label>
                 <input id="bot" name="bot" />

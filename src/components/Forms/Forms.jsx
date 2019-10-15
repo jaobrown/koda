@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import { colors } from '../../utils'
+import { colors, Heading3, Text } from '../../utils'
+// import { Heading3 } from '../../utils';
 
 const Form = styled.form`
     width: 100%;
@@ -159,5 +160,142 @@ export const SignUp = () => {
             </SignUpInputGroup>
             <Pill type="submit" borderColor={colors.darkgray} className="sign-up__pill">sign&nbsp;up</Pill>
         </SignUpForm>
+    )
+}
+
+
+export const AlecYoderForm = () => {
+    return (
+        <Form method="post" name="contact" action="POST" data-netlify="true" netlify-honeypot="bot">
+            <input type="hidden" name="form-name" value="contact" />
+            <InputGroup style={{ display: 'none' }}>
+                <label htmlFor="bot">Don't fill this out, human</label>
+                <input id="bot" name="bot" />
+            </InputGroup>
+
+            {/* First Section */}
+            <Heading3>Contact Info</Heading3>
+            <InputGroup>
+                <label htmlFor="firstNameLastName">First Name + Last Name</label>
+                <input id="firstNameLastName" name="name" type="text" placeholder="Your full name" required />
+            </InputGroup>
+            <InputGroup>
+                <label htmlFor="email">Email</label>
+                <input id="email" name="email" type="text" placeholder="example@example.com" required />
+            </InputGroup>
+            <InputGroup>
+                <label htmlFor="services">What services are you interested in?</label>
+                <input id="services" name="services" type="text" placeholder="Brand strategy and identity, rebrand, web development..." />
+            </InputGroup>
+            <InputGroup>
+                <label htmlFor="refferal">How did you hear about us?</label>
+                <input id="refferal" name="referral" type="text" placeholder="Social Media, etc..." />
+            </InputGroup>
+            <InputGroup>
+                <label htmlFor="refferal">File upload test</label>
+                <input id="refferal" name="referral" type="file" placeholder="File File" />
+            </InputGroup>
+
+            {/* New Section */}
+            <Heading3>Who are you and what are you offering?</Heading3>
+            <InputGroup>
+                <label htmlFor="refferal">File upload test 2</label>
+                <input id="refferal" name="referral" type="file" placeholder="File File File" />
+            </InputGroup>
+            <InputGroup>
+                <label htmlFor="refferal">How did you hear about us?</label>
+                <input id="refferal" name="referral" type="text" placeholder="Social Media, etc..." />
+            </InputGroup>
+            <InputGroup>
+                <label htmlFor="refferal">How did you hear about us?</label>
+                <input id="refferal" name="referral" type="text" placeholder="Social Media, etc..." />
+            </InputGroup>
+            <InputGroup>
+                <label htmlFor="refferal">How did you hear about us?</label>
+                <input id="refferal" name="referral" type="text" placeholder="Social Media, etc..." />
+            </InputGroup>
+            <InputGroup>
+                <label htmlFor="refferal">How did you hear about us?</label>
+                <input id="refferal" name="referral" type="text" placeholder="Social Media, etc..." />
+            </InputGroup>
+            <InputGroup>
+                <label htmlFor="refferal">How did you hear about us?</label>
+                <input id="refferal" name="referral" type="text" placeholder="Social Media, etc..." />
+            </InputGroup>
+
+
+
+            {/* New */}
+            <Heading3>Audience</Heading3>
+            <InputGroup>
+                <label htmlFor="refferal">How did you hear about us?</label>
+                <input id="refferal" name="referral" type="text" placeholder="Social Media, etc..." />
+            </InputGroup>
+            <InputGroup>
+                <label htmlFor="refferal">How did you hear about us?</label>
+                <input id="refferal" name="referral" type="text" placeholder="Social Media, etc..." />
+            </InputGroup>
+            <InputGroup>
+                <label htmlFor="refferal">How did you hear about us?</label>
+                <input id="refferal" name="referral" type="text" placeholder="Social Media, etc..." />
+            </InputGroup>
+            <InputGroup>
+                <label htmlFor="refferal">How did you hear about us?</label>
+                <input id="refferal" name="referral" type="text" placeholder="Social Media, etc..." />
+            </InputGroup>
+            <InputGroup>
+                <label htmlFor="refferal">How did you hear about us?</label>
+                <input id="refferal" name="referral" type="text" placeholder="Social Media, etc..." />
+            </InputGroup>
+
+
+            {/* NEW */}
+            <Heading3>Competetive</Heading3>
+            <InputGroup>
+                <label htmlFor="refferal">How did you hear about us?</label>
+                <input id="refferal" name="referral" type="text" placeholder="Social Media, etc..." />
+            </InputGroup>
+            <InputGroup>
+                <label htmlFor="refferal">How did you hear about us?</label>
+                <input id="refferal" name="referral" type="text" placeholder="Social Media, etc..." />
+            </InputGroup>
+
+            {/* NEW */}
+            <Heading3>Aesthetic Preferences</Heading3>
+            <InputGroup>
+                <label htmlFor="refferal">How did you hear about us?</label>
+                <input id="refferal" name="referral" type="text" placeholder="Social Media, etc..." />
+            </InputGroup>
+            <InputGroup>
+                <label htmlFor="refferal">How did you hear about us?</label>
+                <input id="refferal" name="referral" type="text" placeholder="Social Media, etc..." />
+            </InputGroup>
+            <InputGroup>
+                <label htmlFor="refferal">How did you hear about us?</label>
+                <input id="refferal" name="referral" type="text" placeholder="Social Media, etc..." />
+            </InputGroup>
+            <InputGroup>
+                <label htmlFor="refferal">How did you hear about us?</label>
+                <input id="refferal" name="referral" type="text" placeholder="Social Media, etc..." />
+            </InputGroup>
+            <InputGroup>
+                <label htmlFor="refferal">How did you hear about us?</label>
+                <input id="refferal" name="referral" type="text" placeholder="Social Media, etc..." />
+            </InputGroup>
+            <InputGroup>
+                <label htmlFor="refferal">How did you hear about us?</label>
+                <input id="refferal" name="referral" type="text" placeholder="Social Media, etc..." />
+            </InputGroup>
+
+            {/* Last */}
+            <Heading3>Miscellaneous</Heading3>
+            <InputGroup>
+                <label htmlFor="refferal">How did you hear about us?</label>
+                <input id="refferal" name="referral" type="text" placeholder="Social Media, etc..." />
+            </InputGroup>
+            <InputGroup>
+                <Pill type="submit">submit</Pill>
+            </InputGroup>
+        </Form>
     )
 }

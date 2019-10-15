@@ -192,12 +192,12 @@ export const AlecYoderForm = () => {
                 <input id="refferal" name="referral" type="text" placeholder="Social Media, etc..." />
             </InputGroup>
             <InputGroup>
-                <label htmlFor="refferal">File upload test</label>
-                <input id="refferal" name="referral" type="file" placeholder="File File" />
+                <label htmlFor="fileTest">File upload test</label>
+                <input id="fileTest" name="fileTest" type="file" placeholder="File File" />
             </InputGroup>
 
             {/* New Section */}
-            <Heading3>Who are you and what are you offering?</Heading3>
+            {/* <Heading3>Who are you and what are you offering?</Heading3>
             <InputGroup>
                 <label htmlFor="refferal">File upload test 2</label>
                 <input id="refferal" name="referral" type="file" placeholder="File File File" />
@@ -221,12 +221,12 @@ export const AlecYoderForm = () => {
             <InputGroup>
                 <label htmlFor="refferal">How did you hear about us?</label>
                 <input id="refferal" name="referral" type="text" placeholder="Social Media, etc..." />
-            </InputGroup>
+            </InputGroup> */}
 
 
 
             {/* New */}
-            <Heading3>Audience</Heading3>
+            {/* <Heading3>Audience</Heading3>
             <InputGroup>
                 <label htmlFor="refferal">How did you hear about us?</label>
                 <input id="refferal" name="referral" type="text" placeholder="Social Media, etc..." />
@@ -246,11 +246,11 @@ export const AlecYoderForm = () => {
             <InputGroup>
                 <label htmlFor="refferal">How did you hear about us?</label>
                 <input id="refferal" name="referral" type="text" placeholder="Social Media, etc..." />
-            </InputGroup>
+            </InputGroup> */}
 
 
             {/* NEW */}
-            <Heading3>Competetive</Heading3>
+            {/* <Heading3>Competetive</Heading3>
             <InputGroup>
                 <label htmlFor="refferal">How did you hear about us?</label>
                 <input id="refferal" name="referral" type="text" placeholder="Social Media, etc..." />
@@ -258,10 +258,10 @@ export const AlecYoderForm = () => {
             <InputGroup>
                 <label htmlFor="refferal">How did you hear about us?</label>
                 <input id="refferal" name="referral" type="text" placeholder="Social Media, etc..." />
-            </InputGroup>
+            </InputGroup> */}
 
             {/* NEW */}
-            <Heading3>Aesthetic Preferences</Heading3>
+            {/* <Heading3>Aesthetic Preferences</Heading3>
             <InputGroup>
                 <label htmlFor="refferal">How did you hear about us?</label>
                 <input id="refferal" name="referral" type="text" placeholder="Social Media, etc..." />
@@ -285,14 +285,14 @@ export const AlecYoderForm = () => {
             <InputGroup>
                 <label htmlFor="refferal">How did you hear about us?</label>
                 <input id="refferal" name="referral" type="text" placeholder="Social Media, etc..." />
-            </InputGroup>
+            </InputGroup> */}
 
             {/* Last */}
-            <Heading3>Miscellaneous</Heading3>
+            {/* <Heading3>Miscellaneous</Heading3>
             <InputGroup>
                 <label htmlFor="refferal">How did you hear about us?</label>
                 <input id="refferal" name="referral" type="text" placeholder="Social Media, etc..." />
-            </InputGroup>
+            </InputGroup> */}
             <InputGroup>
                 <Pill type="submit">submit</Pill>
             </InputGroup>

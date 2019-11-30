@@ -24,7 +24,7 @@ const StyledSection = styled.section`
 `
 
 
-export const Section = ({ children, padding, margin, backgroundColor, mdPadding,lgPadding,xlPadding, ...props }) => {
+export const Section = ({ children, padding, margin, backgroundColor, mdPadding, lgPadding, xlPadding }) => {
     return (
         <StyledSection padding={padding} mdPadding={mdPadding} lgPadding={lgPadding} xlPadding={xlPadding} margin={margin} backgroundColor={backgroundColor}>
             {children}

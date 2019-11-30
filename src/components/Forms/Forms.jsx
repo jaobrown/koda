@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { colors, Heading3 } from '../../utils'
-// import { Heading3 } from '../../utils';
+import { colors } from '../../utils'
 
 const Form = styled.form`
     width: 100%;
@@ -9,16 +8,6 @@ const Form = styled.form`
 
     @media (min-width: 767px) {
         max-width: 600px;
-        margin: 0 auto;
-    }
-`
-
-const QuestionnaireForm = styled.form`
-    width: 100%;
-    /* background-color: orangered; */
-
-    @media (min-width: 767px) {
-        max-width: 960px;
         margin: 0 auto;
     }
 `
@@ -36,39 +25,6 @@ const InputGroup = styled.div`
         font-size: .8rem; 
         color: ${colors.darkgray};
         text-transform: uppercase;
-        margin-bottom: .4rem;
-    }
-
-    input,
-    select {
-        width: 100%;
-        height: 2.5rem;
-        border: 1px solid ${colors.gray};
-        border-radius: 100px;
-        background: white;
-        padding-left: .8rem;
-        box-sizing: border-box;
-
-        select {
-            font-family: 'Majesti', 'serif' !important;
-        }
-    }
-`
-
-
-const QuestionnaireInputGroup = styled.div`
-    width: 100%;
-    /* background-color: yellowgreen; */
-    margin-bottom: 1.3rem;
-    border-radius: 100px;
-
-    label {
-        display: block;
-        font-family: 'Soin Sans', 'sans-serif';
-        font-weight: normal;
-        font-size: .8rem; 
-        color: ${colors.darkgray};
-        /* text-transform: uppercase; */
         margin-bottom: .4rem;
     }
 

@@ -1,2 +1,5 @@
+export { FiftyFifty } from './FiftyFifty'
 export { Footer } from './Footer'
 export { NewsletterSignUp } from './NewsletterSignUp'
+export { InstagramCTA } from './InstagramCTA'
+export { ContactLayout } from './ContactLayout'

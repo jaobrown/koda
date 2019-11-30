@@ -4,9 +4,9 @@ import Layout from "../components/Layout/Layout"
 import Nav from "../components/Nav/Nav"
 import { Section } from '../elements'
 import { Heading1, Heading2, Text, colors, SEO } from '../utils'
-import { FiftyFifty, NewsletterSignUp, InstagramCTA, Footer } from '../layouts';
+import { FiftyFifty, ThreeColumns, NewsletterSignUp, InstagramCTA, Footer } from '../layouts';
 
-import { ButtonPill, ServiceTextWrapper, ServicesText } from '../components/Styled/index-styles'
+import { ButtonPill, ServiceTextWrapper, ServicesText, Pill } from '../components/Styled/index-styles'
 
 import styles from '../assets/svg/svg.module.css'
 
@@ -36,7 +36,7 @@ const IndexPage = () => (
       </div>
     </Section>
     {/* // todo: fix this section */}
-    <Section padding="5rem 1rem">
+    <Section padding="5rem 1rem" backgroundColor="#C2CBCE">
       <ServiceTextWrapper>
         <ServicesText mb="0">Brand Strategy</ServicesText>
         <ServicesText mb="0">Custom Web Development</ServicesText>
@@ -46,30 +46,54 @@ const IndexPage = () => (
     {/* // todo: 5050 section 1 */}
     <Section padding="5rem 1rem">
       <FiftyFifty>
-        <div>
+        <FiftyFifty.Left modifiers="needHelp">
           <Heading2 fontSize="2rem">You need help bringing your vision to life.</Heading2>
           <Text fontSize="1.1rem" mb="2rem" lineHeight="1.5rem">Whether a small business or entreprenuer, we want to give you the tools and deliverables you need to attract your ideal customer, stand out, and increase revenue.</Text>
           <Text fontSize="1.1rem" mb="2rem" lineHeight="1.5rem">
             Through brand strategy and identity design, we put in the work, so you can focus on what you need to so your dream can become a reality.
           </Text>
-        </div>
-        <div>
-          <div style={{ height: '450px', width: '350px', background: 'orange' }}></div>
-        </div>
+        </FiftyFifty.Left>
+        <FiftyFifty.Right>
+          <div style={{ height: '500px', width: '300px', background: 'orange' }}></div>
+        </FiftyFifty.Right>
       </FiftyFifty>
     </Section>
     {/* // todo: 5050 section 2 */}
-    <Section padding="5rem 1rem">
-      <h2 style={{ textAlign: 'center' }}>50 50 section 1</h2>
+    <Section padding="5rem 1rem" backgroundColor="#F7F7F7">
+      <FiftyFifty>
+        <FiftyFifty.Left modifiers={["needHelp", "flip"]}>
+          <Heading2 fontSize="2rem">Why brand strategy?</Heading2>
+          <Text fontSize="1.1rem" mb="2rem" lineHeight="1.5rem">Brand strategy is helping a business develop its personality and attracting its ideal clients through visual design and messaging.</Text>
+          <Text fontSize="1.1rem" mb="3rem" lineHeight="1.5rem">
+            A brand is the feeling and understanding of a business and what it is and stands for. In simple terms, it's your business' personality. A logo is not a brand. It is a part of the identity that portrays your brand.
+          </Text>
+          <FiftyFifty.Button to="/contact">transform your business</FiftyFifty.Button>
+        </FiftyFifty.Left>
+        <FiftyFifty.Right modifiers="flip">
+          <div style={{ height: '500px', width: '300px', background: 'orange' }}></div>
+        </FiftyFifty.Right>
+      </FiftyFifty>
     </Section>
     {/* // todo: recent work */}
     <Section padding="5rem 1rem">
-      <h2 style={{ textAlign: 'center' }}>Recent Work</h2>
+      <ThreeColumns>
+        <Heading2 style={{ gridColumnStart: '2' }} fontSize="2rem" mb="1rem">Recent Work</Heading2>
+        <ThreeColumns.Col1>
+          <div style={{ height: '200px', width: '200px', background: 'orange' }}></div>
+        </ThreeColumns.Col1>
+        <ThreeColumns.Col2>
+          <div style={{ height: '200px', width: '200px', background: 'orange' }}></div>
+        </ThreeColumns.Col2>
+        <ThreeColumns.Col3>
+          <div style={{ height: '200px', width: '200px', background: 'orange' }}></div>
+        </ThreeColumns.Col3>
+        <ThreeColumns.CTA to="/work">see full portfolio</ThreeColumns.CTA>
+      </ThreeColumns>
     </Section>
     <InstagramCTA />
     <NewsletterSignUp />
     <Footer />
-  </Layout>
+  </Layout >
 )
 
 export default IndexPage

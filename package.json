@@ -1,8 +1,8 @@
 {
   "name": "koda-creative-website",
   "private": true,
-  "description": "Website designed by Alex Brown",
-  "version": "0.0.1",
+  "description": "Website for Koda Creative Studio",
+  "version": "0.1.0",
   "author": "Jared Brown <joo.brown72@gmail.com>",
   "dependencies": {
     "animated-scroll-to": "^1.2.2",

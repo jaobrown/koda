@@ -9,9 +9,6 @@ const ContactPage = () => (
     <SEO title="Contact" />
     <Nav />
     <ContactLayout />
-    <InstagramCTA />
-    <NewsletterSignUp />
-    <Footer />
   </Layout>
 )
 

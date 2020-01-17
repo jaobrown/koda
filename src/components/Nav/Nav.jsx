@@ -1,83 +1,29 @@
 import React from "react"
 // import { window } from "browser-monads"
 // import logo from "../../images/logo.png"
-import {Heading2} from '../../utils';
-import { NavLink, NavBar } from './NavStyles';
+import { Heading2 } from '../../utils';
+import { NavLink, NavBar, NavLinkContainer } from './NavStyles';
 
 const Nav = () => (
   <NavBar>
-    {/* <NavLink
-      className={
-        window.location.href.indexOf("about") > 0
-          ? "nav__item--link active"
-          : "nav__item--link"
-      }
-      to="/about"
-    >
-      about
-      </NavLink>
-    <NavLink
-      className={
-        window.location.href.indexOf("work") > 0 ||
-          window.location.href.indexOf("category") > 0
-          ? "nav__item--link active"
-          : "nav__item--link"
-      }
-      to="/work"
-    >
-      work
-      </NavLink>
-    <NavLink
-      className={
-        window.location.href.indexOf("services") > 0
-          ? "nav__item--link active"
-          : "nav__item--link"
-      }
-      to="/services"
-    >
-      services
-      </NavLink> */}
+    <NavLinkContainer>
+      <NavLink to="/about">about</NavLink>
+      <NavLink to="/work">work</NavLink>
+      <NavLink to="/services">services</NavLink>
+    </NavLinkContainer>
     <NavLink
       className="nav__item-center"
       to="/"
-      style={{display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column'}}
+      style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}
     >
-      <Heading2 style={{marginBottom: '-8px', textTransform: 'capitalize', fontSize: '4rem'}}>Koda</Heading2>
-      <span style={{fontSize: '11px'}}>a creative studio</span>
+      <Heading2 style={{ marginBottom: '-8px', textTransform: 'capitalize', fontSize: '4rem' }}>Koda</Heading2>
+      <span style={{ fontSize: '11px' }}>creative studio</span>
     </NavLink>
-    {/* <NavLink
-      className={
-        window.location.href.indexOf("blog") > 0 ||
-          window.location.href.indexOf("category") > 0
-          ? "nav__item--link active"
-          : "nav__item--link"
-      }
-      to="/blog"
-    >
-      blog
-      </NavLink>
-    <NavLink
-      className={
-        window.location.href.indexOf("shop") > 0
-          ? "nav__item--link active"
-          : "nav__item--link"
-      }
-      to="/shop"
-    >
-      shop
-      </NavLink>
-    <NavLink
-      className={
-        window.location.href.indexOf("contact") > 0
-          ? "nav__item--link active"
-          : "nav__item--link"
-      }
-      to="/contact"
-    >
-      contact
-      </NavLink> */}
+    <NavLinkContainer>
+      <NavLink to="/blog">blog</NavLink>
+      <NavLink modifiers="pill" to="/contact">contact</NavLink>
+    </NavLinkContainer>
   </NavBar>
 )
 
 export default Nav
- 

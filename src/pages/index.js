@@ -13,9 +13,8 @@ import styles from '../assets/svg/svg.module.css'
 const IndexPage = () => (
   <Layout>
     <SEO title="Koda Studio" />
-    {/* // todo: nav updates */}
     <Nav />
-    <Section backgroundColor="#F7F7F7" padding="5rem 1rem 3rem 1rem" lgPadding="5rem 6rem 3rem 6rem" xlPadding="5rem 18rem 3rem 18rem">
+    <Section backgroundColor="#F7F7F7" padding="7rem 1rem 5rem 1rem" lgPadding="7rem 6rem 5rem 6rem" xlPadding="7rem 18rem 5rem 18rem">
       <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 0 357.354 45.152" fill="#cec8c0" className={styles.lightLines}>
         <g transform="translate(-2615.609 370.543) rotate(-90)">
           <path d="M354.149,6.343H3.2A3.19,3.19,0,0,1,0,3.172,3.19,3.19,0,0,1,3.2,0H354.149a3.19,3.19,0,0,1,3.2,3.172A3.19,3.19,0,0,1,354.149,6.343Z" transform="translate(370.543 2615.609) rotate(90)" />
@@ -29,8 +28,8 @@ const IndexPage = () => (
       <svg xmlns="http://www.w3.org/2000/svg" height="200px" viewBox="0 0 93.748 322.397" fill="#b26c29" className={styles.orangeDrop1}>
         <path d="M839.623,387.548H563.944a46.8,46.8,0,0,1-46.718-46.875h0A46.8,46.8,0,0,1,564.1,293.955l182.087-.155a93.59,93.59,0,0,1,93.437,93.748Z" transform="translate(387.548 -517.226) rotate(90)" />
       </svg>
-      <Heading1 color={colors.darkgray} style={{ textAlign: 'center', fontSize: '3.5rem', margin: '3rem 0' }}>Humbly helping build better brands</Heading1>
-      <Text style={{ textTransform: 'uppercase', textAlign: 'center', fontSize: '1.1rem', letterSpacing: '2px' }}>Full site coming soon</Text>
+      <Heading1 color={colors.darkgray} style={{ textAlign: 'center', fontSize: '3.5rem', margin: '0rem 0 3rem 0' }}>Humbly helping build better brands</Heading1>
+      {/* <Text style={{ textTransform: 'uppercase', textAlign: 'center', fontSize: '1.1rem', letterSpacing: '2px' }}>Full site coming soon</Text> */}
       <div style={{ width: '100%', display: 'flex', justifyContent: 'center', marginBottom: '30px' }}>
         <ButtonPill onClick={() => animateScrollTo(700)}>talk to us about your business</ButtonPill>
       </div>
@@ -38,9 +37,9 @@ const IndexPage = () => (
     {/* // todo: fix this section */}
     <Section padding="5rem 1rem" backgroundColor="#C2CBCE">
       <ServiceTextWrapper>
-        <ServicesText mb="0">Brand Strategy</ServicesText>
-        <ServicesText mb="0">Custom Web Development</ServicesText>
-        <ServicesText mb="0">Visual Design</ServicesText>
+        <ServicesText mb="0">See our work</ServicesText>
+        <ServicesText mb="0">View our services</ServicesText>
+        <ServicesText mb="0">Read our blog</ServicesText>
       </ServiceTextWrapper>
     </Section>
     {/* // todo: 5050 section 1 */}
@@ -54,7 +53,7 @@ const IndexPage = () => (
           </Text>
         </FiftyFifty.Left>
         <FiftyFifty.Right>
-          <div style={{ height: '500px', width: '300px', background: 'orange' }}></div>
+          <div style={{ height: '500px', width: '400px', background: 'orange' }}></div>
         </FiftyFifty.Right>
       </FiftyFifty>
     </Section>
@@ -90,9 +89,6 @@ const IndexPage = () => (
         <ThreeColumns.CTA to="/work">see full portfolio</ThreeColumns.CTA>
       </ThreeColumns>
     </Section>
-    <InstagramCTA />
-    <NewsletterSignUp />
-    <Footer />
   </Layout >
 )
 

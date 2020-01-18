@@ -20,8 +20,8 @@ const Layout = ({ children }) => (
       <>
         <GlobalStyle />
         <main>{children}</main>
-        <InstagramCTA />
         <NewsletterSignUp />
+        <InstagramCTA />
         <Footer />
       </>
     )}

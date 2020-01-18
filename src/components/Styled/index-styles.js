@@ -12,6 +12,7 @@ export const ShapeGroup1 = styled.div`
 `
 
 export const Pill = styled(Link)`
+text-transform: capitalize;
   color: ${colors.darkgray};
   background-color: transparent;
   text-decoration: none;
@@ -35,6 +36,7 @@ export const Pill = styled(Link)`
 `
 
 export const AnchorPill = styled.a`
+text-transform: capitalize;
   color: ${colors.darkgray};
   text-decoration: none;
   background-color: transparent;
@@ -58,6 +60,7 @@ export const AnchorPill = styled.a`
 `
 
 export const ButtonPill = styled.button`
+  text-transform: capitalize;
   color: ${colors.darkgray};
   background-color: transparent;
   text-decoration: none;

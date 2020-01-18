@@ -16,6 +16,7 @@ const ShapeGroup1 = styled.div`
 `
 
 const Pill = styled(Link)`
+text-transform: capitalize;
   color: ${colors.darkgray};
   text-decoration: none;
   font-size: 13px;

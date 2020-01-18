@@ -24,7 +24,7 @@ const InputGroup = styled.div`
         font-weight: normal;
         font-size: .8rem; 
         color: ${colors.darkgray};
-        text-transform: uppercase;
+        text-transform: capitalize;
         margin-bottom: .4rem;
     }
 
@@ -55,6 +55,7 @@ const SignUpForm = styled.form`
 
         .sign-up__pill {
          margin-left: 1rem;   
+         text-transform: capitalize;
         }
     }
 `
@@ -68,7 +69,7 @@ const SignUpInputGroup = styled.div`
         font-weight: normal;
         font-size: .8rem; 
         color: ${colors.darkgray};
-        text-transform: uppercase;
+        text-transform: capitalize;
         margin-bottom: .4rem;
     }
 
@@ -88,6 +89,7 @@ const SignUpInputGroup = styled.div`
 
 const Pill = styled.button`
   color: ${colors.darkgray};
+  text-transform: capitalize;
   height: 2.5rem;
   text-decoration: none;
   font-size: 13px;

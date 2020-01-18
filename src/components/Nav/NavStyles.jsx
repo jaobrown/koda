@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { applyStyleModifiers } from 'styled-components-modifiers'
 import { Link } from "gatsby"
-import { colors } from '../../utils';
+import { colors, below } from '../../utils';
 
 const NAVLINK_MODIFIERS = {
     pill: () => `
@@ -26,16 +26,25 @@ const NAVLINK_MODIFIERS = {
         } 
         }
     `,
+    withImage: () => `
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    `
 }
 
 export const NavBar = styled.nav`
     max-width: 100vw;
     height: 130px;
-    padding: 0 12%;
+    padding: 0 5rem;
     display: flex;
-    justify-content: space-around;
     align-items: center;
+    justify-content: space-between;
+    background: #f7f7f7;
 
+    ${below.md`
+        display: none;
+    `}
 `
 
 export const NavLink = styled(Link)`
@@ -58,5 +67,5 @@ export const NavLinkContainer = styled.div`
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
 `

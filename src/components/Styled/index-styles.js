@@ -91,17 +91,79 @@ export const ServiceTextWrapper = styled.div`
   } 
 `
 
+export const ServicesLink = styled(Link)`
+  color: ${colors.darkgray};
+  text-decoration: none;
+`
+
 export const ServicesText = styled(Heading3)`
+  position: relative;
+  z-index: 1;
   font-size: 1.1rem;
-  font-weight: lighter;
+  font-weight: bold;
+  cursor: pointer;
+  transition: .2s ease-in;
 
   &:not(:last-child) {
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
   }
 
   @media (min-width: 1023px) {
     margin-bottom: 0 !important;
   } 
+
+  /* before/after/decor */
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: ${colors.red};
+    transition: .2s ease-in;
+  }
+
+  &:hover {
+    opacity: 75%;
+
+    &::after {
+      width: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &:nth-of-type(1) {
+      &::before {
+        content: '01';
+        left: -42.5px;
+      }
+  }
+  &:nth-of-type(2) {
+      &::before {
+        content: '02';
+        left: -55px;
+      }
+  }
+  &:nth-of-type(3) {
+      &::before {
+        content: '03';
+        left: -55px;
+      }
+  }
+
+  &::before {
+    position: absolute;
+    z-index: -1;
+    top: -30px;
+    font-family: 'Majesti', serif;
+    font-weight: bold;
+    color: rgba(255,255,255,.63);
+    font-size: 300%;
+  }
+
+
 `
 
 export const ContactSection = styled(Section)`

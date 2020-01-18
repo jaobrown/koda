@@ -73,6 +73,7 @@ export const FiftyFifty = ({ children }) => {
 
 const ContentLeft = styled.div`
     grid-column: 2 / 3;
+    width: 100%;
 
     @media screen and (max-width: 824px) {
         grid-column: 2 / 3;
@@ -83,6 +84,7 @@ const ContentLeft = styled.div`
 
 const ContentRight = styled.div`
     grid-column: 3 / 4;
+    width: 100%;
 
     @media screen and (max-width: 824px) {
         grid-column: 2 / 3;

@@ -2,7 +2,7 @@ import React from "react"
 import { GlobalStyle } from '../../utils'
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
-import { Footer, InstagramCTA, NewsletterSignUp } from '../../layouts'
+import { Footer } from '../../layouts'
 // import "./layout.css"
 
 const Layout = ({ children }) => (
@@ -20,8 +20,6 @@ const Layout = ({ children }) => (
       <>
         <GlobalStyle />
         <main>{children}</main>
-        <NewsletterSignUp />
-        <InstagramCTA />
         <Footer />
       </>
     )}

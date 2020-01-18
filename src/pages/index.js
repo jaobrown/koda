@@ -4,9 +4,9 @@ import Img from 'gatsby-image'
 import animateScrollTo from 'animated-scroll-to';
 import Layout from "../components/Layout/Layout"
 import Nav from "../components/Nav/Nav"
-import { Section } from '../elements'
-import { Heading1, Heading2, Text, colors, SEO } from '../utils'
-import { FiftyFifty, ThreeColumns } from '../layouts';
+import { Section, HeroTitle } from '../elements'
+import { Heading2, Text, SEO } from '../utils'
+import { FiftyFifty, ThreeColumns, InstagramCTA, NewsletterSignUp } from '../layouts';
 
 import { ButtonPill, ServiceTextWrapper, ServicesText, ServicesLink } from '../components/Styled/index-styles'
 
@@ -30,12 +30,20 @@ const IndexPage = () => {
           }
         }
       }
+      placeholderThree: file(relativePath: { eq: "place_3.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1440) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
     `
   )
 
   const place_1 = data.placeholderOne.childImageSharp.fluid
   const place_2 = data.placeholderTwo.childImageSharp.fluid
+  const place_3 = data.placeholderThree.childImageSharp.fluid
 
   return (
     <Layout>
@@ -44,7 +52,7 @@ const IndexPage = () => {
 
 
       {/* //* Begin hero */}
-      <Section backgroundColor="#F7F7F7" padding="12rem 1rem 9rem 1rem" lgPadding="12rem 6rem 9rem 6rem" xlPadding="12rem 18rem 9rem 18rem">
+      <Section backgroundColor="#F7F7F7" padding="12rem 1rem 9rem 1rem" lgPadding="10rem 6rem 9rem 6rem" xlPadding="10rem 18rem 9rem 18rem">
         <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 0 357.354 45.152" fill="#cec8c0" className={styles.lightLines}>
           <g transform="translate(-2615.609 370.543) rotate(-90)">
             <path d="M354.149,6.343H3.2A3.19,3.19,0,0,1,0,3.172,3.19,3.19,0,0,1,3.2,0H354.149a3.19,3.19,0,0,1,3.2,3.172A3.19,3.19,0,0,1,354.149,6.343Z" transform="translate(370.543 2615.609) rotate(90)" />
@@ -58,7 +66,7 @@ const IndexPage = () => {
         <svg xmlns="http://www.w3.org/2000/svg" height="200px" viewBox="0 0 93.748 322.397" fill="#b26c29" className={styles.orangeDrop1}>
           <path d="M839.623,387.548H563.944a46.8,46.8,0,0,1-46.718-46.875h0A46.8,46.8,0,0,1,564.1,293.955l182.087-.155a93.59,93.59,0,0,1,93.437,93.748Z" transform="translate(387.548 -517.226) rotate(90)" />
         </svg>
-        <Heading1 color={colors.darkgray} style={{ textAlign: 'center', fontSize: '4.5rem', margin: '0rem 0 3rem 0' }}>Humbly helping build better&nbsp;brands</Heading1>
+        <HeroTitle>Humbly helping build better&nbsp;brands</HeroTitle>
         {/* <Text style={{ textTransform: 'uppercase', textAlign: 'center', fontSize: '1.1rem', letterSpacing: '2px' }}>Full site coming soon</Text> */}
         <div style={{ width: '100%', display: 'flex', justifyContent: 'center', marginBottom: '30px' }}>
           <ButtonPill onClick={() => animateScrollTo(900)}>about koda</ButtonPill>
@@ -118,22 +126,24 @@ const IndexPage = () => {
       {/* //* Begin Recent Work */}
       {/* // todo: recent work */}
       <Section padding="5rem 1rem">
+        <Heading2 fontSize="2rem" mb="4rem" textAlign="center">Recent Work</Heading2>
         <ThreeColumns>
-          <Heading2 style={{ gridColumnStart: '2' }} fontSize="2rem" mb="1rem">Recent Work</Heading2>
-          <ThreeColumns.Col1 style={{ gridColumnStart: '2' }}>
-            <div style={{ height: '225px', width: '225px', background: 'orange' }}></div>
+          <ThreeColumns.Col1>
+            <Img fluid={place_3} />
           </ThreeColumns.Col1>
           <ThreeColumns.Col2>
-            <div style={{ height: '225px', width: '225px', background: 'orange' }}></div>
+            <Img fluid={place_3} />
           </ThreeColumns.Col2>
           <ThreeColumns.Col3>
-            <div style={{ height: '225px', width: '200px', background: 'orange' }}></div>
+            <Img fluid={place_3} />
           </ThreeColumns.Col3>
           <ThreeColumns.CTA to="/work">see full portfolio</ThreeColumns.CTA>
         </ThreeColumns>
       </Section>
       {/* //* End Recent Work */}
 
+      <NewsletterSignUp />
+      <InstagramCTA />
 
     </Layout >
   )

@@ -112,7 +112,7 @@ export const InstagramCTA = () => {
       </InstagramFeed>
       <Heading2 mb="1rem" fontSize="28px" textAlign="center">Follow us on Instagram</Heading2>
       <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
-        <AnchorPill href="https://www.instagram.com/koda.studio" target="_blank" rel="noopener noreferrer">@koda.studio</AnchorPill>
+        <AnchorPill href="https://www.instagram.com/koda.studio" target="_blank" rel="noopener noreferrer" style={{ textTransform: 'lowercase' }}>@koda.studio</AnchorPill>
       </div>
     </Section>
   )

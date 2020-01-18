@@ -8,7 +8,7 @@ const ThreeColumnsGrid = styled.div`
     width: 100%;
     display: grid;
     grid-template-columns: 120px 1fr 1fr 1fr 120px;
-    grid-gap: 50px;
+    grid-gap: 70px;
     place-items: center;
 
     @media screen and (max-width: 1170px) {
@@ -47,18 +47,24 @@ export const ThreeColumns = ({ children }) => {
 
 const col1 = styled.div`
     grid-column: 2 / 3;
+    height: 100%;
+    width: 100%;
     @media screen and (max-width: 824px) {
         grid-column: 2 / 3;
     }
 `
 const col2 = styled.div`
     grid-column: 3 / 4;
+    height: 100%;
+    width: 100%;
     @media screen and (max-width: 824px) {
         grid-column: 2 / 3;
     }
 `
 const col3 = styled.div`
     grid-column: 4 / 5;
+    height: 100%;
+    width: 100%;
     @media screen and (max-width: 824px) {
         grid-column: 2 / 3;
     }

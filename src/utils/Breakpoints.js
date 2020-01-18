@@ -2,6 +2,7 @@ import { css } from 'styled-components'
 
 const size = {
   xs: 425,
+  xsish: 480,
   sm: 575,
   smish: 745,
   md: 960,

@@ -8,7 +8,7 @@ const BlogPage = () => (
   <Layout>
     <SEO title="Blog" />
     <Nav />
-    <Heading1>Blog</Heading1>
+    <Heading1 style={{ textAlign: `center`, marginTop: `3rem` }}>Blog Page</Heading1>
     <NewsletterSignUp />
     <InstagramCTA />
   </Layout>

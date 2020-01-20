@@ -90,11 +90,8 @@ const IndexPage = () => {
       <Section padding="5rem 1rem">
         <FiftyFifty>
           <FiftyFifty.Left modifiers="needHelp">
-            <Heading2 fontSize="2rem">You need help bringing your vision to life.</Heading2>
-            <Text fontSize="1.1rem" mb="2rem" lineHeight="1.5rem">Whether a small business or entreprenuer, we want to give you the tools and deliverables you need to attract your ideal customer, stand out, and increase revenue.</Text>
-            <Text fontSize="1.1rem" mb="2rem" lineHeight="1.5rem">
-              Through brand strategy and identity design, we put in the work, so you can focus on what you need to so your dream can become a reality.
-          </Text>
+            <Heading2 fontSize="2rem">You need help bringing your vision to life</Heading2>
+            <Text fontSize="1.1rem" mb="2rem" lineHeight="1.5rem">Whether a small business or entrepreneur, we want to give you the tools and deliverables you need to inspire confidence, make good impressions, and attract quality clients.</Text>
           </FiftyFifty.Left>
           <FiftyFifty.Right>
             <Img fluid={place_1} />
@@ -109,12 +106,9 @@ const IndexPage = () => {
       <Section padding="5rem 1rem" backgroundColor="#F7F7F7">
         <FiftyFifty>
           <FiftyFifty.Left modifiers={["needHelp", "flip"]}>
-            <Heading2 fontSize="2rem">Why brand strategy?</Heading2>
-            <Text fontSize="1.1rem" mb="2rem" lineHeight="1.5rem">Brand strategy is helping a business develop its personality and attracting its ideal clients through visual design and messaging.</Text>
-            <Text fontSize="1.1rem" mb="3rem" lineHeight="1.5rem">
-              A brand is the feeling and understanding of a business and what it is and stands for. In simple terms, it's your business' personality. A logo is not a brand. It is a part of the identity that portrays your brand.
-          </Text>
-            <FiftyFifty.Button to="/contact">transform your business</FiftyFifty.Button>
+            <Heading2 fontSize="2rem">We are humble helpers</Heading2>
+            <Text fontSize="1.1rem" mb="2rem" lineHeight="1.5rem">We are a multi-disciplinary studio and we work with any business, no matter how established. Through branding, creative, and web, we put in the work, and you can focus on what you need to so your vision becomes a reality.</Text>
+            <FiftyFifty.Button to="/contact">about koda</FiftyFifty.Button>
           </FiftyFifty.Left>
           <FiftyFifty.Right modifiers="flip">
             <Img fluid={place_2} style={{ width: '80%' }} />

@@ -16,6 +16,9 @@ const FIFTY_FIFTY_LEFT_MODIFIERS = {
         grid-row: 1;
         grid-column: 3 / 4;
     `,
+    withPseudo: () => `
+        padding-left: 4.5rem;
+    `,
 };
 
 const FIFTY_FIFTY_RIGHT_MODIFIERS = {
@@ -72,6 +75,7 @@ export const FiftyFifty = ({ children }) => {
 };
 
 const ContentLeft = styled.div`
+    box-sizing: border-box;
     grid-column: 2 / 3;
     width: 100%;
 
@@ -83,6 +87,7 @@ const ContentLeft = styled.div`
 `;
 
 const ContentRight = styled.div`
+    box-sizing: border-box;
     grid-column: 3 / 4;
     width: 100%;
 

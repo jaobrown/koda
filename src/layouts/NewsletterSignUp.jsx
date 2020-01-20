@@ -1,7 +1,7 @@
 import React from 'react'
 import { Section } from '../elements'
-import {Heading2, Text} from '../utils';
-import {SignUp} from '../components/Forms/Forms'
+import { Heading2, Text } from '../utils';
+import { SignUp } from '../components/Forms/Forms'
 import styles from '../assets/svg/svg.module.css'
 
 export const NewsletterSignUp = () => {
@@ -27,8 +27,8 @@ export const NewsletterSignUp = () => {
                     <path d="M472.755,6.343H4.278C1.917,6.343,0,4.922,0,3.172S1.917,0,4.278,0H472.755c2.362,0,4.278,1.421,4.278,3.172S475.117,6.343,472.755,6.343Z" transform="translate(331.735 2615.609) rotate(90)" />
                 </g>
             </svg>
-            <Heading2 mb="1rem" fontSize="28px" textAlign="center">Notify me</Heading2>
-            <Text fontSize="1.1rem" textAlign="center" mb="2rem" lineHeight="1.5rem">Be the first know when the full website <br />has been launched.</Text>
+            <Heading2 mb="1rem" fontSize="28px" textAlign="center">Sign Up</Heading2>
+            <Text fontSize="1.1rem" textAlign="center" mb="2rem" lineHeight="1.5rem">For blog updates, freebies, and fun.</Text>
             <SignUp />
         </Section>
     )

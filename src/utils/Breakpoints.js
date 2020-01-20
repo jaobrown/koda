@@ -5,6 +5,7 @@ const size = {
   xsish: 480,
   sm: 575,
   smish: 745,
+  mdish: 824,
   md: 960,
   lg: 1140
 }

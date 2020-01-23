@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Brand Strategy and Visual Identity | Indianapolis, IN || Koda`,
+    title: `Brand Strategy and Visual Identity || Koda Studio `,
     description: `Koda is a brand strategy and visual identity design studio focused on humbly helping build better brands.`,
     author: `@jaobrown`,
   },

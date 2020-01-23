@@ -21,14 +21,16 @@ const InputGroup = styled.div`
     label {
         display: block;
         font-family: 'Soin Sans', 'sans-serif';
-        font-weight: normal;
+        font-weight: lighter;
         font-size: .8rem; 
         color: ${colors.darkgray};
         text-transform: uppercase;
+        letter-spacing: 1px;
         margin-bottom: .4rem;
     }
 
     input,
+    textarea,
     select {
         width: 100%;
         height: 2.5rem;
@@ -41,6 +43,13 @@ const InputGroup = styled.div`
         select {
             font-family: 'Majesti', 'serif' !important;
         }
+    }
+
+    textarea {
+        border-radius: 20px;
+        padding: 1rem;
+        min-height: 150px;
+        resize: vertical;
     }
 `
 
@@ -55,6 +64,7 @@ const SignUpForm = styled.form`
 
         .sign-up__pill {
          margin-left: 1rem;   
+         text-transform: capitalize;
         }
     }
 `
@@ -68,7 +78,7 @@ const SignUpInputGroup = styled.div`
         font-weight: normal;
         font-size: .8rem; 
         color: ${colors.darkgray};
-        text-transform: uppercase;
+        text-transform: capitalize;
         margin-bottom: .4rem;
     }
 
@@ -88,6 +98,7 @@ const SignUpInputGroup = styled.div`
 
 const Pill = styled.button`
   color: ${colors.darkgray};
+  text-transform: capitalize;
   height: 2.5rem;
   text-decoration: none;
   font-size: 13px;
@@ -122,11 +133,11 @@ export const ContactForm = () => {
             </InputGroup>
             <InputGroup>
                 <label htmlFor="email">Email</label>
-                <input id="email" name="email" type="text" placeholder="example@example.com" required />
+                <input id="email" name="email" type="text" placeholder="Example@example.com" required />
             </InputGroup>
             <InputGroup>
-                <label htmlFor="services">What services are you interested in?</label>
-                <input id="services" name="services" type="text" placeholder="Brand strategy and identity, rebrand, web development..." />
+                <label htmlFor="services">Business Type</label>
+                <input id="services" name="services" type="text" placeholder="Product, service, etc..." />
                 {/* <select name="service[]" form="contact">
                     <option value="select">Select</option>
                     <option value="strategy">Brand Strategy</option>
@@ -135,8 +146,12 @@ export const ContactForm = () => {
                 </select> */}
             </InputGroup>
             <InputGroup>
-                <label htmlFor="refferal">How did you hear about us?</label>
-                <input id="refferal" name="referral" type="text" placeholder="Social Media, etc..." />
+                <label htmlFor="refferal">Business Social Media / Website</label>
+                <input id="refferal" name="referral" type="text" placeholder="@koda.studio, etc" />
+            </InputGroup>
+            <InputGroup>
+                <label htmlFor="more">Tell us More</label>
+                <textarea id="more" name="more" type="text" placeholder="Type your message here..." />
             </InputGroup>
             <InputGroup>
                 <Pill type="submit">submit</Pill>

@@ -40,7 +40,21 @@ const IndexPage = () => {
             }
           }
         }
-        placeholderThree: file(relativePath: { eq: "place_3.jpg" }) {
+        placeholderThree: file(relativePath: { eq: "AlecCover.jpg" }) {
+          childImageSharp {
+            fluid(maxWidth: 1440) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        placeholderFour: file(relativePath: { eq: "EcoCover.jpg" }) {
+          childImageSharp {
+            fluid(maxWidth: 1440) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        placeholderFive: file(relativePath: { eq: "WWCover.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 1440) {
               ...GatsbyImageSharpFluid
@@ -54,6 +68,8 @@ const IndexPage = () => {
   const place_1 = data.placeholderOne.childImageSharp.fluid
   const place_2 = data.placeholderTwo.childImageSharp.fluid
   const place_3 = data.placeholderThree.childImageSharp.fluid
+  const place_4 = data.placeholderFour.childImageSharp.fluid
+  const place_5 = data.placeholderFive.childImageSharp.fluid
 
   return (
     <Layout>
@@ -199,10 +215,10 @@ const IndexPage = () => {
             <Img fluid={place_3} />
           </ThreeColumns.Col1>
           <ThreeColumns.Col2>
-            <Img fluid={place_3} />
+            <Img fluid={place_4} />
           </ThreeColumns.Col2>
           <ThreeColumns.Col3>
-            <Img fluid={place_3} />
+            <Img fluid={place_5} />
           </ThreeColumns.Col3>
           <ThreeColumns.CTA to="/work">see full portfolio</ThreeColumns.CTA>
         </ThreeColumns>

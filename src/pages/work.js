@@ -7,45 +7,23 @@ import Nav from "../components/Nav/Nav"
 import { SEO, below, Heading2 } from "../utils"
 import { Pill } from "../components/Styled/index-styles"
 
-const WORK_ITEMS = [
-  {
-    title: "Alec Yoder",
-    categories: ["Brand"],
-    coverPhoto: "data.AlecYoder.childImageSharp.fluid",
-  },
-  {
-    title: "World & Wind Films",
-    categories: ["Brand", "Social", "Web"],
-    coverPhoto: "data.WorldWind.childImageSharp.fluid",
-  },
-  {
-    title: "JBQ",
-    categories: ["Brand", "Social"],
-    coverPhoto: "data.JBQ.childImageSharp.fluid",
-  },
-  {
-    title: "EcoClean",
-    categories: ["Brand", "Web"],
-    coverPhoto: "data.EcoClean.childImageSharp.fluid",
-  },
-]
-
 const Grid = styled.section`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 5%;
   grid-row-gap: 5%;
-  padding: 5rem;
+  padding: 5rem 10rem;
 
   ${below.md`
     grid-template-columns: repeat(2, 1fr);
-    padding: 5rem 2rem;
+    padding: 5rem 8rem;
   `}
 
   ${below.sm`
     grid-template-columns: 1fr;
     grid-column-gap: 0;
     grid-row-gap: 2%;
+    padding: 5rem 4rem;
   `}
 `
 
@@ -136,6 +114,29 @@ const WorkPage = () => {
       }
     `
   )
+
+  const WORK_ITEMS = [
+    {
+      title: "Alec Yoder",
+      categories: ["Brand"],
+      coverPhoto: data.AlecYoder.childImageSharp.fluid,
+    },
+    {
+      title: "World & Wind Films",
+      categories: ["Brand", "Social", "Web"],
+      coverPhoto: data.WorldWind.childImageSharp.fluid,
+    },
+    {
+      title: "JBQ",
+      categories: ["Brand", "Social"],
+      coverPhoto: data.JBQ.childImageSharp.fluid,
+    },
+    {
+      title: "EcoClean",
+      categories: ["Brand", "Web"],
+      coverPhoto: data.EcoClean.childImageSharp.fluid,
+    },
+  ]
 
   return (
     <Layout>

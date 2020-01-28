@@ -1,4 +1,4 @@
-import { css } from 'styled-components'
+import { css } from "styled-components"
 
 const size = {
   xs: 425,
@@ -7,7 +7,7 @@ const size = {
   smish: 745,
   mdish: 824,
   md: 960,
-  lg: 1140
+  lg: 1140,
 }
 
 export const above = Object.keys(size).reduce((acc, label) => {
@@ -15,8 +15,8 @@ export const above = Object.keys(size).reduce((acc, label) => {
     @media (min-width: ${size[label] / 16}em) {
       ${css(...args)}
     }
-  `;
-  return acc;
+  `
+  return acc
 }, {})
 
 export const below = Object.keys(size).reduce((acc, label) => {
@@ -24,6 +24,6 @@ export const below = Object.keys(size).reduce((acc, label) => {
     @media (max-width: ${size[label] / 16}em) {
       ${css(...args)}
     }
-  `;
-  return acc;
+  `
+  return acc
 }, {})

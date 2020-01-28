@@ -6,7 +6,7 @@ import MajestiLightItalic from "../assets/fonts/Majesti-LightItalic.otf"
 import SoinSansMedium from "../assets/fonts/SoinSansNeue-Medium.otf"
 import SoinSansRoman from "../assets/fonts/SoinSansNeue-Roman.otf"
 import SoinSansBold from "../assets/fonts/SoinSansNeue-Bold.otf"
-import { colors } from './Colors'
+import { colors } from "./Colors"
 
 export const GlobalStyle = createGlobalStyle`
   ::selection {

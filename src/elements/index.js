@@ -1,2 +1,2 @@
-export { Section } from './Section';
-export * from './HeroTitle';
+export { Section } from "./Section"
+export * from "./HeroTitle"

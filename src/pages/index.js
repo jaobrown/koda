@@ -40,6 +40,13 @@ const IndexPage = () => {
             }
           }
         }
+        HumbleHelpers: file(relativePath: { eq: "WEb_new.jpg" }) {
+          childImageSharp {
+            fluid(maxWidth: 1440) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         allMdx(
           filter: { fileAbsolutePath: { regex: "/content/work/" } }
           limit: 3
@@ -66,6 +73,7 @@ const IndexPage = () => {
 
   const place_1 = data.placeholderOne.childImageSharp.fluid
   const place_2 = data.placeholderTwo.childImageSharp.fluid
+  const humbleHelpers = data.HumbleHelpers.childImageSharp.fluid
   const place_3 = data.allMdx.edges[0].node.frontmatter.featuredImage.childImageSharp.fluid
   const place_4 = data.allMdx.edges[1].node.frontmatter.featuredImage.childImageSharp.fluid
   const place_5 = data.allMdx.edges[2].node.frontmatter.featuredImage.childImageSharp.fluid
@@ -194,10 +202,10 @@ const IndexPage = () => {
               put in the work, and you can focus on what you need to so your
               vision becomes a reality.
             </Text>
-            <FiftyFifty.Button to="/contact">about koda</FiftyFifty.Button>
+            <FiftyFifty.Button to="/about">about koda</FiftyFifty.Button>
           </FiftyFifty.Left>
           <FiftyFifty.Right modifiers="flip">
-            <Img fluid={place_2} style={{ width: "80%" }} />
+            <Img fluid={humbleHelpers} style={{ width: "80%" }} />
           </FiftyFifty.Right>
         </FiftyFifty>
       </Section>

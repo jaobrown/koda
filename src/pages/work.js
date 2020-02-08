@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 import styled from "styled-components"
 import Layout from "../components/Layout/Layout"
@@ -25,6 +25,11 @@ const Grid = styled.section`
     grid-row-gap: 2%;
     padding: 5rem 4rem;
   `}
+`
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: unset;
 `
 
 const WorkItem = styled.article`
@@ -79,91 +84,51 @@ const CtaSection = styled.section`
   }
 `
 
-const WorkPage = () => {
-  const data = useStaticQuery(
-    graphql`
-      query {
-        AlecYoder: file(relativePath: { eq: "AlecCover.jpg" }) {
-          childImageSharp {
-            fluid(maxWidth: 400) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-        EcoClean: file(relativePath: { eq: "EcoCover.jpg" }) {
-          childImageSharp {
-            fluid(maxWidth: 400) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-        WorldWind: file(relativePath: { eq: "WWCover.jpg" }) {
-          childImageSharp {
-            fluid(maxWidth: 400) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-        JBQ: file(relativePath: { eq: "JBQCover.jpg" }) {
-          childImageSharp {
-            fluid(maxWidth: 400) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-      }
-    `
-  )
-
-  const WORK_ITEMS = [
-    {
-      title: "Alec Yoder",
-      categories: ["Brand"],
-      coverPhoto: data.AlecYoder.childImageSharp.fluid,
-    },
-    {
-      title: "World & Wind Films",
-      categories: ["Brand", "Social", "Web"],
-      coverPhoto: data.WorldWind.childImageSharp.fluid,
-    },
-    {
-      title: "JBQ",
-      categories: ["Brand", "Social"],
-      coverPhoto: data.JBQ.childImageSharp.fluid,
-    },
-    {
-      title: "EcoClean",
-      categories: ["Brand", "Web"],
-      coverPhoto: data.EcoClean.childImageSharp.fluid,
-    },
-  ]
-
+const WorkPage = ({ data }) => {
+  const workItems = { ...data.allMdx }
   return (
     <Layout>
       <SEO title="Work" />
       <Nav />
       <Grid>
-        {WORK_ITEMS.map((work, key) => (
-          <WorkItem key={key}>
-            <WorkItemImg fluid={work.coverPhoto} />
-            <WorkItemDescription>
-              <h3>{work.title}</h3>
-              <ul>
-                {work.categories.map((category, key) => {
-                  const categoryCount = work.categories.length
+        {workItems.edges.map((work, key) => (
+          <StyledLink
+            key={key}
+            to={`/work/${work.node.frontmatter.categories.split(", ")[0]}/${
+              work.node.frontmatter.slug
+            }`}
+          >
+            <WorkItem>
+              <WorkItemImg
+                fluid={
+                  work.node.frontmatter.featuredImage.childImageSharp.fluid
+                }
+              />
+              <WorkItemDescription>
+                <h3>{work.node.frontmatter.title}</h3>
+                <ul>
+                  {work.node.frontmatter.categories
+                    .split(", ")
+                    .map((category, key) => {
+                      const categoryCount = work.node.frontmatter.categories.split(
+                        ", "
+                      ).length
 
-                  return (
-                    <li key={key}>
-                      <em>
-                        {key < categoryCount - 1 ? `${category},` : category}
-                        &ensp;
-                      </em>
-                    </li>
-                  )
-                })}
-              </ul>
-            </WorkItemDescription>
-          </WorkItem>
+                      return (
+                        <li key={key}>
+                          <em>
+                            {key < categoryCount - 1
+                              ? `${category},`
+                              : category}
+                            &ensp;
+                          </em>
+                        </li>
+                      )
+                    })}
+                </ul>
+              </WorkItemDescription>
+            </WorkItem>
+          </StyledLink>
         ))}
       </Grid>
       <CtaSection>
@@ -175,3 +140,26 @@ const WorkPage = () => {
 }
 
 export default WorkPage
+
+export const query = graphql`
+  query {
+    allMdx(filter: { fileAbsolutePath: { regex: "/content/work/" } }) {
+      edges {
+        node {
+          frontmatter {
+            featuredImage {
+              childImageSharp {
+                fluid(maxWidth: 500) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            title
+            slug
+            categories
+          }
+        }
+      }
+    }
+  }
+`

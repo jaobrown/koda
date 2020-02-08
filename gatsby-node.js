@@ -13,7 +13,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             id
             fileAbsolutePath
             frontmatter {
-              path
+              slug
+              categories
             }
           }
         }
@@ -31,13 +32,13 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   pages.forEach(({ node }, index) => {
     node.fileAbsolutePath.includes("blog")
       ? createPage({
-          path: `/blog/${node.frontmatter.path}`,
+          path: `/blog/${node.frontmatter.categories.split(', ')[0]}/${node.frontmatter.slug}`,
           component: path.resolve(`./src/templates/blog-template.jsx`),
           context: { id: node.id },
         })
       : node.fileAbsolutePath.includes("work")
       ? createPage({
-          path: `/work/${node.frontmatter.path}`,
+          path: `/work/${node.frontmatter.categories.split(', ')[0]}/${node.frontmatter.slug}`,
           component: path.resolve(`./src/templates/work-template.jsx`),
           context: { id: node.id },
         })

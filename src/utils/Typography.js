@@ -4,6 +4,8 @@ import styled from "styled-components"
 // 44.504708
 // 72.00861754
 
+export const OrderedList = styled.ol``
+
 export const Text = styled.p`
   font-size: ${props => props.fontSize || "1.5rem"};
   line-height: ${props => props.lineHeight || "2rem"};

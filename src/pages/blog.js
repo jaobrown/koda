@@ -1,10 +1,10 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 import styled from "styled-components"
 import Layout from "../components/Layout/Layout"
 import Nav from "../components/Nav/Nav"
-import { SEO, below, Heading2 } from "../utils"
+import { SEO, below, Heading2, Text } from "../utils"
 import { Pill } from "../components/Styled/index-styles"
 
 const Grid = styled.section`
@@ -27,7 +27,12 @@ const Grid = styled.section`
   `}
 `
 
-const WorkItem = styled.article`
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: unset;
+`
+
+const BlogPost = styled.article`
   ${below.sm`
     &:last-of-type {
       margin-bottom: 6rem;
@@ -35,21 +40,37 @@ const WorkItem = styled.article`
   `}
 `
 
-const WorkItemImg = styled(Img)`
-  margin-bottom: 2rem;
+const BlogPostImg = styled(Img)`
+  margin-bottom: .5rem;
   height: auto;
   width: 100%;
 `
 
-const WorkItemDescription = styled.div`
-  h3 {
-    font-size: 1.3rem;
-    font-family: "Soin Sans", "sans serif";
-    text-transform: uppercase;
+// just define it so we can call in SC
+const StyledHeading2 = styled(Heading2)``
+const BlogPostDescriptionMeta = styled.div``
+const BlogPostDescriptionDate = styled(Text)``
+const BlogPostDescription = styled.div`
+  ${StyledHeading2} {
     font-weight: lighter;
-    margin-bottom: 0.5rem;
-    border-top: 2px solid black;
+    font-size: 2rem;
+    margin-bottom: 0.6rem;
+    border-top: 1px solid black;
     padding-top: 1rem;
+  }
+
+  ${BlogPostDescriptionMeta} {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: .35rem;
+
+    ${BlogPostDescriptionDate} {
+      font-size: .95rem;
+      margin-bottom: 0;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
   }
 
   ul {
@@ -81,79 +102,60 @@ const CtaSection = styled.section`
   }
 `
 
-const BlogPage = () => {
-  const data = useStaticQuery(
-    graphql`
-      query {
-        placeholderOne: file(relativePath: { eq: "gram_1.jpg" }) {
-          childImageSharp {
-            fluid(maxWidth: 600) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-        placeholderTwo: file(relativePath: { eq: "gram_4.jpg" }) {
-          childImageSharp {
-            fluid(maxWidth: 600) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-        placeholderThree: file(relativePath: { eq: "gram_5.jpg" }) {
-          childImageSharp {
-            fluid(maxWidth: 600) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-      }
-    `
-  )
-
-  const WORK_ITEMS = [
-    {
-      title: "Blog Post Title",
-      categories: ["Brand"],
-      coverPhoto: data.placeholderOne.childImageSharp.fluid,
-    },
-    {
-      title: "Blog Post Title",
-      categories: ["Social"],
-      coverPhoto: data.placeholderTwo.childImageSharp.fluid,
-    },
-    {
-      title: "Blog Post Title",
-      categories: ["Web"],
-      coverPhoto: data.placeholderThree.childImageSharp.fluid,
-    },
-  ]
+const BlogPage = ({ data }) => {
+  const blogPosts = { ...data.allMdx }
 
   return (
     <Layout>
-      <SEO title="Work" />
+      <SEO title="Blog" />
       <Nav />
       <Grid>
-        {WORK_ITEMS.map((work, key) => (
-          <WorkItem key={key}>
-            <WorkItemImg fluid={work.coverPhoto} />
-            <WorkItemDescription>
-              <h3>{work.title}</h3>
-              <ul>
-                {work.categories.map((category, key) => {
-                  const categoryCount = work.categories.length
+        {blogPosts.edges.map((post, key) => (
+          <StyledLink
+            key={key}
+            to={`/blog/${post.node.frontmatter.categories.split(", ")[0]}/${
+              post.node.frontmatter.slug
+            }`}
+          >
+            <BlogPost key={key}>
+              <BlogPostImg
+                fluid={
+                  post.node.frontmatter.featuredImage.childImageSharp.fluid
+                }
+              />
+              <BlogPostDescription>
+                <BlogPostDescriptionMeta>
+                  <BlogPostDescriptionDate>
+                    {post.node.frontmatter.date}
+                  </BlogPostDescriptionDate>
+                  <ul>
+                    {post.node.frontmatter.categories
+                      .split(", ")
+                      .map((category, key) => {
+                        const categoryCount = post.node.frontmatter.categories.split(
+                          ", "
+                        ).length
 
-                  return (
-                    <li key={key}>
-                      <em>
-                        {key < categoryCount - 1 ? `${category},` : category}
-                        &ensp;
-                      </em>
-                    </li>
-                  )
-                })}
-              </ul>
-            </WorkItemDescription>
-          </WorkItem>
+                        return (
+                          <li key={key}>
+                            <em>
+                              {key < categoryCount - 1
+                                ? `${category},`
+                                : category}
+                              &ensp;
+                            </em>
+                          </li>
+                        )
+                      })}
+                  </ul>
+                </BlogPostDescriptionMeta>
+                <StyledHeading2>{post.node.frontmatter.title}</StyledHeading2>
+                <Text fontSize="1.1rem" fontWeight="lighter" mb=".5rem">
+                  {post.node.excerpt}
+                </Text>
+              </BlogPostDescription>
+            </BlogPost>
+          </StyledLink>
         ))}
       </Grid>
       <CtaSection>
@@ -165,3 +167,28 @@ const BlogPage = () => {
 }
 
 export default BlogPage
+
+export const query = graphql`
+  query {
+    allMdx(filter: { fileAbsolutePath: { regex: "/content/blog/" } }) {
+      edges {
+        node {
+          frontmatter {
+            categories
+            date(formatString: "MMMM DD, YYYY")
+            featuredImage {
+              childImageSharp {
+                fluid(maxWidth: 500) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            slug
+            title
+          }
+          excerpt(pruneLength: 100)
+        }
+      }
+    }
+  }
+`

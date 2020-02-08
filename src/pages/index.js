@@ -1,5 +1,5 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 import animateScrollTo from "animated-scroll-to"
 import Layout from "../components/Layout/Layout"
@@ -40,24 +40,23 @@ const IndexPage = () => {
             }
           }
         }
-        placeholderThree: file(relativePath: { eq: "AlecCover.jpg" }) {
-          childImageSharp {
-            fluid(maxWidth: 1440) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-        placeholderFour: file(relativePath: { eq: "EcoCover.jpg" }) {
-          childImageSharp {
-            fluid(maxWidth: 1440) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-        placeholderFive: file(relativePath: { eq: "WWCover.jpg" }) {
-          childImageSharp {
-            fluid(maxWidth: 1440) {
-              ...GatsbyImageSharpFluid
+        allMdx(
+          filter: { fileAbsolutePath: { regex: "/content/work/" } }
+          limit: 3
+        ) {
+          edges {
+            node {
+              frontmatter {
+                slug
+                categories
+                featuredImage {
+                  childImageSharp {
+                    fluid(maxWidth: 700) {
+                      ...GatsbyImageSharpFluid
+                    }
+                  }
+                }
+              }
             }
           }
         }
@@ -67,9 +66,9 @@ const IndexPage = () => {
 
   const place_1 = data.placeholderOne.childImageSharp.fluid
   const place_2 = data.placeholderTwo.childImageSharp.fluid
-  const place_3 = data.placeholderThree.childImageSharp.fluid
-  const place_4 = data.placeholderFour.childImageSharp.fluid
-  const place_5 = data.placeholderFive.childImageSharp.fluid
+  const place_3 = data.allMdx.edges[0].node.frontmatter.featuredImage.childImageSharp.fluid
+  const place_4 = data.allMdx.edges[1].node.frontmatter.featuredImage.childImageSharp.fluid
+  const place_5 = data.allMdx.edges[2].node.frontmatter.featuredImage.childImageSharp.fluid
 
   return (
     <Layout>
@@ -212,13 +211,19 @@ const IndexPage = () => {
         </Heading2>
         <ThreeColumns>
           <ThreeColumns.Col1>
-            <Img fluid={place_3} />
+            <Link to={`/work/${data.allMdx.edges[0].node.frontmatter.categories.split(', ')[0]}/${data.allMdx.edges[0].node.frontmatter.slug}`}>
+              <Img fluid={place_3} />
+            </Link>
           </ThreeColumns.Col1>
           <ThreeColumns.Col2>
-            <Img fluid={place_4} />
+            <Link to={`/work/${data.allMdx.edges[1].node.frontmatter.categories.split(', ')[0]}/${data.allMdx.edges[1].node.frontmatter.slug}`}>
+              <Img fluid={place_4} />
+            </Link>
           </ThreeColumns.Col2>
           <ThreeColumns.Col3>
-            <Img fluid={place_5} />
+            <Link to={`/work/${data.allMdx.edges[2].node.frontmatter.categories.split(', ')[0]}/${data.allMdx.edges[2].node.frontmatter.slug}`}>
+              <Img fluid={place_5} />
+            </Link>
           </ThreeColumns.Col3>
           <ThreeColumns.CTA to="/work">see full portfolio</ThreeColumns.CTA>
         </ThreeColumns>

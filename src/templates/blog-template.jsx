@@ -1,14 +1,15 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { MDXProvider } from "@mdx-js/react"
 import styled from "styled-components"
-import Layout from "../components/Layout/Layout"
-import Nav from "../components/Nav/Nav"
-import { InstagramCTA, NewsletterSignUp } from "../layouts"
 import { SEO, below } from "../utils"
 import * as DesignSystem from "../utils/Typography"
+import Layout from "../components/Layout/Layout"
+import Nav from "../components/Nav/Nav"
+import { BackButton } from "../components/BackButton/BackButton"
+import { InstagramCTA } from "../layouts"
 
 const PostWrapper = styled.section`
   margin: 0 auto;
@@ -26,7 +27,7 @@ const PostWrapper = styled.section`
     margin-bottom: 4rem;
   }
 
-  ${below.md`
+  ${below.lg`
     padding: 5rem 3rem;
   `}
 
@@ -39,10 +40,28 @@ const HeroImage = styled(Img)`
   width: 100%;
   height: 480px;
   margin: 0 auto 3rem auto;
+
+  ${below.lg`
+    height: 420px;
+  `}
+
+  ${below.md`
+    height: 380px;
+  `}
+
+  ${below.sm`
+    height: 250px;
+  `}
 `
 
 const Content = styled.article`
   padding: 0 60px;
+  max-width: 1000px;
+  margin: 0 auto;
+
+  ${below.md`
+    padding: 0 16px;
+  `}
 `
 
 const BlogPostTemplate = ({ data: { mdx } }) => {
@@ -52,11 +71,19 @@ const BlogPostTemplate = ({ data: { mdx } }) => {
       <Nav />
       <MDXProvider
         components={{
-          // Map HTML element tag to React component
           h1: DesignSystem.Heading1,
           h2: DesignSystem.Heading2,
           h3: DesignSystem.Heading3,
-          p: DesignSystem.Text,
+          p: props => (
+            <DesignSystem.Text
+              fontSize="1.1rem"
+              mb="2rem"
+              lineHeight="1.85rem"
+              {...props}
+            />
+          ),
+          ol: DesignSystem.OrderedList,
+          li: DesignSystem.Text,
         }}
       >
         <PostWrapper>
@@ -67,10 +94,10 @@ const BlogPostTemplate = ({ data: { mdx } }) => {
           <DesignSystem.Heading3>{mdx.frontmatter.date}</DesignSystem.Heading3>
           <Content>
             <MDXRenderer>{mdx.body}</MDXRenderer>
+            <BackButton to="/blog/">back to blog list</BackButton>
           </Content>
         </PostWrapper>
       </MDXProvider>
-      <NewsletterSignUp />
       <InstagramCTA />
     </Layout>
   )
@@ -79,7 +106,7 @@ const BlogPostTemplate = ({ data: { mdx } }) => {
 export default BlogPostTemplate
 
 export const postQuery = graphql`
-  query BlogPostQuery($id: String) {
+  query BlogPostTemplateQuery($id: String) {
     mdx(id: { eq: $id }) {
       id
       body

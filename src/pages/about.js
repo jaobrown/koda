@@ -11,21 +11,14 @@ const AboutPage = () => {
   const data = useStaticQuery(
     graphql`
       query {
-        placeholderOne: file(relativePath: { eq: "place_1.jpg" }) {
+        ourMissionImage: file(relativePath: { eq: "ourmission.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 1440) {
               ...GatsbyImageSharpFluid
             }
           }
         }
-        placeholderTwo: file(relativePath: { eq: "place_2.jpg" }) {
-          childImageSharp {
-            fluid(maxWidth: 1440) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-        placeholderThree: file(relativePath: { eq: "place_3.jpg" }) {
+        whyUsImage: file(relativePath: { eq: "whyus.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 1440) {
               ...GatsbyImageSharpFluid
@@ -36,9 +29,8 @@ const AboutPage = () => {
     `
   )
 
-  const place_1 = data.placeholderOne.childImageSharp.fluid
-  const place_2 = data.placeholderTwo.childImageSharp.fluid
-  // const place_3 = data.placeholderThree.childImageSharp.fluid
+  const OurMissionImgData = data.ourMissionImage.childImageSharp.fluid
+  const WhyUsImgData = data.whyUsImage.childImageSharp.fluid
 
   return (
     <Layout>
@@ -84,7 +76,7 @@ const AboutPage = () => {
       {/* //* End transform */}
 
       {/* //* Begin mission statement */}
-      <Section padding="5rem 1rem" backgroundColor="#cecece">
+      <Section padding="5rem 1rem" backgroundColor="#cecece"  xxlPadding="5rem 5rem">
         <FiftyFifty>
           <FiftyFifty.Left modifiers={["needHelp", "flip"]}>
             <Heading2 fontSize="2rem">Our mission</Heading2>
@@ -96,7 +88,7 @@ const AboutPage = () => {
             </Text>
           </FiftyFifty.Left>
           <FiftyFifty.Right modifiers="flip">
-            <Img fluid={place_2} />
+            <Img fluid={OurMissionImgData} />
           </FiftyFifty.Right>
         </FiftyFifty>
       </Section>
@@ -104,7 +96,7 @@ const AboutPage = () => {
 
       {/* //* Begin need help */}
       {/* // todo: 5050 section 1 */}
-      <Section padding="5rem 1rem" backgroundColor="#F7F7F7" margin="75px 0">
+      <Section padding="5rem 1rem" backgroundColor="#F7F7F7" margin="75px 0"   xxlPadding="5rem 5rem">
         <FiftyFifty>
           <FiftyFifty.Left modifiers="needHelp">
             <Heading2 fontSize="2rem">Why us?</Heading2>
@@ -117,7 +109,7 @@ const AboutPage = () => {
             </Text>
           </FiftyFifty.Left>
           <FiftyFifty.Right>
-            <Img fluid={place_1} />
+            <Img fluid={WhyUsImgData} />
           </FiftyFifty.Right>
         </FiftyFifty>
       </Section>

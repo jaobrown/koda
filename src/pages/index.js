@@ -26,21 +26,14 @@ const IndexPage = () => {
   const data = useStaticQuery(
     graphql`
       query {
-        placeholderOne: file(relativePath: { eq: "place_1.jpg" }) {
+        yourVisionImage: file(relativePath: { eq: "yourvision.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 1440) {
               ...GatsbyImageSharpFluid
             }
           }
         }
-        placeholderTwo: file(relativePath: { eq: "place_2.jpg" }) {
-          childImageSharp {
-            fluid(maxWidth: 1440) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-        HumbleHelpers: file(relativePath: { eq: "WEb_new.jpg" }) {
+        humbleHelperImage: file(relativePath: { eq: "humblehelpers.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 1440) {
               ...GatsbyImageSharpFluid
@@ -71,12 +64,8 @@ const IndexPage = () => {
     `
   )
 
-  const place_1 = data.placeholderOne.childImageSharp.fluid
-  const place_2 = data.placeholderTwo.childImageSharp.fluid
-  const humbleHelpers = data.HumbleHelpers.childImageSharp.fluid
-  const place_3 = data.allMdx.edges[0].node.frontmatter.featuredImage.childImageSharp.fluid
-  const place_4 = data.allMdx.edges[1].node.frontmatter.featuredImage.childImageSharp.fluid
-  const place_5 = data.allMdx.edges[2].node.frontmatter.featuredImage.childImageSharp.fluid
+  const YourVisionImgData = data.yourVisionImage.childImageSharp.fluid
+  const HumbleHelpersImgData = data.humbleHelperImage.childImageSharp.fluid
 
   return (
     <Layout>
@@ -89,6 +78,7 @@ const IndexPage = () => {
         padding="12rem 1rem 9rem 1rem"
         lgPadding="10rem 6rem 9rem 6rem"
         xlPadding="10rem 18rem 9rem 18rem"
+        xxlPadding="10rem 24rem 9rem 24rem"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -137,7 +127,6 @@ const IndexPage = () => {
           />
         </svg>
         <HeroTitle>Humbly helping build better&nbsp;brands</HeroTitle>
-        {/* <Text style={{ textTransform: 'uppercase', textAlign: 'center', fontSize: '1.1rem', letterSpacing: '2px' }}>Full site coming soon</Text> */}
         <div
           style={{
             width: "100%",
@@ -154,7 +143,7 @@ const IndexPage = () => {
       {/* //* End hero */}
 
       {/* //* Begin Secondary nav */}
-      <Section padding="5rem 1rem" backgroundColor="#C2CBCE">
+      <Section padding="5rem 1rem" backgroundColor="#C2CBCE"  xxlPadding="5rem 15rem">
         <ServiceTextWrapper>
           <ServicesText mb="0">
             <ServicesLink to="/work">See our work</ServicesLink>
@@ -171,10 +160,10 @@ const IndexPage = () => {
 
       {/* //* Begin need help */}
       {/* // todo: 5050 section 1 */}
-      <Section padding="5rem 1rem">
+      <Section padding="5rem 1rem" xxlPadding="5rem 10rem">
         <FiftyFifty>
           <FiftyFifty.Left modifiers="needHelp">
-            <Heading2 fontSize="2rem">
+            <Heading2 fontSize="2rem" maxWidth="500px">
               You need help bringing your vision to life
             </Heading2>
             <Text fontSize="1.1rem" mb="2rem" lineHeight="1.5rem">
@@ -184,7 +173,7 @@ const IndexPage = () => {
             </Text>
           </FiftyFifty.Left>
           <FiftyFifty.Right>
-            <Img fluid={place_1} />
+            <Img fluid={YourVisionImgData} />
           </FiftyFifty.Right>
         </FiftyFifty>
       </Section>
@@ -192,7 +181,7 @@ const IndexPage = () => {
 
       {/* //* Begin why brand */}
       {/* // todo: 5050 section 2 */}
-      <Section padding="5rem 1rem" backgroundColor="#F7F7F7">
+      <Section padding="5rem 1rem" xxlPadding="5rem 10rem" backgroundColor="#F7F7F7">
         <FiftyFifty>
           <FiftyFifty.Left modifiers={["needHelp", "flip"]}>
             <Heading2 fontSize="2rem">We are humble helpers</Heading2>
@@ -205,7 +194,7 @@ const IndexPage = () => {
             <FiftyFifty.Button to="/about">about koda</FiftyFifty.Button>
           </FiftyFifty.Left>
           <FiftyFifty.Right modifiers="flip">
-            <Img fluid={humbleHelpers} style={{ width: "80%" }} />
+            <Img fluid={HumbleHelpersImgData} />
           </FiftyFifty.Right>
         </FiftyFifty>
       </Section>
@@ -213,24 +202,24 @@ const IndexPage = () => {
 
       {/* //* Begin Recent Work */}
       {/* // todo: recent work */}
-      <Section padding="5rem 1rem">
+      <Section padding="5rem 1rem" xxlPadding="5rem 5rem">
         <Heading2 fontSize="2rem" mb="4rem" textAlign="center">
           Recent Work
         </Heading2>
         <ThreeColumns>
           <ThreeColumns.Col1>
             <Link to={`/work/${data.allMdx.edges[0].node.frontmatter.categories.split(', ')[0]}/${data.allMdx.edges[0].node.frontmatter.slug}`}>
-              <Img fluid={place_3} />
+              <Img fluid={data.allMdx.edges[0].node.frontmatter.featuredImage.childImageSharp.fluid} />
             </Link>
           </ThreeColumns.Col1>
           <ThreeColumns.Col2>
             <Link to={`/work/${data.allMdx.edges[1].node.frontmatter.categories.split(', ')[0]}/${data.allMdx.edges[1].node.frontmatter.slug}`}>
-              <Img fluid={place_4} />
+              <Img fluid={data.allMdx.edges[1].node.frontmatter.featuredImage.childImageSharp.fluid} />
             </Link>
           </ThreeColumns.Col2>
           <ThreeColumns.Col3>
             <Link to={`/work/${data.allMdx.edges[2].node.frontmatter.categories.split(', ')[0]}/${data.allMdx.edges[2].node.frontmatter.slug}`}>
-              <Img fluid={place_5} />
+              <Img fluid={data.allMdx.edges[2].node.frontmatter.featuredImage.childImageSharp.fluid} />
             </Link>
           </ThreeColumns.Col3>
           <ThreeColumns.CTA to="/work">see full portfolio</ThreeColumns.CTA>

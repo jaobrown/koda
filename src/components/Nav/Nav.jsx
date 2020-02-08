@@ -1,12 +1,11 @@
 import React from "react"
 // import { window } from "browser-monads"
 // import logo from "../../images/logo.png"
-import { Heading3 } from '../../utils';
-import { NavLink, NavBar, NavLinkContainer } from './NavStyles';
+import { NavLink, NavBar, NavLinkContainer, NavLogo, NavLogoText } from './NavStyles';
 
 const Nav = () => (
   <NavBar>
-    <NavLinkContainer style={{ justifyContent: `flex-start` }}>
+    <NavLogo style={{ justifyContent: `flex-start` }}>
       <NavLink to="/" modifiers="withImage">
         <svg xmlns="http://www.w3.org/2000/svg" width="58.706" height="51.837" viewBox="0 0 58.706 51.837" style={{ marginRight: `2rem` }}>
           <g transform="translate(-56.06 -368.178)">
@@ -27,15 +26,15 @@ const Nav = () => (
             </g>
           </g>
         </svg>
-        <Heading3 style={{ marginBottom: '-5px' }}>Koda Studio</Heading3>
+        <NavLogoText >Koda Studio</NavLogoText>
       </NavLink>
-    </NavLinkContainer>
+    </NavLogo>
     <NavLinkContainer style={{ justifyContent: `flex-end` }}>
       <NavLink style={{ marginLeft: `3rem`, marginBottom: `-4px` }} to="/about">about</NavLink>
       <NavLink style={{ marginLeft: `3rem`, marginBottom: `-4px` }} to="/work">work</NavLink>
       <NavLink style={{ marginLeft: `3rem`, marginBottom: `-4px` }} to="/services">services</NavLink>
       <NavLink style={{ marginLeft: `3rem`, marginBottom: `-4px` }} to="/blog">blog</NavLink>
-      <NavLink style={{ marginLeft: `3rem`, marginBottom: `-4px` }} to="/contact">contact</NavLink>
+      <NavLink style={{ marginLeft: `3rem`, marginBottom: `-4px` }} to="/contact" modifiers="pill">contact</NavLink>
     </NavLinkContainer>
   </NavBar>
 )

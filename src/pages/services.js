@@ -106,21 +106,21 @@ const ServicesPage = () => {
   const data = useStaticQuery(
     graphql`
       query {
-        placeholderOne: file(relativePath: { eq: "place_1.jpg" }) {
+        servicesBrand: file(relativePath: { eq: "servicesbrand.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 1440) {
               ...GatsbyImageSharpFluid
             }
           }
         }
-        placeholderTwo: file(relativePath: { eq: "place_2.jpg" }) {
+        servicesCreative: file(relativePath: { eq: "servicescreative.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 1440) {
               ...GatsbyImageSharpFluid
             }
           }
         }
-        placeholderThree: file(relativePath: { eq: "place_3.jpg" }) {
+        servicesWeb: file(relativePath: { eq: "servicesweb.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 1440) {
               ...GatsbyImageSharpFluid
@@ -131,9 +131,9 @@ const ServicesPage = () => {
     `
   )
 
-  const place_1 = data.placeholderOne.childImageSharp.fluid
-  const place_2 = data.placeholderTwo.childImageSharp.fluid
-  const place_3 = data.placeholderThree.childImageSharp.fluid
+  const brandImg = data.servicesBrand.childImageSharp.fluid
+  const creativeImg = data.servicesCreative.childImageSharp.fluid
+  const webImg = data.servicesWeb.childImageSharp.fluid
 
   return (
     <Layout>
@@ -185,7 +185,7 @@ const ServicesPage = () => {
             <FiftyFifty.Button to="contact">inquire</FiftyFifty.Button>
           </FiftyFifty.Left>
           <FiftyFifty.Right>
-            <Img fluid={place_1} />
+            <Img fluid={brandImg} />
           </FiftyFifty.Right>
         </FiftyFifty>
       </Section>
@@ -211,7 +211,7 @@ const ServicesPage = () => {
             <FiftyFifty.Button to="contact">inquire</FiftyFifty.Button>
           </FiftyFifty.Left>
           <FiftyFifty.Right modifiers="flip">
-            <Img fluid={place_2} />
+            <Img fluid={creativeImg} />
           </FiftyFifty.Right>
         </FiftyFifty>
       </Section>
@@ -236,7 +236,7 @@ const ServicesPage = () => {
             <FiftyFifty.Button to="contact">inquire</FiftyFifty.Button>
           </FiftyFifty.Left>
           <FiftyFifty.Right>
-            <Img fluid={place_3} />
+            <Img fluid={webImg} />
           </FiftyFifty.Right>
         </FiftyFifty>
       </Section>

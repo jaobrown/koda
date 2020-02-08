@@ -21,6 +21,10 @@ const StyledSection = styled.section`
   @media (min-width: 1160px) {
     padding: ${props => props.xlPadding};
   }
+
+  @media (min-width: 1575px) {
+    padding: ${props => props.xxlPadding};
+  }
 `
 
 export const Section = ({
@@ -31,6 +35,7 @@ export const Section = ({
   mdPadding,
   lgPadding,
   xlPadding,
+  xxlPadding,
 }) => {
   return (
     <StyledSection
@@ -38,6 +43,7 @@ export const Section = ({
       mdPadding={mdPadding}
       lgPadding={lgPadding}
       xlPadding={xlPadding}
+      xxlPadding={xxlPadding}
       margin={margin}
       backgroundColor={backgroundColor}
     >

@@ -13,6 +13,6 @@ const StyledHeading1 = styled(Heading1)`
     `}
 `
 
-export const HeroTitle = ({ children }) => {
-  return <StyledHeading1>{children}</StyledHeading1>
+export const HeroTitle = ({ children, ...props }) => {
+  return <StyledHeading1 {...props}>{children}</StyledHeading1>
 }

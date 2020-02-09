@@ -4,8 +4,8 @@ import Img from "gatsby-image"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { MDXProvider } from "@mdx-js/react"
 import styled from "styled-components"
-import { SEO, below } from "../utils"
-import * as DesignSystem from "../utils/Typography"
+import { SEO, below, Heading3, Heading2} from "../utils"
+import * as DesignSystem from "../utils/BlogDesignSystem"
 import Layout from "../components/Layout/Layout"
 import Nav from "../components/Nav/Nav"
 import { BackButton } from "../components/BackButton/BackButton"
@@ -17,14 +17,15 @@ const PostWrapper = styled.section`
   padding: 5rem 10rem;
 
   h2 {
-    font-size: 3.4rem;
+    font-size: 3rem;
     text-align: center;
     margin-bottom: 1rem;
   }
 
   h3 {
+    font-size: 1rem;
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
   }
 
   ${below.lg`
@@ -34,6 +35,11 @@ const PostWrapper = styled.section`
   ${below.sm`
     padding: 5rem 0rem;
   `}
+
+  hr {
+    width: 10%;
+    margin: 0 auto 40px auto;
+  }
 `
 
 const HeroImage = styled(Img)`
@@ -71,27 +77,26 @@ const BlogPostTemplate = ({ data: { mdx } }) => {
       <Nav />
       <MDXProvider
         components={{
-          h1: DesignSystem.Heading1,
-          h2: DesignSystem.Heading2,
-          h3: DesignSystem.Heading3,
-          p: props => (
-            <DesignSystem.Text
-              fontSize="1.1rem"
-              mb="2rem"
-              lineHeight="1.85rem"
-              {...props}
-            />
-          ),
-          ol: DesignSystem.OrderedList,
-          li: DesignSystem.Text,
+          h1: DesignSystem.Head1,
+          h2: DesignSystem.Head2,
+          h3: DesignSystem.Head3,
+          h4: DesignSystem.Head4,
+          h5: DesignSystem.Head5,
+          h6: DesignSystem.Head6,
+          p: DesignSystem.Body,
+          ol: DesignSystem.Ordered,
+          ul: DesignSystem.Unordered,
+          li: DesignSystem.LineItem,
+          blockquote: DesignSystem.BlockQuote,
         }}
       >
         <PostWrapper>
           <HeroImage
             fluid={mdx.frontmatter.featuredImage.childImageSharp.fluid}
           />
-          <DesignSystem.Heading2>{mdx.frontmatter.title}</DesignSystem.Heading2>
-          <DesignSystem.Heading3>{mdx.frontmatter.date}</DesignSystem.Heading3>
+          <Heading2>{mdx.frontmatter.title}</Heading2>
+          <Heading3>{mdx.frontmatter.date}</Heading3>
+          <hr/>
           <Content>
             <MDXRenderer>{mdx.body}</MDXRenderer>
             <BackButton to="/blog/">back to blog list</BackButton>

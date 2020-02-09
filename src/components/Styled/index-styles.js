@@ -18,7 +18,8 @@ text-transform: capitalize;
   text-decoration: none;
   font-size: 13px;
   font-family: 'Soin Sans', 'sans serif';
-  font-weight: normal;
+  font-weight: bold;
+  letter-spacing: 1px;
   border: 2px solid ${colors.red};
   padding: .7rem 1rem;
   border-radius: 100px;
@@ -42,7 +43,8 @@ text-transform: capitalize;
   background-color: transparent;
   font-size: 13px;
   font-family: 'Soin Sans', 'sans serif';
-  font-weight: normal;
+  font-weight: bold;
+  letter-spacing: 1px;
   border: 2px solid ${colors.red};
   padding: .7rem 1rem;
   border-radius: 100px;
@@ -66,7 +68,8 @@ export const ButtonPill = styled.button`
   text-decoration: none;
   font-size: 13px;
   font-family: 'Soin Sans', 'sans serif';
-  font-weight: normal;
+  font-weight: bold;
+  letter-spacing: 1px;
   border: 2px solid ${colors.red};
   padding: .7rem 1rem;
   border-radius: 100px;
@@ -191,7 +194,7 @@ export const ContactText = styled(Text)`
   ::before {
     content: '';
     position: absolute;
-    top: 10px;
+    top: 0px;
     bottom: 0;
     left: -3.5rem;
     width: 2px;

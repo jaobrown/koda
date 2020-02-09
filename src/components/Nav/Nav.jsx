@@ -30,11 +30,11 @@ const Nav = () => (
       </NavLink>
     </NavLogo>
     <NavLinkContainer style={{ justifyContent: `flex-end` }}>
-      <NavLink style={{ marginLeft: `3rem`, marginBottom: `-4px` }} to="/about">about</NavLink>
-      <NavLink style={{ marginLeft: `3rem`, marginBottom: `-4px` }} to="/work">work</NavLink>
-      <NavLink style={{ marginLeft: `3rem`, marginBottom: `-4px` }} to="/services">services</NavLink>
-      <NavLink style={{ marginLeft: `3rem`, marginBottom: `-4px` }} to="/blog">blog</NavLink>
-      <NavLink style={{ marginLeft: `3rem`, marginBottom: `-4px` }} to="/contact" modifiers="pill">contact</NavLink>
+      <NavLink style={{ marginLeft: `3rem`, marginBottom: `-4px` }} modifiers="animated" to="/about">about</NavLink>
+      <NavLink style={{ marginLeft: `3rem`, marginBottom: `-4px` }} modifiers="animated" to="/work">work</NavLink>
+      <NavLink style={{ marginLeft: `3rem`, marginBottom: `-4px` }} modifiers="animated" to="/services">services</NavLink>
+      <NavLink style={{ marginLeft: `3rem`, marginBottom: `-4px` }} modifiers="animated" to="/blog">blog</NavLink>
+      <NavLink style={{ marginLeft: `3rem`, marginBottom: `-4px` }} modifiers="animated" to="/contact">contact</NavLink>
     </NavLinkContainer>
   </NavBar>
 )

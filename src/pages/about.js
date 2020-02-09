@@ -11,14 +11,14 @@ const AboutPage = () => {
   const data = useStaticQuery(
     graphql`
       query {
-        ourMissionImage: file(relativePath: { eq: "ourmission.jpg" }) {
+        ourMissionImage: file(relativePath: { eq: "our_mission.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 1440) {
               ...GatsbyImageSharpFluid
             }
           }
         }
-        whyUsImage: file(relativePath: { eq: "whyus.jpg" }) {
+        whyUsImage: file(relativePath: { eq: "why_us.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 1440) {
               ...GatsbyImageSharpFluid
@@ -68,7 +68,7 @@ const AboutPage = () => {
           mb="0"
           textAlign="center"
           fontSize="1.3rem"
-          style={{ lineHeight: `1.618rem` }}
+          style={{ lineHeight: `1.618rem`, letterSpacing: `2.5px` }}
         >
           let us help you transform your business
         </Heading3>
@@ -78,8 +78,8 @@ const AboutPage = () => {
       {/* //* Begin mission statement */}
       <Section padding="5rem 1rem" backgroundColor="#cecece"  xxlPadding="5rem 5rem">
         <FiftyFifty>
-          <FiftyFifty.Left modifiers={["needHelp", "flip"]}>
-            <Heading2 fontSize="2rem">Our mission</Heading2>
+          <FiftyFifty.Left modifiers={["needHelp", "flip", "humbleHelpers"]}>
+            <Heading2 fontSize="2rem" mb="2rem">Our mission</Heading2>
             <Text fontSize="1.1rem" mb="2rem" lineHeight="1.5rem">
               Koda Studio works with good people to humbly help them build
               better brands. Along with providing incredible design, Koda cares
@@ -96,10 +96,10 @@ const AboutPage = () => {
 
       {/* //* Begin need help */}
       {/* // todo: 5050 section 1 */}
-      <Section padding="5rem 1rem" backgroundColor="#F7F7F7" margin="75px 0"   xxlPadding="5rem 5rem">
+      <Section padding="5rem 1rem" backgroundColor="#F7F7F7" margin="75px 0"  xxlPadding="5rem 5rem">
         <FiftyFifty>
-          <FiftyFifty.Left modifiers="needHelp">
-            <Heading2 fontSize="2rem">Why us?</Heading2>
+          <FiftyFifty.Left modifiers={["needHelp", "whyUs"]}>
+            <Heading2 fontSize="2rem" mb="2rem">Why us?</Heading2>
             <Text fontSize="1.1rem" mb="2rem" lineHeight="1.5rem">
               Your vision brought you here. You are your business, and your
               involvement in defining your brand is vital. We want to listen to

@@ -18,6 +18,7 @@ export const Text = styled.p`
   text-align: ${props => props.textAlign || "left"};
   font-display: fallback;
   max-width: ${props => props.maxWidth || "auto"};
+  letter-spacing: 1px;
 `
 
 export const Heading3 = styled.h3`
@@ -46,6 +47,7 @@ export const Heading2 = styled.h2`
   text-align: ${props => props.textAlign || "left"};
   max-width: ${props => props.maxWidth || "auto"};
   font-display: fallback;
+  letter-spacing: 1px;
 `
 
 export const Heading1 = styled.h1`
@@ -59,4 +61,5 @@ export const Heading1 = styled.h1`
   text-align: ${props => props.textAlign || "left"};
   font-display: fallback;
   max-width: ${props => props.maxWidth || "auto"};
+  letter-spacing: 1px;
 `

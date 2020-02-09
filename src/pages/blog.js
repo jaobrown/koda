@@ -52,8 +52,8 @@ const BlogPostDescriptionMeta = styled.div``
 const BlogPostDescriptionDate = styled(Text)``
 const BlogPostDescription = styled.div`
   ${StyledHeading2} {
-    font-weight: lighter;
-    font-size: 2rem;
+    font-weight: bold;
+    font-size: 1.618rem;
     margin-bottom: 0.6rem;
     border-top: 1px solid black;
     padding-top: 1rem;
@@ -150,7 +150,7 @@ const BlogPage = ({ data }) => {
                   </ul>
                 </BlogPostDescriptionMeta>
                 <StyledHeading2>{post.node.frontmatter.title}</StyledHeading2>
-                <Text fontSize="1.1rem" fontWeight="lighter" mb=".5rem">
+                <Text fontSize="1.1rem" fontWeight="lighter" mb=".5rem" lineHeight="1.5rem">
                   {post.node.excerpt}
                 </Text>
               </BlogPostDescription>

@@ -17,6 +17,20 @@ const FIFTY_FIFTY_LEFT_MODIFIERS = {
   withPseudo: () => `
         padding-left: 4.5rem;
     `,
+  humbleHelpers: () => `
+    padding-left: 3rem;
+
+    @media screen and (max-width: 824px) {
+      padding-left: 0;
+    }
+  `,
+  whyUs: () => `
+  padding-right: 3rem;
+
+  @media screen and (max-width: 824px) {
+    padding-right: 0;
+  }
+`,
 }
 
 const FIFTY_FIFTY_RIGHT_MODIFIERS = {
@@ -92,7 +106,10 @@ const ContentRight = styled.div`
   ${applyStyleModifiers(FIFTY_FIFTY_RIGHT_MODIFIERS)}
 `
 
-const FiftyFiftyButton = styled(Pill)``
+const FiftyFiftyButton = styled(Pill)`
+  font-weight: bold;
+  letter-spacing: 1px;
+`
 
 FiftyFifty.Left = ContentLeft
 FiftyFifty.Right = ContentRight

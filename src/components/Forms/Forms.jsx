@@ -78,7 +78,8 @@ const SignUpInputGroup = styled.div`
         font-weight: normal;
         font-size: .8rem; 
         color: ${colors.darkgray};
-        text-transform: capitalize;
+        text-transform: uppercase;
+        letter-spacing: 1px;
         margin-bottom: .4rem;
     }
 
@@ -103,7 +104,8 @@ const Pill = styled.button`
   text-decoration: none;
   font-size: 13px;
   font-family: 'Soin Sans', 'sans serif';
-  font-weight: normal;
+  font-weight: bold;
+  letter-spacing: 1px;
   border: 2px solid ${props => props.borderColor || colors.red};
   padding: 0 1rem;
   border-radius: 100px;

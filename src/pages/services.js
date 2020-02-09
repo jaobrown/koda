@@ -106,21 +106,21 @@ const ServicesPage = () => {
   const data = useStaticQuery(
     graphql`
       query {
-        servicesBrand: file(relativePath: { eq: "servicesbrand.jpg" }) {
+        servicesBrand: file(relativePath: { eq: "brand.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 1440) {
               ...GatsbyImageSharpFluid
             }
           }
         }
-        servicesCreative: file(relativePath: { eq: "servicescreative.jpg" }) {
+        servicesCreative: file(relativePath: { eq: "creative.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 1440) {
               ...GatsbyImageSharpFluid
             }
           }
         }
-        servicesWeb: file(relativePath: { eq: "servicesweb.jpg" }) {
+        servicesWeb: file(relativePath: { eq: "web.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 1440) {
               ...GatsbyImageSharpFluid
@@ -169,7 +169,7 @@ const ServicesPage = () => {
       {/* // todo: 5050 section 1 */}
       <Section padding="5rem 1rem" backgroundColor="#C2CBCE" margin="75px 0">
         <FiftyFifty>
-          <FiftyFifty.Left modifiers={["needHelp", "withPseudo"]}>
+          <FiftyFifty.Left modifiers={["needHelp", "withPseudo", "whyUs"]}>
             <StyledHeading3 modifiers="one">BRAND</StyledHeading3>
             <Text fontSize="1.1rem" mb="2rem" lineHeight="1.5rem">
               We humbly help build your brand. We want to identify your needs
@@ -177,10 +177,10 @@ const ServicesPage = () => {
               of.
             </Text>
             <StyledUL>
-              <li>Exploration &amp; Discovery</li>
-              <li>Strategy Design</li>
-              <li>Visual Identity</li>
-              <li>Implementation</li>
+              <li style={{letterSpacing: `.75px`}}>Exploration &amp; Discovery</li>
+              <li style={{letterSpacing: `.75px`}}>Strategy Design</li>
+              <li style={{letterSpacing: `.75px`}}>Visual Identity</li>
+              <li style={{letterSpacing: `.75px`}}>Implementation</li>
             </StyledUL>
             <FiftyFifty.Button to="contact">inquire</FiftyFifty.Button>
           </FiftyFifty.Left>
@@ -202,11 +202,11 @@ const ServicesPage = () => {
               content, photo, video, to motion graphics and print design.
             </Text>
             <StyledUL>
-              <li>Photography</li>
-              <li>Video</li>
-              <li>Motion graphics</li>
-              <li>Print design</li>
-              <li>Honestly, almost anything else you need designed</li>
+              <li  style={{letterSpacing: `.75px`}}>Photography</li>
+              <li  style={{letterSpacing: `.75px`}}>Video</li>
+              <li  style={{letterSpacing: `.75px`}}>Motion graphics</li>
+              <li  style={{letterSpacing: `.75px`}}>Print design</li>
+              <li  style={{letterSpacing: `.75px`}}>Social Media Content</li>
             </StyledUL>
             <FiftyFifty.Button to="contact">inquire</FiftyFifty.Button>
           </FiftyFifty.Left>
@@ -221,17 +221,17 @@ const ServicesPage = () => {
       {/* // todo: 5050 section 1 */}
       <Section padding="5rem 1rem" backgroundColor="#C7C7C7" margin="75px 0">
         <FiftyFifty>
-          <FiftyFifty.Left modifiers={["needHelp", "withPseudo"]}>
+          <FiftyFifty.Left modifiers={["needHelp", "withPseudo", "whyUs"]}>
             <StyledHeading3 modifiers="three">Web</StyledHeading3>
             <Text fontSize="1.1rem" mb="2rem" lineHeight="1.5rem">
               We build thoughtfully crafted brand websites that are useful,
               useable, and desirable.
             </Text>
             <StyledUL>
-              <li>Exploration &amp; Discovery</li>
-              <li>Design</li>
-              <li>Development</li>
-              <li>Ongoing support, and new features</li>
+              <li style={{letterSpacing: `.75px`}}>Exploration &amp; Discovery</li>
+              <li style={{letterSpacing: `.75px`}}>Design</li>
+              <li style={{letterSpacing: `.75px`}}>Development</li>
+              <li style={{letterSpacing: `.75px`}}>Ongoing support, and new features</li>
             </StyledUL>
             <FiftyFifty.Button to="contact">inquire</FiftyFifty.Button>
           </FiftyFifty.Left>
@@ -247,7 +247,7 @@ const ServicesPage = () => {
         lgPadding="5rem 1rem 6rem 1rem"
         xlPadding="3rem 1rem 8rem 1rem"
       >
-        <Heading2 textAlign="center" fontSize="2.3rem" mb="4rem">
+        <Heading2 textAlign="center" fontSize="2.3rem" mb="6rem">
           Why invest?
         </Heading2>
         <WhyInvestGrid>
@@ -346,7 +346,7 @@ const ServicesPage = () => {
           </div>
         </WhyInvestGrid>
         <div style={{ width: `100%`, display: `grid`, placeItems: `center` }}>
-          <Pill to="contact">cta goes here ok</Pill>
+          <Pill to="contact">Reach out to us</Pill>
         </div>
       </Section>
 

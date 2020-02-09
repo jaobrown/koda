@@ -66,6 +66,8 @@ const col3 = styled.div`
   }
 `
 const ThreeColCTA = styled(Pill)`
+  font-weight: bold;
+  letter-spacing: 1px;
   grid-column: 3 / 4;
   @media screen and (max-width: 824px) {
     grid-column: 2 / 3;

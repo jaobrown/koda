@@ -41,17 +41,15 @@ const WorkItem = styled.article`
 `
 
 const WorkItemImg = styled(Img)`
-  margin-bottom: 2rem;
+  margin-bottom: .75rem;
 `
 
 const WorkItemDescription = styled.div`
-  h3 {
-    font-size: 1.3rem;
-    font-family: "Soin Sans", "sans serif";
-    text-transform: uppercase;
-    font-weight: lighter;
-    margin-bottom: 0.5rem;
-    border-top: 2px solid black;
+  h2 {
+    font-weight: bold;
+    font-size: 1.618rem;
+    margin-bottom: 0.6rem;
+    border-top: 1px solid black;
     padding-top: 1rem;
   }
 
@@ -62,6 +60,7 @@ const WorkItemDescription = styled.div`
       font-size: 1rem;
       font-weight: lighter;
       font-family: "Majesti", "serif";
+      margin-bottom: .75rem;
     }
   }
 `
@@ -79,7 +78,6 @@ const CtaSection = styled.section`
     ${below.sm`
       margin-left: auto;
       margin-right: auto;
-      font-size: 2rem;
     `}
   }
 `
@@ -105,7 +103,6 @@ const WorkPage = ({ data }) => {
                 }
               />
               <WorkItemDescription>
-                <h3>{work.node.frontmatter.title}</h3>
                 <ul>
                   {work.node.frontmatter.categories
                     .split(", ")
@@ -126,13 +123,14 @@ const WorkPage = ({ data }) => {
                       )
                     })}
                 </ul>
+                <Heading2>{work.node.frontmatter.title}</Heading2>
               </WorkItemDescription>
             </WorkItem>
           </StyledLink>
         ))}
       </Grid>
       <CtaSection>
-        <Heading2 mb="2rem">Like what you&nbsp;see?</Heading2>
+        <Heading2 mb="2rem" fontSize="2rem">Like what you&nbsp;see?</Heading2>
         <Pill to="services">view our services</Pill>
       </CtaSection>
     </Layout>

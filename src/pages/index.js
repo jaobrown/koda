@@ -1,6 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import Img from "gatsby-image"
+import styled from "styled-components"
 import animateScrollTo from "animated-scroll-to"
 import Layout from "../components/Layout/Layout"
 import Nav from "../components/Nav/Nav"
@@ -22,18 +23,45 @@ import {
 
 import styles from "../assets/svg/svg.module.css"
 
+const StyledLink = styled(Link)`
+  display: block;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(95%);
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    border: 3px solid #853526;
+    transition: .2s cubic-bezier(0.19, 1, 0.22, 1) transform;
+  }
+
+  &:hover {
+    &::after {
+      transform: translate(-50%,-50%) scale(105%);
+    }
+  }
+`
+
 const IndexPage = () => {
   const data = useStaticQuery(
     graphql`
       query {
-        yourVisionImage: file(relativePath: { eq: "yourvision.jpg" }) {
+        yourVisionImage: file(relativePath: { eq: "your_vision.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 1440) {
               ...GatsbyImageSharpFluid
             }
           }
         }
-        humbleHelperImage: file(relativePath: { eq: "humblehelpers.jpg" }) {
+        humbleHelperImage: file(relativePath: { eq: "humble_helpers.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 1440) {
               ...GatsbyImageSharpFluid
@@ -143,7 +171,11 @@ const IndexPage = () => {
       {/* //* End hero */}
 
       {/* //* Begin Secondary nav */}
-      <Section padding="5rem 1rem" backgroundColor="#C2CBCE"  xxlPadding="5rem 15rem">
+      <Section
+        padding="5rem 1rem"
+        backgroundColor="#C2CBCE"
+        xxlPadding="5rem 15rem"
+      >
         <ServiceTextWrapper>
           <ServicesText mb="0">
             <ServicesLink to="/work">See our work</ServicesLink>
@@ -163,10 +195,15 @@ const IndexPage = () => {
       <Section padding="5rem 1rem" xxlPadding="5rem 10rem">
         <FiftyFifty>
           <FiftyFifty.Left modifiers="needHelp">
-            <Heading2 fontSize="2rem" maxWidth="500px">
+            <Heading2 fontSize="2rem" maxWidth="400px" mb="2rem">
               You need help bringing your vision to life
             </Heading2>
-            <Text fontSize="1.1rem" mb="2rem" lineHeight="1.5rem">
+            <Text
+              fontSize="1.1rem"
+              mb="2rem"
+              lineHeight="1.5rem"
+              maxWidth="400px"
+            >
               Whether a small business or entrepreneur, we want to give you the
               tools and deliverables you need to inspire confidence, make good
               impressions, and attract quality clients.
@@ -181,11 +218,17 @@ const IndexPage = () => {
 
       {/* //* Begin why brand */}
       {/* // todo: 5050 section 2 */}
-      <Section padding="5rem 1rem" xxlPadding="5rem 10rem" backgroundColor="#F7F7F7">
+      <Section
+        padding="5rem 1rem"
+        xxlPadding="5rem 10rem"
+        backgroundColor="#F7F7F7"
+      >
         <FiftyFifty>
-          <FiftyFifty.Left modifiers={["needHelp", "flip"]}>
-            <Heading2 fontSize="2rem">We are humble helpers</Heading2>
-            <Text fontSize="1.1rem" mb="2rem" lineHeight="1.5rem">
+          <FiftyFifty.Left modifiers={["needHelp", "flip", "humbleHelpers"]}>
+            <Heading2 fontSize="2rem" mb="2rem">
+              We are humble helpers
+            </Heading2>
+            <Text fontSize="1.1rem" mb="4rem" lineHeight="1.5rem">
               We are a multi-disciplinary studio and we work with any business,
               no matter how established. Through branding, creative, and web, we
               put in the work, and you can focus on what you need to so your
@@ -208,19 +251,46 @@ const IndexPage = () => {
         </Heading2>
         <ThreeColumns>
           <ThreeColumns.Col1>
-            <Link to={`/work/${data.allMdx.edges[0].node.frontmatter.categories.split(', ')[0]}/${data.allMdx.edges[0].node.frontmatter.slug}`}>
-              <Img fluid={data.allMdx.edges[0].node.frontmatter.featuredImage.childImageSharp.fluid} />
-            </Link>
+            <StyledLink
+              to={`/work/${
+                data.allMdx.edges[0].node.frontmatter.categories.split(", ")[0]
+              }/${data.allMdx.edges[0].node.frontmatter.slug}`}
+            >
+              <Img
+                fluid={
+                  data.allMdx.edges[0].node.frontmatter.featuredImage
+                    .childImageSharp.fluid
+                }
+              />
+            </StyledLink>
           </ThreeColumns.Col1>
           <ThreeColumns.Col2>
-            <Link to={`/work/${data.allMdx.edges[1].node.frontmatter.categories.split(', ')[0]}/${data.allMdx.edges[1].node.frontmatter.slug}`}>
-              <Img fluid={data.allMdx.edges[1].node.frontmatter.featuredImage.childImageSharp.fluid} />
-            </Link>
+            <StyledLink
+              to={`/work/${
+                data.allMdx.edges[1].node.frontmatter.categories.split(", ")[0]
+              }/${data.allMdx.edges[1].node.frontmatter.slug}`}
+            >
+              <Img
+                fluid={
+                  data.allMdx.edges[1].node.frontmatter.featuredImage
+                    .childImageSharp.fluid
+                }
+              />
+            </StyledLink>
           </ThreeColumns.Col2>
           <ThreeColumns.Col3>
-            <Link to={`/work/${data.allMdx.edges[2].node.frontmatter.categories.split(', ')[0]}/${data.allMdx.edges[2].node.frontmatter.slug}`}>
-              <Img fluid={data.allMdx.edges[2].node.frontmatter.featuredImage.childImageSharp.fluid} />
-            </Link>
+            <StyledLink
+              to={`/work/${
+                data.allMdx.edges[2].node.frontmatter.categories.split(", ")[0]
+              }/${data.allMdx.edges[2].node.frontmatter.slug}`}
+            >
+              <Img
+                fluid={
+                  data.allMdx.edges[2].node.frontmatter.featuredImage
+                    .childImageSharp.fluid
+                }
+              />
+            </StyledLink>
           </ThreeColumns.Col3>
           <ThreeColumns.CTA to="/work">see full portfolio</ThreeColumns.CTA>
         </ThreeColumns>

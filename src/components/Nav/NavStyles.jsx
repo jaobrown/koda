@@ -4,28 +4,27 @@ import { Link } from "gatsby"
 import { colors, below, Heading3 } from "../../utils"
 
 const NAVLINK_MODIFIERS = {
-  pill: () => `
-        color: ${colors.darkgray};
-        background-color: transparent;
-        text-decoration: none;
-        font-size: 12px;
-        font-family: 'Soin Sans', 'sans serif';
-        font-weight: normal;
-        border: 2px solid ${colors.red};
-        padding: 1rem 1.25rem .85rem 1.25rem;
-        border-radius: 100px;
-        text-align: center;
-    
-        transition: .2s ease-in-out;
-        cursor: pointer;
-    
-        @media (min-width: 500px) {
-        :hover {
-            background-color: ${colors.red};
-            color: #ffffff;
-        } 
-        }
-    `,
+  animated: () => `
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -6px;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: ${colors.red};
+      transition: 0.2s ease-in;
+    }
+
+    &:hover {
+      opacity: 75%;
+
+      &::after {
+        width: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  `,
   withImage: () => `
         display: flex;
         align-items: center;
@@ -48,6 +47,7 @@ export const NavBar = styled.nav`
 `
 
 export const NavLink = styled(Link)`
+  position: relative;
   font-family: "Soin Sans", "serif";
   font-size: 12px;
   font-weight: normal;
@@ -55,6 +55,8 @@ export const NavLink = styled(Link)`
   text-transform: uppercase;
   letter-spacing: 1px;
   color: ${colors.darkgray};
+  cursor: pointer;
+  transition: 0.2s ease-in;
 
   ${applyStyleModifiers(NAVLINK_MODIFIERS)}
 `
@@ -67,12 +69,12 @@ export const NavLogo = styled.div`
   justify-content: space-around;
 
   ${NavLogoText} {
-      margin-bottom: -5px;
+    margin-bottom: -5px;
 
-      ${below.sm`
+    ${below.sm`
         font-size: 150%;
       `}
-      ${below.xs`
+    ${below.xs`
         font-size: 120%;
         margin-left: -15px;
       `}

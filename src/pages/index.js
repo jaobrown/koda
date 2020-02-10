@@ -103,7 +103,7 @@ const IndexPage = () => {
       {/* //* Begin hero */}
       <Section
         backgroundColor="#F7F7F7"
-        padding="12rem 1rem 9rem 1rem"
+        padding="9rem 1rem 9rem 1rem"
         lgPadding="10rem 6rem 9rem 6rem"
         xlPadding="10rem 18rem 9rem 18rem"
         xxlPadding="10rem 24rem 9rem 24rem"

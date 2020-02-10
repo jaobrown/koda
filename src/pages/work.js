@@ -12,18 +12,16 @@ const Grid = styled.section`
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 5%;
   grid-row-gap: 5%;
-  padding: 5rem 10rem;
+  padding: 5rem 10vw;
 
   ${below.md`
     grid-template-columns: repeat(2, 1fr);
-    padding: 5rem 8rem;
   `}
 
   ${below.sm`
     grid-template-columns: 1fr;
     grid-column-gap: 0;
     grid-row-gap: 2%;
-    padding: 5rem 4rem;
   `}
 `
 
@@ -35,7 +33,7 @@ const StyledLink = styled(Link)`
 const WorkItem = styled.article`
   ${below.sm`
     &:last-of-type {
-      margin-bottom: 6rem;
+      margin-bottom: 2rem;
     }
   `}
 `
@@ -71,11 +69,12 @@ const CtaSection = styled.section`
   padding: 5rem;
 
   ${below.sm`
-    padding: 3rem 2rem 5rem 2rem;
+    padding: 5rem 2rem 5rem 2rem;
   `}
 
   h2 {
     ${below.sm`
+      font-size: 1.6rem;
       margin-left: auto;
       margin-right: auto;
     `}

@@ -1,10 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
+import {below} from '../utils'
 
 const GalleryLayout = styled.section`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
+
+  ${below.sm`
+    grid-gap: 10px;
+  `}
 
   p {
     margin: 0;

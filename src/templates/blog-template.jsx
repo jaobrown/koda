@@ -14,7 +14,7 @@ import { InstagramCTA } from "../layouts"
 const PostWrapper = styled.section`
   margin: 0 auto;
   max-width: 1375px;
-  padding: 5rem 10rem;
+  padding: 3rem 10rem 5rem 10rem;
 
   h2 {
     font-size: 3rem;
@@ -91,6 +91,7 @@ const BlogPostTemplate = ({ data: { mdx } }) => {
         }}
       >
         <PostWrapper>
+        <BackButton to="/blog/">back to blog list</BackButton>
           <HeroImage
             fluid={mdx.frontmatter.featuredImage.childImageSharp.fluid}
           />

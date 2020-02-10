@@ -7,14 +7,14 @@ import styled from "styled-components"
 import Layout from "../components/Layout/Layout"
 import Nav from "../components/Nav/Nav"
 import { InstagramCTA, NewsletterSignUp } from "../layouts"
-import { SEO, below } from "../utils"
-import * as DesignSystem from "../utils/Typography"
+import { SEO, below, Text, Heading2 } from "../utils"
+import * as DesignSystem from "../utils/BlogDesignSystem"
 import { BackButton } from "../components/BackButton/BackButton"
 
 const PostWrapper = styled.section`
   margin: 0 auto;
   max-width: 1375px;
-  padding: 5rem 10rem;
+  padding: 3rem 10rem 5rem 10rem;
 
   ${below.lg`
     padding: 5rem 3rem;
@@ -46,13 +46,27 @@ const HeroImage = styled(Img)`
 const ContentMain = styled.div``
 const ContentMeta = styled.div``
 const Content = styled.section`
-  padding: 2.65rem 0;
+  padding: 2rem 0;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 20px;
 
+  ${below.smish`
+    padding: 1rem 0;
+    grid-template-columns: 1fr;
+  `}
+
+  ${below.sm`
+      padding: 2rem 16px;
+      grid-column-gap: 10px;
+  `}
+
   ${ContentMain} {
     grid-column: 1 / span 3;
+
+    ${below.smish`
+      grid-column: -1 / 1;
+    `}
   }
 
   ${ContentMeta} {
@@ -61,6 +75,13 @@ const Content = styled.section`
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+
+    ${below.smish`
+      grid-column: -1 / 1;
+      order: -1;
+      margin-bottom: 2rem;
+      align-items: flex-start;
+    `}
   }
 
   ul {
@@ -83,53 +104,48 @@ const WorkTemplate = ({ data: { mdx } }) => {
       <MDXProvider
         components={{
           // Map HTML element tag to React component
-          h1: props => (
-            <DesignSystem.Heading1
-              fontSize="3rem"
-              mb="2rem"
-              lineHeight="1.85rem"
-              {...props}
-            />
-          ),
-          h2: DesignSystem.Heading2,
-          h3: DesignSystem.Heading3,
-          p: props => (
-            <DesignSystem.Text fontSize="1.3rem" mb="2rem" {...props} />
-          ),
+          h1: DesignSystem.Head1,
+          h2: DesignSystem.Head2,
+          h3: DesignSystem.Head3,
+          h4: DesignSystem.Head4,
+          h5: DesignSystem.Head5,
+          h6: DesignSystem.Head6,
+          p:  DesignSystem.Body,
         }}
       >
         <PostWrapper>
+        <BackButton to="/work/">back</BackButton>
           <HeroImage
             fluid={mdx.frontmatter.featuredImage.childImageSharp.fluid}
           />
           <Content>
             <ContentMain>
-              <DesignSystem.Heading2 fontSize="2.5rem" mb="2.5rem">
+              <Heading2>
                 {mdx.frontmatter.title}
-              </DesignSystem.Heading2>
-              <DesignSystem.Text fontSize="1.3rem" lineHeight="2rem">
+              </Heading2>
+              <DesignSystem.Body>
                 {mdx.frontmatter.description}
-              </DesignSystem.Text>
+              </DesignSystem.Body>
             </ContentMain>
             <ContentMeta>
               {mdx.frontmatter.categories.split(", ").length > 1 ? (
-                <DesignSystem.Text
+                <Text
                   fontSize="1.3rem"
                   mb="0rem"
                   fontWeight="normal"
                   style={{ letterSpacing: `1px` }}
                 >
                   CATEGORIES
-                </DesignSystem.Text>
+                </Text>
               ) : (
-                <DesignSystem.Text
+                <Text
                   fontSize="1.3rem"
                   mb="0rem"
                   fontWeight="normal"
                   style={{ letterSpacing: `1px` }}
                 >
                   CATEGORY
-                </DesignSystem.Text>
+                </Text>
               )}
               <ul>
                 {mdx.frontmatter.categories.split(", ").map((category, key) => {

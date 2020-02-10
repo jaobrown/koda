@@ -127,6 +127,7 @@ export const ServicesText = styled(Heading3)`
     left: 50%;
     width: 0;
     height: 3px;
+    transform: translateX(-50%);
     background: ${colors.red};
     transition: .2s ease-in;
   }
@@ -136,7 +137,6 @@ export const ServicesText = styled(Heading3)`
 
     &::after {
       width: 50%;
-      transform: translateX(-50%);
     }
   }
 

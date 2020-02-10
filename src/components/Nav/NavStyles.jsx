@@ -10,6 +10,7 @@ const NAVLINK_MODIFIERS = {
       position: absolute;
       bottom: -6px;
       left: 50%;
+      transform: translateX(-50%);
       width: 0;
       height: 2px;
       background: ${colors.red};
@@ -21,7 +22,6 @@ const NAVLINK_MODIFIERS = {
 
       &::after {
         width: 50%;
-        transform: translateX(-50%);
       }
     }
   `,

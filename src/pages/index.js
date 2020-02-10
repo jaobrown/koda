@@ -35,7 +35,7 @@ const StyledLink = styled(Link)`
     z-index: -1;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%) scale(95%);
+    transform: translate(-50%,-50%) scale(.95);
     height: 100%;
     width: 100%;
     background: transparent;
@@ -45,7 +45,7 @@ const StyledLink = styled(Link)`
 
   &:hover {
     &::after {
-      transform: translate(-50%,-50%) scale(105%);
+      transform: translate(-50%,-50%) scale(1.05);
     }
   }
 `

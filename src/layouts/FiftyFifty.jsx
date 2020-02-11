@@ -83,6 +83,7 @@ export const FiftyFifty = ({ children }) => {
 }
 
 const ContentLeft = styled.div`
+position: relative;
   box-sizing: border-box;
   grid-column: 2 / 3;
   width: 100%;
@@ -95,6 +96,7 @@ const ContentLeft = styled.div`
 `
 
 const ContentRight = styled.div`
+position: relative;
   box-sizing: border-box;
   grid-column: 3 / 4;
   width: 100%;

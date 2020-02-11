@@ -194,6 +194,19 @@ const IndexPage = () => {
       {/* //* Begin need help */}
       {/* // todo: 5050 section 1 */}
       <Section padding="5rem 1rem" xxlPadding="5rem 10rem">
+        <svg
+          className={styles.shape1}
+          xmlns="http://www.w3.org/2000/svg"
+          width="240.235"
+          height="240.231"
+          viewBox="0 0 240.235 240.231"
+          fill="#263752"
+        >
+          <path
+            d="M407.545,274.771A120.115,120.115,0,1,0,527.66,394.887,120.117,120.117,0,0,0,407.545,274.771Zm0,214.77A94.653,94.653,0,1,1,502.2,394.887,94.654,94.654,0,0,1,407.545,489.541Z"
+            transform="translate(-287.425 -274.771)"
+          />
+        </svg>
         <FiftyFifty>
           <FiftyFifty.Left modifiers="needHelp">
             <Heading2 fontSize="2rem" maxWidth="400px" mb="2rem">
@@ -209,8 +222,44 @@ const IndexPage = () => {
               tools and deliverables you need to inspire confidence, make good
               impressions, and attract quality clients.
             </Text>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="188.167"
+              height="61.3"
+              viewBox="0 0 188.167 61.3"
+              fill="#7c3a2b"
+              className={styles.shape3}
+            >
+              <path
+                d="M741.727,299.834l-157.7-.263A30.517,30.517,0,0,1,553.56,269h0a30.519,30.519,0,0,1,30.568-30.467l96.664.162a61.035,61.035,0,0,1,60.935,61.138Z"
+                transform="translate(741.727 299.833) rotate(180)"
+              />
+            </svg>
           </FiftyFifty.Left>
           <FiftyFifty.Right>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="353.641"
+              height="45.152"
+              viewBox="0 0 353.641 45.152"
+              fill="#b26c29"
+              className={styles.shape2}
+            >
+              <g transform="translate(2969.25 -325.391) rotate(90)">
+                <path
+                  d="M350.469,6.343H3.172A3.172,3.172,0,0,1,3.172,0h347.3a3.172,3.172,0,0,1,0,6.343Z"
+                  transform="translate(370.543 2615.609) rotate(90)"
+                />
+                <path
+                  d="M350.469,6.343H3.172A3.172,3.172,0,0,1,3.172,0h347.3a3.172,3.172,0,0,1,0,6.343Z"
+                  transform="translate(350.883 2615.609) rotate(90)"
+                />
+                <path
+                  d="M350.469,6.343H3.172A3.172,3.172,0,0,1,3.172,0h347.3a3.172,3.172,0,0,1,0,6.343Z"
+                  transform="translate(331.735 2615.609) rotate(90)"
+                />
+              </g>
+            </svg>
             <Img fluid={YourVisionImgData} />
           </FiftyFifty.Right>
         </FiftyFifty>
@@ -238,6 +287,19 @@ const IndexPage = () => {
             <FiftyFifty.Button to="/about">about koda</FiftyFifty.Button>
           </FiftyFifty.Left>
           <FiftyFifty.Right modifiers="flip">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="337.378"
+              height="109.909"
+              viewBox="0 0 337.378 109.909"
+              fill="#b26c29"
+              className={styles.shape4}
+            >
+              <path
+                d="M890.938,348.443l-282.751-.471a54.717,54.717,0,0,1-54.627-54.811h0a54.719,54.719,0,0,1,54.808-54.627l173.316.29A109.434,109.434,0,0,1,890.938,348.443Z"
+                transform="translate(-553.56 -238.534)"
+              />
+            </svg>
             <Img fluid={HumbleHelpersImgData} />
           </FiftyFifty.Right>
         </FiftyFifty>

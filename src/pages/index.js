@@ -7,7 +7,6 @@ import Layout from "../components/Layout/Layout"
 import Nav from "../components/Nav/Nav"
 import { Section, HeroTitle } from "../elements"
 import { Heading2, Text, SEO } from "../utils"
-import {Toggler} from '../components/MobileNavigation'
 import {
   FiftyFifty,
   ThreeColumns,
@@ -31,22 +30,22 @@ const StyledLink = styled(Link)`
   z-index: 2;
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     z-index: -1;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%) scale(.95);
+    transform: translate(-50%, -50%) scale(0.95);
     height: 100%;
     width: 100%;
     background: transparent;
     border: 3px solid #853526;
-    transition: .2s cubic-bezier(0.19, 1, 0.22, 1) transform;
+    transition: 0.2s cubic-bezier(0.19, 1, 0.22, 1) transform;
   }
 
   &:hover {
     &::after {
-      transform: translate(-50%,-50%) scale(1.05);
+      transform: translate(-50%, -50%) scale(1.05);
     }
   }
 `
@@ -70,7 +69,7 @@ const IndexPage = () => {
           }
         }
         allMdx(
-          sort: {fields: frontmatter___date},
+          sort: { fields: frontmatter___date }
           filter: { fileAbsolutePath: { regex: "/content/work/" } }
           limit: 3
         ) {
@@ -101,7 +100,6 @@ const IndexPage = () => {
     <Layout>
       <SEO title="Home" />
       <Nav />
-      <Toggler/>
 
       {/* //* Begin hero */}
       <Section

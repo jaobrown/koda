@@ -29,10 +29,10 @@ const PostWrapper = styled.section`
 
 const HeroImage = styled(Img)`
   width: 100%;
-  height: 720px;
+  height: auto;
   margin: 0 auto 3rem auto;
 
-  ${below.lg`
+  /* ${below.lg`
     height: 420px;
   `}
 
@@ -42,7 +42,7 @@ const HeroImage = styled(Img)`
 
   ${below.sm`
     height: 250px;
-  `}
+  `} */
 `
 
 const ContentMain = styled.div``
@@ -190,7 +190,7 @@ export const workQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         bannerImage {
           childImageSharp {
-            fluid(maxWidth: 1260) {
+            fluid(maxWidth: 2400) {
               ...GatsbyImageSharpFluid
             }
           }

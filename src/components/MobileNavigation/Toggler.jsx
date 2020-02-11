@@ -1,5 +1,6 @@
-import React, { useState } from "react"
+import React from "react"
 import styled from "styled-components"
+import { below, above } from "../../utils"
 
 const HamburgerColor = `#3a3a3a`
 const HamburgerHeight = `35px`
@@ -8,8 +9,8 @@ const HamburgerIconStrokeWidth = `2.5px`
 
 const MobileNavigationToggler = styled.button`
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 46px;
+  right: 40px;
   z-index: 999;
   background: transparent;
   border: none;
@@ -17,6 +18,17 @@ const MobileNavigationToggler = styled.button`
   width: ${HamburgerWidth};
   cursor: pointer;
   transition: 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+
+  ${above.md`
+    display: none;
+    opacity: 0;
+    visibility:hidden;
+  `}
+
+  ${below.xs`
+    right: 20px;
+    width: 40px;  
+  `}
 
   span {
     position: absolute;
@@ -49,25 +61,10 @@ const MobileNavigationToggler = styled.button`
   }
 `
 
-const MobileMenu = styled.nav`
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: transparent;
-  pointer-events: none;
-  z-index: 9;
-`
-
-export const Toggler = () => {
-  const [isToggled, setIsToggled] = useState(false)
-
+export const Toggler = ({ clickEvent }) => {
   return (
-    <MobileMenu>
-      <MobileNavigationToggler onClick={() => setIsToggled(!isToggled)}>
-        <span></span>
-      </MobileNavigationToggler>
-    </MobileMenu>
+    <MobileNavigationToggler onClick={clickEvent}>
+      <span></span>
+    </MobileNavigationToggler>
   )
 }

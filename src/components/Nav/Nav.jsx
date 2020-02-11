@@ -7,8 +7,6 @@ import {
   NavLinkContainer,
   NavLogo,
   NavLogoText,
-  MobileNavigation,
-  MobileMenu,
 } from "./NavStyles"
 
 const Nav = () => (

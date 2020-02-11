@@ -128,13 +128,6 @@ export const postQuery = graphql`
             }
           }
         }
-        thumbnail {
-          childImageSharp {
-            fluid(maxWidth: 1260) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
       }
     }
   }

@@ -116,7 +116,7 @@ const WorkTemplate = ({ data: { mdx } }) => {
         <PostWrapper>
         <BackButton to="/work/">back</BackButton>
           <HeroImage
-            fluid={mdx.frontmatter.featuredImage.childImageSharp.fluid}
+            fluid={mdx.frontmatter.bannerImage.childImageSharp.fluid}
           />
           <Content>
             <ContentMain>
@@ -186,7 +186,7 @@ export const workQuery = graphql`
         description
         categories
         date(formatString: "MMMM DD, YYYY")
-        featuredImage {
+        bannerImage {
           childImageSharp {
             fluid(maxWidth: 1260) {
               ...GatsbyImageSharpFluid

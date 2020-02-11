@@ -98,7 +98,7 @@ const WorkPage = ({ data }) => {
             <WorkItem>
               <WorkItemImg
                 fluid={
-                  work.node.frontmatter.featuredImage.childImageSharp.fluid
+                  work.node.frontmatter.thumbnail.childImageSharp.fluid
                 }
               />
               <WorkItemDescription>
@@ -144,9 +144,9 @@ export const query = graphql`
       edges {
         node {
           frontmatter {
-            featuredImage {
+            thumbnail {
               childImageSharp {
-                fluid(maxWidth: 500) {
+                fluid(maxWidth: 600) {
                   ...GatsbyImageSharpFluid
                 }
               }

@@ -77,7 +77,7 @@ const IndexPage = () => {
               frontmatter {
                 slug
                 categories
-                featuredImage {
+                thumbnail {
                   childImageSharp {
                     fluid(maxWidth: 700) {
                       ...GatsbyImageSharpFluid
@@ -258,7 +258,7 @@ const IndexPage = () => {
             >
               <Img
                 fluid={
-                  data.allMdx.edges[0].node.frontmatter.featuredImage
+                  data.allMdx.edges[0].node.frontmatter.thumbnail
                     .childImageSharp.fluid
                 }
               />
@@ -272,7 +272,7 @@ const IndexPage = () => {
             >
               <Img
                 fluid={
-                  data.allMdx.edges[1].node.frontmatter.featuredImage
+                  data.allMdx.edges[1].node.frontmatter.thumbnail
                     .childImageSharp.fluid
                 }
               />
@@ -286,7 +286,7 @@ const IndexPage = () => {
             >
               <Img
                 fluid={
-                  data.allMdx.edges[2].node.frontmatter.featuredImage
+                  data.allMdx.edges[2].node.frontmatter.thumbnail
                     .childImageSharp.fluid
                 }
               />

@@ -62,7 +62,7 @@ const HeroImage = styled(Img)`
 
 const Content = styled.article`
   padding: 0 60px;
-  max-width: 1000px;
+  max-width: 800px;
   margin: 0 auto;
 
   ${below.md`
@@ -91,7 +91,7 @@ const BlogPostTemplate = ({ data: { mdx } }) => {
         }}
       >
         <PostWrapper>
-        <BackButton to="/blog/">back to blog list</BackButton>
+        <BackButton to="/blog/">back</BackButton>
           <HeroImage
             fluid={mdx.frontmatter.featuredImage.childImageSharp.fluid}
           />

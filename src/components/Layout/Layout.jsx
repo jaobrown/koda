@@ -3,6 +3,7 @@ import { GlobalStyle } from '../../utils'
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 import { Footer } from '../../layouts'
+import MobileNavigation from '../MobileNavigation/MobileNavigation'
 // import "./layout.css"
 
 const Layout = ({ children }) => (
@@ -19,7 +20,9 @@ const Layout = ({ children }) => (
     render={data => (
       <>
         <GlobalStyle />
-        <main>{children}</main>
+        <main>
+          {children}
+        </main>
         <Footer />
       </>
     )}

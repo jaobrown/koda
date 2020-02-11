@@ -19,6 +19,9 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 10px;
     color: ${colors.darkgray}
   }
+  main {
+    position: relative;
+  }
   * {
     margin: 0;
     padding: 0;

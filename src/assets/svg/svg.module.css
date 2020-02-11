@@ -276,29 +276,68 @@
 
 .shape1 {
   position: absolute;
-  left: -9%;
+  left: 5%;
   top: 40px;
+  height: 25%;
 }
 
 .shape2 {
   position: absolute;
   right: -50%;
-  top: 5%;
+  top: 8%;
   z-index: 999;
+  transform: scale(0.75);
 }
 
 .shape3 {
   position: absolute;
-  right: 20px;
+  left: -30px;
   bottom: -40%;
   z-index: 999;
+  transform: scale(0.65);
 }
 
 .shape4 {
-    position: absolute;
-    z-index: -1;
-    left: -60px;
-    top: 60px;
+  position: absolute;
+  z-index: -1;
+  left: -150px;
+  top: 60px;
+  transform: scale(0.75);
+}
+
+.shape5 {
+  position: absolute;
+  z-index: 99;
+  left: 70px;
+  top: -100px;
+  transform: scaleX(0.65) scaleY(0.9);
+}
+
+.shape6 {
+  position: absolute;
+  z-index: 99;
+  right: -300px;
+  bottom: -150px;
+  transform: scale(0.85);
+}
+
+.dots1 {
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  top: 15%;
+  height: 30%;
+  width: auto;
+}
+
+.dots2 {
+  position: absolute;
+  z-index: -1;
+  bottom: -150px;
+  left: -8%;
+  height: 30%;
+  width: auto;
+  transform: rotate(90deg);
 }
 
 @media (max-width: 1160px) {
@@ -317,6 +356,12 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .shape6 {
+    right: -200px;
+  }
+}
+
 @media (max-width: 960px) {
   .shape1 {
     position: absolute;
@@ -331,10 +376,32 @@
   }
 
   .shape2 {
-    top: 3%;
+    top: 8%;
+    right: -70px;
   }
 
   .shape3 {
     display: none;
+  }
+
+  .shape5 {
+    left: unset;
+    right: 70px;
+  }
+
+  .shape6 {
+    display: none;
+  }
+
+  .dots1,
+  .dots2 {
+    display: none;
+  }
+  
+}
+@media (max-width: 575px) {
+  .shape2 {
+    top: 5%;
+    right: -200px;
   }
 }

@@ -38,7 +38,7 @@ export const NewsletterSignUp = () => {
         xmlns="http://www.w3.org/2000/svg"
         height="50px"
         viewBox="0 0 192.308 55.92"
-        fill="#7b3a2b"
+        fill="#223754"
         className={styles.redDrop2}
       >
         <path
@@ -50,7 +50,7 @@ export const NewsletterSignUp = () => {
         xmlns="http://www.w3.org/2000/svg"
         height="175px"
         viewBox="0 0 261.505 261.5"
-        fill="#263752"
+        fill="#005664"
         className={styles.blueCircle2}
       >
         <path

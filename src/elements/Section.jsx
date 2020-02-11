@@ -3,8 +3,8 @@ import styled from "styled-components"
 
 const StyledSection = styled.section`
   position: relative;
-  z-index: 2;
-  overflow: hidden;
+  z-index:  ${props => props.zIndex || "2"};;
+  overflow:  ${props => props.overFlow || "hidden"};;
   max-width: 100vw;
   padding: ${props => props.padding};
   margin: ${props => props.margin};
@@ -32,10 +32,12 @@ export const Section = ({
   padding,
   margin,
   backgroundColor,
+  overFlow,
+  zIndex,
   mdPadding,
   lgPadding,
   xlPadding,
-  xxlPadding,
+  xxlPadding
 }) => {
   return (
     <StyledSection
@@ -45,6 +47,8 @@ export const Section = ({
       xlPadding={xlPadding}
       xxlPadding={xxlPadding}
       margin={margin}
+      zIndex={zIndex}
+      overFlow={overFlow}
       backgroundColor={backgroundColor}
     >
       {children}

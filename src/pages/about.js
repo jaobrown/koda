@@ -1,6 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import styled from "styled-components"
 import Layout from "../components/Layout/Layout"
 import { InstagramCTA, NewsletterSignUp, FiftyFifty } from "../layouts"
 import { Section } from "../elements"
@@ -32,6 +33,18 @@ const AboutPage = () => {
   const OurMissionImgData = data.ourMissionImage.childImageSharp.fluid
   const WhyUsImgData = data.whyUsImage.childImageSharp.fluid
 
+  const StyledLine = styled.span`
+    display: inline-block;
+    position: absolute;
+    z-index: 8;
+    bottom: -40px;
+    left: 50%;
+    height: 130px;
+    width: 2px;
+    background: #3a3a3a;
+    border-radius: 100px;
+  `
+
   return (
     <Layout>
       <SEO title="About" />
@@ -43,7 +56,8 @@ const AboutPage = () => {
         padding="10rem 1rem"
         lgPadding="10rem"
         xlPadding="10rem"
-        style={{ zIndex: `2 !important`, overflow: `visible !important` }}
+        zIndex="auto"
+        overFlow="visible"
       >
         <Text
           style={{
@@ -59,6 +73,7 @@ const AboutPage = () => {
         <Heading1 textAlign="center" fontSize="40px" mb="0">
           You've got a friend in&nbsp;us
         </Heading1>
+        <StyledLine/>
       </Section>
       {/* //* End Hero */}
 
@@ -76,10 +91,16 @@ const AboutPage = () => {
       {/* //* End transform */}
 
       {/* //* Begin mission statement */}
-      <Section padding="5rem 1rem" backgroundColor="#cecece"  xxlPadding="5rem 5rem">
+      <Section
+        padding="5rem 1rem"
+        backgroundColor="#cecece"
+        xxlPadding="5rem 5rem"
+      >
         <FiftyFifty>
           <FiftyFifty.Left modifiers={["needHelp", "flip", "humbleHelpers"]}>
-            <Heading2 fontSize="2rem" mb="2rem">Our mission</Heading2>
+            <Heading2 fontSize="2rem" mb="2rem">
+              Our mission
+            </Heading2>
             <Text fontSize="1.1rem" mb="2rem" lineHeight="1.5rem">
               Koda Studio works with good people to humbly help them build
               better brands. Along with providing incredible design, Koda cares
@@ -96,10 +117,17 @@ const AboutPage = () => {
 
       {/* //* Begin need help */}
       {/* // todo: 5050 section 1 */}
-      <Section padding="5rem 1rem" backgroundColor="#F7F7F7" margin="75px 0"  xxlPadding="5rem 5rem">
+      <Section
+        padding="5rem 1rem"
+        backgroundColor="#F7F7F7"
+        margin="75px 0"
+        xxlPadding="5rem 5rem"
+      >
         <FiftyFifty>
           <FiftyFifty.Left modifiers={["needHelp", "whyUs"]}>
-            <Heading2 fontSize="2rem" mb="2rem">Why us?</Heading2>
+            <Heading2 fontSize="2rem" mb="2rem">
+              Why us?
+            </Heading2>
             <Text fontSize="1.1rem" mb="2rem" lineHeight="1.5rem">
               Your vision brought you here. You are your business, and your
               involvement in defining your brand is vital. We want to listen to

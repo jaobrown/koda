@@ -24,6 +24,14 @@ const FIFTY_FIFTY_LEFT_MODIFIERS = {
       padding-left: 0;
     }
   `,
+  humbleHelpersMain: () => `
+    padding-left: 3rem;
+
+    @media screen and (max-width: 824px) {
+      padding-left: 0;
+      margin-bottom: 4rem;
+    }
+  `,
   whyUs: () => `
   padding-right: 3rem;
 

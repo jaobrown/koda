@@ -102,6 +102,18 @@ const StyledSVG = styled.svg`
   `}
 `
 
+const StyledLine = styled.span`
+display: inline-block;
+position: absolute;
+z-index: 8;
+bottom: -40px;
+left: 50%;
+height: 130px;
+width: 2px;
+background: #3a3a3a;
+border-radius: 100px;
+`
+
 const ServicesPage = () => {
   const data = useStaticQuery(
     graphql`
@@ -146,7 +158,8 @@ const ServicesPage = () => {
         padding="10rem 1rem"
         lgPadding="10rem"
         xlPadding="10rem"
-        style={{ zIndex: `2 !important`, overflow: `visible !important` }}
+        zIndex="auto"
+        overFlow="visible"
       >
         <Text
           style={{
@@ -162,6 +175,7 @@ const ServicesPage = () => {
         <Heading1 textAlign="center" fontSize="40px" mb="0">
           You’re ready to make your dream a&nbsp;reality
         </Heading1>
+        <StyledLine/>
       </Section>
       {/* //* End Hero */}
 

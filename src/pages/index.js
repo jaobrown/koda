@@ -7,7 +7,7 @@ import Layout from "../components/Layout/Layout"
 import Nav from "../components/Nav/Nav"
 import { Section, HeroTitle } from "../elements"
 import { Heading2, Text, SEO } from "../utils"
-import MobileNavigation from '../components/MobileNavigation/MobileNavigation'
+import {Toggler} from '../components/MobileNavigation'
 import {
   FiftyFifty,
   ThreeColumns,
@@ -70,6 +70,7 @@ const IndexPage = () => {
           }
         }
         allMdx(
+          sort: {fields: frontmatter___date},
           filter: { fileAbsolutePath: { regex: "/content/work/" } }
           limit: 3
         ) {
@@ -100,7 +101,7 @@ const IndexPage = () => {
     <Layout>
       <SEO title="Home" />
       <Nav />
-      <MobileNavigation />
+      <Toggler/>
 
       {/* //* Begin hero */}
       <Section

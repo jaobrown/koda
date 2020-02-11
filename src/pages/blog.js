@@ -118,7 +118,7 @@ const BlogPage = ({ data }) => {
             <BlogPost key={key}>
               <BlogPostImg
                 fluid={
-                  post.node.frontmatter.featuredImage.childImageSharp.fluid
+                  post.node.frontmatter.thumbnail.childImageSharp.fluid
                 }
               />
               <BlogPostDescription>
@@ -174,7 +174,7 @@ export const query = graphql`
           frontmatter {
             categories
             date(formatString: "MMMM DD, YYYY")
-            featuredImage {
+            thumbnail {
               childImageSharp {
                 fluid(maxWidth: 500) {
                   ...GatsbyImageSharpFluid

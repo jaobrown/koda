@@ -1,3 +1,5 @@
+// todo: fixed width hero
+
 import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
@@ -44,10 +46,10 @@ const PostWrapper = styled.section`
 
 const HeroImage = styled(Img)`
   width: 100%;
-  height: 480px;
+  height: auto;
   margin: 0 auto 3rem auto;
 
-  ${below.lg`
+  /* ${below.lg`
     height: 420px;
   `}
 
@@ -57,7 +59,7 @@ const HeroImage = styled(Img)`
 
   ${below.sm`
     height: 250px;
-  `}
+  `} */
 `
 
 const Content = styled.article`
@@ -93,7 +95,7 @@ const BlogPostTemplate = ({ data: { mdx } }) => {
         <PostWrapper>
         <BackButton to="/blog/">back</BackButton>
           <HeroImage
-            fluid={mdx.frontmatter.featuredImage.childImageSharp.fluid}
+            fluid={mdx.frontmatter.bannerImage.childImageSharp.fluid}
           />
           <Heading2>{mdx.frontmatter.title}</Heading2>
           <Heading3>{mdx.frontmatter.date}</Heading3>
@@ -119,7 +121,14 @@ export const postQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
-        featuredImage {
+        bannerImage {
+          childImageSharp {
+            fluid(maxWidth: 2400) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        thumbnail {
           childImageSharp {
             fluid(maxWidth: 1260) {
               ...GatsbyImageSharpFluid

@@ -85,7 +85,7 @@ const AboutPage = () => {
           mb="0"
           textAlign="center"
           fontSize="1.3rem"
-          style={{ lineHeight: `1.618rem`, letterSpacing: `2.5px` }}
+          style={{ lineHeight: `2rem`, letterSpacing: `2.5px` }}
         >
           let us help you transform your business
         </Heading3>
@@ -181,7 +181,7 @@ const AboutPage = () => {
         xxlPadding="5rem 5rem"
       >
         <FiftyFifty>
-          <FiftyFifty.Left modifiers={["needHelp", "whyUs"]}>
+          <FiftyFifty.Left modifiers={["needHelp", "whyUs", "humbleHelpersMain"]}>
             <Heading2 fontSize="2rem" mb="2rem">
               Why us?
             </Heading2>

@@ -90,6 +90,7 @@ const BlogPostTemplate = ({ data: { mdx } }) => {
           ul: DesignSystem.Unordered,
           li: DesignSystem.LineItem,
           blockquote: DesignSystem.BlockQuote,
+          a: DesignSystem.KodaLink,
         }}
       >
         <PostWrapper>

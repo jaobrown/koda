@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
+import {below} from '../../utils'
 
 const StyledLink = styled(Link)`
   display: inline-block;
@@ -19,6 +20,10 @@ const StyledLink = styled(Link)`
     margin-right: 1rem;
     transform: translate3d(0, 4px, 0);
     transition: .1s ease-in;
+
+    ${below.sm`
+      margin-left: 1rem;
+    `}
   }
 
   &:hover {

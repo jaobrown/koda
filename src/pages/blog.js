@@ -6,7 +6,6 @@ import Layout from "../components/Layout/Layout"
 import Nav from "../components/Nav/Nav"
 import { SEO, below, Heading2, Text } from "../utils"
 import { NewsletterSignUp } from "../layouts"
-import { Pill } from "../components/Styled/index-styles"
 
 const Grid = styled.section`
   display: grid;
@@ -119,24 +118,6 @@ const BlogPostDescription = styled.div`
         font-size: 1rem;
       `}
     }
-  }
-`
-
-const CtaSection = styled.section`
-  display: grid;
-  place-items: center;
-  padding: 5rem;
-
-  ${below.sm`
-    padding: 5rem 2rem 5rem 2rem;
-  `}
-
-  h2 {
-    ${below.sm`
-      font-size: 1.6rem;
-      margin-left: auto;
-      margin-right: auto;
-    `}
   }
 `
 

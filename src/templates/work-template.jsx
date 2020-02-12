@@ -89,7 +89,14 @@ const Content = styled.section`
   ul {
     list-style: none;
     display: flex;
-    justify-content: flex-start;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    transform: translateX(10px);
+
+    ${below.smish`
+      justify-content: flex-start;
+      transform: none;
+    `}
     li {
       font-size: 1.25rem;
       font-weight: lighter;

@@ -103,15 +103,15 @@ const StyledSVG = styled.svg`
 `
 
 const StyledLine = styled.span`
-display: inline-block;
-position: absolute;
-z-index: 8;
-bottom: -40px;
-left: 50%;
-height: 130px;
-width: 2px;
-background: #3a3a3a;
-border-radius: 100px;
+  display: inline-block;
+  position: absolute;
+  z-index: 8;
+  bottom: -40px;
+  left: 50%;
+  height: 130px;
+  width: 2px;
+  background: #3a3a3a;
+  border-radius: 100px;
 `
 
 const ServicesPage = () => {
@@ -175,7 +175,7 @@ const ServicesPage = () => {
         <Heading1 textAlign="center" fontSize="40px" mb="0">
           You’re ready to make your dream a&nbsp;reality
         </Heading1>
-        <StyledLine/>
+        <StyledLine />
       </Section>
       {/* //* End Hero */}
 
@@ -191,10 +191,12 @@ const ServicesPage = () => {
               of.
             </Text>
             <StyledUL>
-              <li style={{letterSpacing: `.75px`}}>Exploration &amp; Discovery</li>
-              <li style={{letterSpacing: `.75px`}}>Strategy Design</li>
-              <li style={{letterSpacing: `.75px`}}>Visual Identity</li>
-              <li style={{letterSpacing: `.75px`}}>Implementation</li>
+              <li style={{ letterSpacing: `.75px` }}>
+                Exploration &amp; Discovery
+              </li>
+              <li style={{ letterSpacing: `.75px` }}>Strategy Design</li>
+              <li style={{ letterSpacing: `.75px` }}>Visual Identity</li>
+              <li style={{ letterSpacing: `.75px` }}>Implementation</li>
             </StyledUL>
             <FiftyFifty.Button to="contact">inquire</FiftyFifty.Button>
           </FiftyFifty.Left>
@@ -212,15 +214,14 @@ const ServicesPage = () => {
           <FiftyFifty.Left modifiers={["flip", "withPseudo"]}>
             <StyledHeading3 modifiers="two">Creative</StyledHeading3>
             <Text fontSize="1.1rem" mb="2rem" lineHeight="1.5rem">
-              We make intentional things, and we do it all. From social media
-              content, photo, video, to motion graphics and print design.
+              From curating social media content to creating empathetic packaging for your product, we make intentional things, and we do it all.
             </Text>
             <StyledUL>
-              <li  style={{letterSpacing: `.75px`}}>Photography</li>
-              <li  style={{letterSpacing: `.75px`}}>Video</li>
-              <li  style={{letterSpacing: `.75px`}}>Motion graphics</li>
-              <li  style={{letterSpacing: `.75px`}}>Print design</li>
-              <li  style={{letterSpacing: `.75px`}}>Social Media Content</li>
+              <li style={{ letterSpacing: `.75px` }}>Photography</li>
+              <li style={{ letterSpacing: `.75px` }}>Video</li>
+              <li style={{ letterSpacing: `.75px` }}>Motion graphics</li>
+              <li style={{ letterSpacing: `.75px` }}>Print design</li>
+              <li style={{ letterSpacing: `.75px` }}>Social Media Content</li>
             </StyledUL>
             <FiftyFifty.Button to="contact">inquire</FiftyFifty.Button>
           </FiftyFifty.Left>
@@ -242,10 +243,14 @@ const ServicesPage = () => {
               useable, and desirable.
             </Text>
             <StyledUL>
-              <li style={{letterSpacing: `.75px`}}>Exploration &amp; Discovery</li>
-              <li style={{letterSpacing: `.75px`}}>Design</li>
-              <li style={{letterSpacing: `.75px`}}>Development</li>
-              <li style={{letterSpacing: `.75px`}}>Ongoing support, and new features</li>
+              <li style={{ letterSpacing: `.75px` }}>
+                Exploration &amp; Discovery
+              </li>
+              <li style={{ letterSpacing: `.75px` }}>Design</li>
+              <li style={{ letterSpacing: `.75px` }}>Development</li>
+              <li style={{ letterSpacing: `.75px` }}>
+                Ongoing support &amp; new features
+              </li>
             </StyledUL>
             <FiftyFifty.Button to="contact">inquire</FiftyFifty.Button>
           </FiftyFifty.Left>
@@ -331,7 +336,7 @@ const ServicesPage = () => {
               non-cohesive social page or a lackluster website, people will pass
               on your business. Your brand is the first thing that your audience
               will attribute to the professionalism of your business and the
-              reliability of your product or services.
+              reliability of your product and/or services.
             </Text>
           </div>
           <div>
@@ -352,7 +357,7 @@ const ServicesPage = () => {
             </Heading3>
             <Text fontSize="1.1rem" lineHeight="1.6rem">
               Giving attention to the visual design of your brand will attract
-              quality clients, in your preferred markets. By taking a strategic
+              quality clients in your preferred markets. By taking a strategic
               approach in clearly defining your brand, you intentionally align
               with your ideal client and they know that your business is the one
               they’ve been looking for.

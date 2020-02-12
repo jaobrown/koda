@@ -157,7 +157,7 @@ const BlogPage = ({ data }) => {
         ))}
       </Grid>
       <CtaSection>
-        <Heading2 mb="2rem">Like what you&nbsp;see?</Heading2>
+      <Heading2 mb="2rem" fontSize="2rem">Like what you&nbsp;see?</Heading2>
         <Pill to="services">view our services</Pill>
       </CtaSection>
     </Layout>
@@ -173,7 +173,7 @@ export const query = graphql`
         node {
           frontmatter {
             categories
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "MM DD, YYYY")
             thumbnail {
               childImageSharp {
                 fluid(maxWidth: 500) {

@@ -166,7 +166,7 @@ const IndexPage = () => {
             marginBottom: "30px",
           }}
         >
-          <ButtonPill onClick={() => animateScrollTo(900)}>
+          <ButtonPill onClick={() => animateScrollTo(900)} backgroundColor="#f7f7f7">
             about koda
           </ButtonPill>
         </div>
@@ -303,24 +303,20 @@ const IndexPage = () => {
             >
               <g transform="translate(-1657.146 -3179.801)">
                 <path
-                  class="a"
                   d="M355.506,274.771a68.078,68.078,0,1,0,68.078,68.078A68.079,68.079,0,0,0,355.506,274.771Zm0,121.726a53.647,53.647,0,1,1,53.646-53.648A53.648,53.648,0,0,1,355.506,396.5Z"
                   transform="translate(1459.118 2905.03)"
                   fill="#969a8a"
                 />
                 <g transform="translate(4626.396 2955.462) rotate(90)" fill="#fff">
                   <path
-                    class="b"
                     d="M350.469,6.343H3.172A3.172,3.172,0,0,1,3.172,0h347.3a3.172,3.172,0,0,1,0,6.343Z"
                     transform="translate(370.543 2615.609) rotate(90)"
                   />
                   <path
-                    class="b"
                     d="M350.469,6.343H3.172A3.172,3.172,0,0,1,3.172,0h347.3a3.172,3.172,0,0,1,0,6.343Z"
                     transform="translate(350.883 2615.609) rotate(90)"
                   />
                   <path
-                    class="b"
                     d="M350.469,6.343H3.172A3.172,3.172,0,0,1,3.172,0h347.3a3.172,3.172,0,0,1,0,6.343Z"
                     transform="translate(331.735 2615.609) rotate(90)"
                   />
@@ -339,17 +335,14 @@ const IndexPage = () => {
             >
               <g transform="translate(-325.391 -2615.609)">
                 <path
-                  class="a"
                   d="M196.612,6.343H1.779C.8,6.343,0,4.922,0,3.172S.8,0,1.779,0H196.612c.982,0,1.779,1.421,1.779,3.172S197.594,6.343,196.612,6.343Z"
                   transform="translate(370.543 2615.609) rotate(90)"
                 />
                 <path
-                  class="a"
                   d="M196.612,6.343H1.779C.8,6.343,0,4.922,0,3.172S.8,0,1.779,0H196.612c.982,0,1.779,1.421,1.779,3.172S197.594,6.343,196.612,6.343Z"
                   transform="translate(350.883 2615.609) rotate(90)"
                 />
                 <path
-                  class="a"
                   d="M196.612,6.343H1.779C.8,6.343,0,4.922,0,3.172S.8,0,1.779,0H196.612c.982,0,1.779,1.421,1.779,3.172S197.594,6.343,196.612,6.343Z"
                   transform="translate(331.735 2615.609) rotate(90)"
                 />
@@ -377,8 +370,8 @@ const IndexPage = () => {
       {/* //* Begin Recent Work */}
       {/* // todo: recent work */}
       <Section padding="5rem 1rem" xxlPadding="5rem 5rem">
-        <img src={dot_pattern} className={styles.dots1}/>
-        <img src={dot_pattern} className={styles.dots2}/>
+        <img src={dot_pattern} className={styles.dots1} alt="decorative dot pattern"/>
+        <img src={dot_pattern} className={styles.dots2} alt="decorative dot pattern"/>
         <Heading2 fontSize="2rem" mb="4rem" textAlign="center">
           Recent Work
         </Heading2>

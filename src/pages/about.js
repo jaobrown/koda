@@ -110,17 +110,14 @@ const AboutPage = () => {
             >
               <g transform="translate(370.543 2969.25) rotate(180)">
                 <path
-                  class="a"
                   d="M350.469,6.343H3.172A3.172,3.172,0,0,1,3.172,0h347.3a3.172,3.172,0,0,1,0,6.343Z"
                   transform="translate(370.543 2615.609) rotate(90)"
                 />
                 <path
-                  class="a"
                   d="M350.469,6.343H3.172A3.172,3.172,0,0,1,3.172,0h347.3a3.172,3.172,0,0,1,0,6.343Z"
                   transform="translate(350.883 2615.609) rotate(90)"
                 />
                 <path
-                  class="a"
                   d="M350.469,6.343H3.172A3.172,3.172,0,0,1,3.172,0h347.3a3.172,3.172,0,0,1,0,6.343Z"
                   transform="translate(331.735 2615.609) rotate(90)"
                 />

@@ -64,7 +64,7 @@ text-transform: capitalize;
 export const ButtonPill = styled.button`
   text-transform: capitalize;
   color: ${colors.darkgray};
-  background-color: transparent;
+  background-color: ${props => props.backgroundColor || `transparent`};
   text-decoration: none;
   font-size: 13px;
   font-family: 'Soin Sans', 'sans serif';

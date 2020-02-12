@@ -198,7 +198,7 @@ const ServicesPage = () => {
               <li style={{ letterSpacing: `.75px` }}>Visual Identity</li>
               <li style={{ letterSpacing: `.75px` }}>Implementation</li>
             </StyledUL>
-            <FiftyFifty.Button to="contact">inquire</FiftyFifty.Button>
+            <FiftyFifty.Button to="/contact/">inquire</FiftyFifty.Button>
           </FiftyFifty.Left>
           <FiftyFifty.Right>
             <Img fluid={brandImg} />
@@ -223,7 +223,7 @@ const ServicesPage = () => {
               <li style={{ letterSpacing: `.75px` }}>Print design</li>
               <li style={{ letterSpacing: `.75px` }}>Social Media Content</li>
             </StyledUL>
-            <FiftyFifty.Button to="contact">inquire</FiftyFifty.Button>
+            <FiftyFifty.Button to="/contact/">inquire</FiftyFifty.Button>
           </FiftyFifty.Left>
           <FiftyFifty.Right modifiers="flip">
             <Img fluid={creativeImg} />
@@ -252,7 +252,7 @@ const ServicesPage = () => {
                 Ongoing support &amp; new features
               </li>
             </StyledUL>
-            <FiftyFifty.Button to="contact">inquire</FiftyFifty.Button>
+            <FiftyFifty.Button to="/contact/">inquire</FiftyFifty.Button>
           </FiftyFifty.Left>
           <FiftyFifty.Right>
             <Img fluid={webImg} />
@@ -365,7 +365,7 @@ const ServicesPage = () => {
           </div>
         </WhyInvestGrid>
         <div style={{ width: `100%`, display: `grid`, placeItems: `center` }}>
-          <Pill to="contact">Reach out to us</Pill>
+          <Pill to="/contact/">Reach out to us</Pill>
         </div>
       </Section>
 

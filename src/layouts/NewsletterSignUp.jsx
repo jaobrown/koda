@@ -4,7 +4,10 @@ import { Heading2, Text } from "../utils"
 import { SignUp } from "../components/Forms/Forms"
 import styles from "../assets/svg/svg.module.css"
 
-export const NewsletterSignUp = () => {
+export const NewsletterSignUp = ({
+  heading = "Sign Up",
+  subheading = "For newsletters, freebies, and fun."
+}) => {
   return (
     <Section
       backgroundColor="#C2CBCE"
@@ -81,10 +84,10 @@ export const NewsletterSignUp = () => {
         </g>
       </svg>
       <Heading2 mb="1rem" fontSize="28px" textAlign="center">
-        Sign Up
+        {heading}
       </Heading2>
       <Text fontSize="1.1rem" textAlign="center" mb="2rem" lineHeight="1.5rem">
-        For blog updates, freebies, and fun.
+        {subheading}
       </Text>
       <SignUp />
     </Section>

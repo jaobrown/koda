@@ -5,6 +5,7 @@ import styled from "styled-components"
 import Layout from "../components/Layout/Layout"
 import Nav from "../components/Nav/Nav"
 import { SEO, below, Heading2, Text } from "../utils"
+import { NewsletterSignUp } from "../layouts"
 import { Pill } from "../components/Styled/index-styles"
 
 const Grid = styled.section`
@@ -12,7 +13,7 @@ const Grid = styled.section`
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 5%;
   grid-row-gap: 5%;
-  padding: 5rem 10vw;
+  padding: 5rem 10vw 7rem 10vw;
 
   ${below.md`
     grid-template-columns: repeat(2, 1fr);
@@ -36,10 +37,17 @@ const BlogPost = styled.article`
       margin-bottom: 2rem;
     }
   `}
+
+  &:hover {
+    h2 {
+      border-top: 3px solid #7c2f27;
+      padding-top: calc(1rem - 2px);
+    }
+  }
 `
 
 const BlogPostImg = styled(Img)`
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   height: auto;
   width: 100%;
 `
@@ -55,19 +63,35 @@ const BlogPostDescription = styled.div`
     margin-bottom: 0.6rem;
     border-top: 1px solid black;
     padding-top: 1rem;
+    transition: .2s ease all;
   }
 
   ${BlogPostDescriptionMeta} {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: .35rem;
+    margin-bottom: 0.35rem;
 
     ${BlogPostDescriptionDate} {
-      font-size: .95rem;
+      font-size: 0.95rem;
       margin-bottom: 0;
       text-transform: uppercase;
       letter-spacing: 1px;
+      ${below.lg`
+        font-size: .85rem;
+      `}
+
+      ${below.md`
+        font-size: .9rem;
+      `}
+
+      ${below.smish`
+        font-size: .85rem;
+      `}
+
+      ${below.sm`
+        font-size: .95rem;
+      `}
     }
   }
 
@@ -78,6 +102,22 @@ const BlogPostDescription = styled.div`
       font-size: 1rem;
       font-weight: lighter;
       font-family: "Majesti", "serif";
+
+      ${below.lg`
+        font-size: .9rem;
+      `}
+
+      ${below.md`
+        font-size: 1rem;
+      `}
+
+      ${below.smish`
+        font-size: .9rem;
+      `}
+
+      ${below.sm`
+        font-size: 1rem;
+      `}
     }
   }
 `
@@ -117,9 +157,7 @@ const BlogPage = ({ data }) => {
           >
             <BlogPost key={key}>
               <BlogPostImg
-                fluid={
-                  post.node.frontmatter.thumbnail.childImageSharp.fluid
-                }
+                fluid={post.node.frontmatter.thumbnail.childImageSharp.fluid}
               />
               <BlogPostDescription>
                 <BlogPostDescriptionMeta>
@@ -148,7 +186,12 @@ const BlogPage = ({ data }) => {
                   </ul>
                 </BlogPostDescriptionMeta>
                 <StyledHeading2>{post.node.frontmatter.title}</StyledHeading2>
-                <Text fontSize="1.1rem" fontWeight="lighter" mb=".5rem" lineHeight="1.5rem">
+                <Text
+                  fontSize="1.1rem"
+                  fontWeight="lighter"
+                  mb=".5rem"
+                  lineHeight="1.5rem"
+                >
                   {post.node.excerpt}
                 </Text>
               </BlogPostDescription>
@@ -156,10 +199,7 @@ const BlogPage = ({ data }) => {
           </StyledLink>
         ))}
       </Grid>
-      <CtaSection>
-      <Heading2 mb="2rem" fontSize="2rem">Like what you&nbsp;see?</Heading2>
-        <Pill to="services">view our services</Pill>
-      </CtaSection>
+      <NewsletterSignUp heading="Get Updates" subheading="On newsletters, freebies, and fun."/>
     </Layout>
   )
 }
@@ -173,7 +213,7 @@ export const query = graphql`
         node {
           frontmatter {
             categories
-            date(formatString: "MM DD, YYYY")
+            date(formatString: "MMM DD, YYYY")
             thumbnail {
               childImageSharp {
                 fluid(maxWidth: 500) {

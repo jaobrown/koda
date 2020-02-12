@@ -38,10 +38,17 @@ const WorkItem = styled.article`
       margin-bottom: 2rem;
     }
   `}
+
+  &:hover {
+    h2 {
+      border-top: 3px solid #7c2f27;
+      padding-top: calc(1rem - 2px);
+    }
+  }
 `
 
 const WorkItemImg = styled(Img)`
-  margin-bottom: .75rem;
+  margin-bottom: 0.75rem;
 `
 
 const WorkItemDescription = styled.div`
@@ -51,6 +58,7 @@ const WorkItemDescription = styled.div`
     margin-bottom: 0.6rem;
     border-top: 1px solid black;
     padding-top: 1rem;
+    transition: .2s ease all;
   }
 
   ul {
@@ -61,6 +69,26 @@ const WorkItemDescription = styled.div`
       font-weight: lighter;
       font-family: "Majesti", "serif";
       margin-bottom: .75rem;
+
+      font-size: 1rem;
+      font-weight: lighter;
+      font-family: "Majesti", "serif";
+
+      ${below.lg`
+        font-size: .9rem;
+      `}
+
+      ${below.md`
+        font-size: 1rem;
+      `}
+
+      ${below.smish`
+        font-size: .9rem;
+      `}
+
+      ${below.sm`
+        font-size: 1rem;
+      `}
     }
   }
 `
@@ -99,9 +127,7 @@ const WorkPage = ({ data }) => {
           >
             <WorkItem>
               <WorkItemImg
-                fluid={
-                  work.node.frontmatter.thumbnail.childImageSharp.fluid
-                }
+                fluid={work.node.frontmatter.thumbnail.childImageSharp.fluid}
               />
               <WorkItemDescription>
                 <ul>
@@ -131,8 +157,10 @@ const WorkPage = ({ data }) => {
         ))}
       </Grid>
       <CtaSection>
-        <Heading2 mb="2rem" fontSize="2rem">Like what you&nbsp;see?</Heading2>
-        <Pill to="services">view our services</Pill>
+        <Heading2 mb="2rem" fontSize="2rem">
+          Like what you&nbsp;see?
+        </Heading2>
+        <Pill to="/services/">view our services</Pill>
       </CtaSection>
     </Layout>
   )

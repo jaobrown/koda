@@ -1,6 +1,7 @@
-import SEO from './Seo'
+import SEO from "./Seo"
 
-export { SEO };
-export * from './Colors'
-export * from './Typography'
-export * from './GlobalStyles'
+export { SEO }
+export * from "./Colors"
+export * from "./Typography"
+export * from "./GlobalStyles"
+export * from "./Breakpoints"

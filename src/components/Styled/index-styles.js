@@ -12,12 +12,14 @@ export const ShapeGroup1 = styled.div`
 `
 
 export const Pill = styled(Link)`
+text-transform: capitalize;
   color: ${colors.darkgray};
   background-color: transparent;
   text-decoration: none;
   font-size: 13px;
   font-family: 'Soin Sans', 'sans serif';
-  font-weight: normal;
+  font-weight: bold;
+  letter-spacing: 1px;
   border: 2px solid ${colors.red};
   padding: .7rem 1rem;
   border-radius: 100px;
@@ -35,12 +37,14 @@ export const Pill = styled(Link)`
 `
 
 export const AnchorPill = styled.a`
+text-transform: capitalize;
   color: ${colors.darkgray};
   text-decoration: none;
   background-color: transparent;
   font-size: 13px;
   font-family: 'Soin Sans', 'sans serif';
-  font-weight: normal;
+  font-weight: bold;
+  letter-spacing: 1px;
   border: 2px solid ${colors.red};
   padding: .7rem 1rem;
   border-radius: 100px;
@@ -58,12 +62,14 @@ export const AnchorPill = styled.a`
 `
 
 export const ButtonPill = styled.button`
+  text-transform: capitalize;
   color: ${colors.darkgray};
-  background-color: transparent;
+  background-color: ${props => props.backgroundColor || `transparent`};
   text-decoration: none;
   font-size: 13px;
   font-family: 'Soin Sans', 'sans serif';
-  font-weight: normal;
+  font-weight: bold;
+  letter-spacing: 1px;
   border: 2px solid ${colors.red};
   padding: .7rem 1rem;
   border-radius: 100px;
@@ -91,17 +97,79 @@ export const ServiceTextWrapper = styled.div`
   } 
 `
 
+export const ServicesLink = styled(Link)`
+  color: ${colors.darkgray};
+  text-decoration: none;
+`
+
 export const ServicesText = styled(Heading3)`
+  position: relative;
+  z-index: 1;
   font-size: 1.1rem;
-  font-weight: lighter;
+  font-weight: bold;
+  cursor: pointer;
+  transition: .2s ease-in;
 
   &:not(:last-child) {
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
   }
 
   @media (min-width: 1023px) {
     margin-bottom: 0 !important;
   } 
+
+  /* before/after/decor */
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    transform: translateX(-50%);
+    background: ${colors.red};
+    transition: .2s ease-in;
+  }
+
+  &:hover {
+    opacity: 75%;
+
+    &::after {
+      width: 50%;
+    }
+  }
+
+  &:nth-of-type(1) {
+      &::before {
+        content: '01';
+        left: -42.5px;
+      }
+  }
+  &:nth-of-type(2) {
+      &::before {
+        content: '02';
+        left: -55px;
+      }
+  }
+  &:nth-of-type(3) {
+      &::before {
+        content: '03';
+        left: -55px;
+      }
+  }
+
+  &::before {
+    position: absolute;
+    z-index: -1;
+    top: -30px;
+    font-family: 'Majesti', serif;
+    font-weight: bold;
+    color: rgba(255,255,255,.63);
+    font-size: 300%;
+  }
+
+
 `
 
 export const ContactSection = styled(Section)`
@@ -126,7 +194,7 @@ export const ContactText = styled(Text)`
   ::before {
     content: '';
     position: absolute;
-    top: 10px;
+    top: 0px;
     bottom: 0;
     left: -3.5rem;
     width: 2px;

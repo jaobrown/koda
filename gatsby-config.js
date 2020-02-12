@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Brand Strategy and Visual Identity | Indianapolis, IN || Koda`,
+    title: `Brand Strategy and Visual Identity || Koda Studio `,
     description: `Koda is a brand strategy and visual identity design studio focused on humbly helping build better brands.`,
     author: `@jaobrown`,
   },
@@ -19,8 +19,29 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `content`,
+        path: `${__dirname}/src/content`,
+      },
+    },
     `gatsby-plugin-sharp`,
+    `gatsby-remark-images`,
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1776,
+            },
+          },
+        ],
+      },
+    },
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

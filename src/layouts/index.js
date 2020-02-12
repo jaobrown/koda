@@ -1,2 +1,6 @@
-export { Footer } from './Footer'
-export { NewsletterSignUp } from './NewsletterSignUp'
+export { FiftyFifty } from "./FiftyFifty"
+export { ThreeColumns } from "./ThreeColumns"
+export { Footer } from "./Footer"
+export { NewsletterSignUp } from "./NewsletterSignUp"
+export { InstagramCTA } from "./InstagramCTA"
+export { ContactLayout } from "./ContactLayout"

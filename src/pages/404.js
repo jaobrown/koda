@@ -2,7 +2,7 @@ import React from "react"
 
 import Layout from "../components/Layout/Layout"
 import Nav from "../components/Nav/Nav"
-import {Heading1, SEO} from '../utils'
+import { Heading1, SEO } from "../utils"
 
 const NotFoundPage = () => (
   <Layout>

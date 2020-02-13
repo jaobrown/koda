@@ -1,7 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: `Brand Strategy and Visual Identity || Koda Studio `,
-    description: `Koda is a brand strategy and visual identity design studio focused on humbly helping build better brands.`,
+    siteUrl: `https://kodastudio.co`,
+    defaultDescription: `Koda is a brand strategy and visual identity design studio focused on humbly helping build better brands.`,
+    defaultImage: `/images/kodastudio.jpg`,
     author: `@jaobrown`,
   },
   plugins: [

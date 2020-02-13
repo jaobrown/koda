@@ -46,7 +46,7 @@ function SEO({ description, lang, meta, title, pathName, siteUrl, image, default
           content: seoProperties.metaDescription,
         },
         {
-          property: `image`,
+          name: `image`,
           content: seoProperties.image,
         },
         {

@@ -29,8 +29,8 @@ function SEO({ description, lang, meta, title, pathName, siteUrl, image, default
 
   const seoProperties = {
     metaDescription: description || site.siteMetadata.defaultDescription,
-    image: `${siteUrl}${image || defaultImage}`,
-    url: `${siteUrl}${pathName || "/"}`,
+    image: `${site.siteMetadata.siteUrl}${image || site.siteMetadata.defaultImage}`,
+    url: `${site.siteMetadata.siteUrl}${pathName || "/"}`,
   }
 
   return (

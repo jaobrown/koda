@@ -10,14 +10,16 @@ import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang, meta, title }) {
+function SEO({ description, lang, meta, title, pathName, siteUrl, image, defaultImage }) {
   const { site } = useStaticQuery(
     graphql`
       query {
         site {
           siteMetadata {
             title
-            description
+            siteUrl
+            defaultDescription
+            defaultImage
             author
           }
         }
@@ -25,7 +27,11 @@ function SEO({ description, lang, meta, title }) {
     `
   )
 
-  const metaDescription = description || site.siteMetadata.description
+  const seoProperties = {
+    metaDescription: description || site.siteMetadata.defaultDescription,
+    image: `${siteUrl}${image || defaultImage}`,
+    url: `${siteUrl}${pathName || "/"}`,
+  }
 
   return (
     <Helmet
@@ -37,7 +43,15 @@ function SEO({ description, lang, meta, title }) {
       meta={[
         {
           name: `description`,
-          content: metaDescription,
+          content: seoProperties.metaDescription,
+        },
+        {
+          property: `image`,
+          content: seoProperties.image,
+        },
+        {
+          property: `og:image`,
+          content: seoProperties.image,
         },
         {
           property: `og:title`,
@@ -45,19 +59,27 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:description`,
-          content: metaDescription,
+          content: seoProperties.metaDescription,
         },
         {
           property: `og:type`,
           content: `website`,
         },
         {
+          property: `og:url`,
+          content: seoProperties.url,
+        },
+        {
           name: `twitter:card`,
-          content: `summary`,
+          content: site.siteMetadata.defaultDescription,
         },
         {
           name: `twitter:creator`,
           content: site.siteMetadata.author,
+        },
+        {
+          name: `twitter:image`,
+          content: seoProperties.image,
         },
         {
           name: `twitter:title`,
@@ -65,7 +87,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:description`,
-          content: metaDescription,
+          content: seoProperties.metaDescription,
         },
       ].concat(meta)}
     />

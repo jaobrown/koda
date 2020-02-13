@@ -2,7 +2,7 @@
   "name": "koda-creative-website",
   "private": true,
   "description": "Website for Koda Creative Studio",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Jared Brown <joo.brown72@gmail.com>",
   "dependencies": {
     "@mdx-js/mdx": "^1.5.5",

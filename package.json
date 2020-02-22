@@ -9,6 +9,7 @@
     "@mdx-js/react": "^1.5.5",
     "animated-scroll-to": "^1.2.2",
     "browser-monads": "^1.0.0",
+    "framer-motion": "^1.8.4",
     "gatsby": "^2.19.12",
     "gatsby-image": "^2.2.40",
     "gatsby-plugin-manifest": "^2.2.41",

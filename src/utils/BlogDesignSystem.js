@@ -1,5 +1,5 @@
-import React from 'react'
-import {Link} from 'gatsby'
+import React from "react"
+import { Link } from "gatsby"
 import styled from "styled-components"
 
 export const Head1 = styled.h1``
@@ -25,18 +25,21 @@ export const Body = styled.p`
   max-width: auto;
   letter-spacing: 1px;
 `
-export const Ordered = styled.ol``
+export const Ordered = styled.ol`
+  margin-bottom: 3rem;
+  list-style-position: inside;
+`
 export const Unordered = styled.ul`
-    margin-bottom: 3rem;
-    list-style-position: inside;
+  margin-bottom: 3rem;
+  list-style-position: outside;
+  padding-left: 1rem;
 `
 export const LineItem = styled.li`
   font-size: 1rem;
   line-height: 1.5rem;
   font-family: "Soin Sans", "sans serif";
-  font-weight: normal;
+  font-weight: lighter;
   margin-bottom: 1rem;
-  text-transform: uppercase;
   text-align: left;
   font-display: fallback;
   letter-spacing: 1px;

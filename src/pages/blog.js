@@ -180,7 +180,10 @@ const BlogPage = ({ data }) => {
           </StyledLink>
         ))}
       </Grid>
-      <NewsletterSignUp heading="Get Updates" subheading="On newsletters, freebies, and fun."/>
+      <NewsletterSignUp
+        heading="Get Updates"
+        subheading="On newsletters, freebies, and fun."
+      />
     </Layout>
   )
 }
@@ -189,7 +192,10 @@ export default BlogPage
 
 export const query = graphql`
   query {
-    allMdx(filter: { fileAbsolutePath: { regex: "/content/blog/" } }) {
+    allMdx(
+      filter: { fileAbsolutePath: { regex: "/content/blog/" } }
+      sort: { fields: frontmatter___date, order: DESC }
+    ) {
       edges {
         node {
           frontmatter {

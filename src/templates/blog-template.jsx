@@ -75,7 +75,7 @@ const Content = styled.article`
 const BlogPostTemplate = ({ data: { mdx } }) => {
   return (
     <Layout>
-      <SEO title={mdx.frontmatter.title} />
+      <SEO title={mdx.frontmatter.title} image={mdx.frontmatter.thumbnail.childImageSharp.fixed} description={mdx.frontmatter.excerpt}/>
       <Nav />
       <MDXProvider
         components={{
@@ -119,6 +119,7 @@ export const postQuery = graphql`
     mdx(id: { eq: $id }) {
       id
       body
+      excerpt(pruneLength: 120)
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
@@ -126,6 +127,13 @@ export const postQuery = graphql`
           childImageSharp {
             fluid(maxWidth: 2400) {
               ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        thumbnail {
+          childImageSharp {
+            fixed(width: 900) {
+              ...GatsbyImageSharpFixed
             }
           }
         }

@@ -40,9 +40,9 @@ export const BackButton = ({ children, ...props }) => {
         <polyline
           fill="none"
           stroke="#B26C29"
-          stroke-width="7"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="7"
+          strokeLinecap="round"
+          strokeLinejoin="round"
           points="55,90 10,50 55,10"
         />
       </svg>

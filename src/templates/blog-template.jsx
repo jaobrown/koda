@@ -6,7 +6,7 @@ import Img from "gatsby-image"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { MDXProvider } from "@mdx-js/react"
 import styled from "styled-components"
-import { SEO, below, Heading3, Heading2} from "../utils"
+import { SEO, below, Heading3, Heading2 } from "../utils"
 import * as DesignSystem from "../utils/BlogDesignSystem"
 import Layout from "../components/Layout/Layout"
 import Nav from "../components/Nav/Nav"
@@ -73,9 +73,10 @@ const Content = styled.article`
 `
 
 const BlogPostTemplate = ({ data: { mdx } }) => {
+  const { title, socialImage } = mdx.frontmatter
   return (
     <Layout>
-      <SEO title={mdx.frontmatter.title} />
+      <SEO title={title} image={socialImage} description={mdx.excerpt} />
       <Nav />
       <MDXProvider
         components={{
@@ -94,13 +95,13 @@ const BlogPostTemplate = ({ data: { mdx } }) => {
         }}
       >
         <PostWrapper>
-        <BackButton to="/blog/">back</BackButton>
+          <BackButton to="/blog/">back</BackButton>
           <HeroImage
             fluid={mdx.frontmatter.bannerImage.childImageSharp.fluid}
           />
           <Heading2>{mdx.frontmatter.title}</Heading2>
           <Heading3>{mdx.frontmatter.date}</Heading3>
-          <hr/>
+          <hr />
           <Content>
             <MDXRenderer>{mdx.body}</MDXRenderer>
             <BackButton to="/blog/">back to blog list</BackButton>
@@ -119,9 +120,11 @@ export const postQuery = graphql`
     mdx(id: { eq: $id }) {
       id
       body
+      excerpt(pruneLength: 120)
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+        socialImage
         bannerImage {
           childImageSharp {
             fluid(maxWidth: 2400) {

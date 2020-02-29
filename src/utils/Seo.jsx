@@ -29,7 +29,7 @@ function SEO({ description, lang, meta, title, pathName, siteUrl, image, default
 
   const seoProperties = {
     metaDescription: description || site.siteMetadata.defaultDescription,
-    image: `${site.siteMetadata.siteUrl}${image || site.siteMetadata.defaultImage}`,
+    image: `${site.siteMetadata.siteUrl}${`/images/${image}` || site.siteMetadata.defaultImage}`,
     url: `${site.siteMetadata.siteUrl}${pathName || "/"}`,
   }
 

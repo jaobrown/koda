@@ -28,17 +28,23 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   const pages = result.data.allMdx.edges
 
-  // you'll call `createPage` for each result
+  //* you'll call `createPage` for each result
   pages.forEach(({ node }, index) => {
+    // grab primary category, defined by first in list of categories
+    const category = node.frontmatter.categories.split(", ")[0]
+    // change any spaces within the category to `-` instead, add slug and make path
+    const categoryAndSlug = `${category.split(" ").join("-")}/${
+      node.frontmatter.slug
+    }`
     node.fileAbsolutePath.includes("blog")
       ? createPage({
-          path: `/blog/${node.frontmatter.categories.split(', ')[0]}/${node.frontmatter.slug}`,
+          path: `/blog/${categoryAndSlug}`,
           component: path.resolve(`./src/templates/blog-template.jsx`),
           context: { id: node.id },
         })
       : node.fileAbsolutePath.includes("work")
       ? createPage({
-          path: `/work/${node.frontmatter.categories.split(', ')[0]}/${node.frontmatter.slug}`,
+          path: `/work/${categoryAndSlug}`,
           component: path.resolve(`./src/templates/work-template.jsx`),
           context: { id: node.id },
         })

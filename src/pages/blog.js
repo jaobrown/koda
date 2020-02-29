@@ -129,56 +129,60 @@ const BlogPage = ({ data }) => {
       <SEO title="Blog" />
       <Nav />
       <Grid>
-        {blogPosts.edges.map((post, key) => (
-          <StyledLink
-            key={key}
-            to={`/blog/${post.node.frontmatter.categories.split(", ")[0]}/${
-              post.node.frontmatter.slug
-            }`}
-          >
-            <BlogPost key={key}>
-              <BlogPostImg
-                fluid={post.node.frontmatter.thumbnail.childImageSharp.fluid}
-              />
-              <BlogPostDescription>
-                <BlogPostDescriptionMeta>
-                  <BlogPostDescriptionDate>
-                    {post.node.frontmatter.date}
-                  </BlogPostDescriptionDate>
-                  <ul>
-                    {post.node.frontmatter.categories
-                      .split(", ")
-                      .map((category, key) => {
-                        const categoryCount = post.node.frontmatter.categories.split(
-                          ", "
-                        ).length
+        {blogPosts.edges.map((post, key) => {
+          const category = post.node.frontmatter.categories.split(", ")[0]
+          const categoryAndSlug = `${category.split(" ").join("-")}/${
+            post.node.frontmatter.slug
+          }`
+          return (
+            <StyledLink
+              key={key}
+              to={`/blog/${categoryAndSlug}/`}
+            >
+              <BlogPost key={key}>
+                <BlogPostImg
+                  fluid={post.node.frontmatter.thumbnail.childImageSharp.fluid}
+                />
+                <BlogPostDescription>
+                  <BlogPostDescriptionMeta>
+                    <BlogPostDescriptionDate>
+                      {post.node.frontmatter.date}
+                    </BlogPostDescriptionDate>
+                    <ul>
+                      {post.node.frontmatter.categories
+                        .split(", ")
+                        .map((category, key) => {
+                          const categoryCount = post.node.frontmatter.categories.split(
+                            ", "
+                          ).length
 
-                        return (
-                          <li key={key}>
-                            <em>
-                              {key < categoryCount - 1
-                                ? `${category},`
-                                : category}
-                              &ensp;
-                            </em>
-                          </li>
-                        )
-                      })}
-                  </ul>
-                </BlogPostDescriptionMeta>
-                <StyledHeading2>{post.node.frontmatter.title}</StyledHeading2>
-                <Text
-                  fontSize="1.1rem"
-                  fontWeight="lighter"
-                  mb=".5rem"
-                  lineHeight="1.5rem"
-                >
-                  {post.node.excerpt}
-                </Text>
-              </BlogPostDescription>
-            </BlogPost>
-          </StyledLink>
-        ))}
+                          return (
+                            <li key={key}>
+                              <em>
+                                {key < categoryCount - 1
+                                  ? `${category},`
+                                  : category}
+                                &ensp;
+                              </em>
+                            </li>
+                          )
+                        })}
+                    </ul>
+                  </BlogPostDescriptionMeta>
+                  <StyledHeading2>{post.node.frontmatter.title}</StyledHeading2>
+                  <Text
+                    fontSize="1.1rem"
+                    fontWeight="lighter"
+                    mb=".5rem"
+                    lineHeight="1.5rem"
+                  >
+                    {post.node.excerpt}
+                  </Text>
+                </BlogPostDescription>
+              </BlogPost>
+            </StyledLink>
+          )
+        })}
       </Grid>
       <NewsletterSignUp
         heading="Get Updates"

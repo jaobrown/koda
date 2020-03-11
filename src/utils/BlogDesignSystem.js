@@ -2,7 +2,19 @@ import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 
-export const Head1 = styled.h1``
+export const Head1 = styled.h1`
+  margin-left: ${props => props.mx || "0"};
+  margin-right: ${props => props.mx || "0"};
+  font-size: ${props => props.fontSize || "3rem"};
+  font-family: ${props => props.fontFamily || `'Majesti', 'serif'`};
+  font-weight: ${props => props.fontWeight || "bold"};
+  margin-bottom: ${props => props.mb || "3rem;"};
+  color: ${props => props.color};
+  text-align: ${props => props.textAlign || "left"};
+  max-width: ${props => props.maxWidth || "auto"};
+  font-display: fallback;
+  letter-spacing: 1px;
+`
 export const Head2 = styled.h2``
 export const Head3 = styled.h3`
   font-size: 1.618rem !important;
@@ -44,7 +56,9 @@ export const LineItem = styled.li`
   font-display: fallback;
   letter-spacing: 1px;
 `
-export const BlockQuote = styled.blockquote``
+export const BlockQuote = styled.blockquote`
+  /* background: ; */
+`
 
 // Since DOM elements <a> cannot receive activeClassName
 // and partiallyActive, destructure the prop here and

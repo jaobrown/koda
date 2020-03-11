@@ -99,7 +99,9 @@ const BlogPostTemplate = ({ data: { mdx } }) => {
           <HeroImage
             fluid={mdx.frontmatter.bannerImage.childImageSharp.fluid}
           />
-          <Heading2>{mdx.frontmatter.title}</Heading2>
+          <DesignSystem.Head1 mb="1rem" textAlign="center">
+            {mdx.frontmatter.title}
+          </DesignSystem.Head1>
           <Heading3>{mdx.frontmatter.date}</Heading3>
           <hr />
           <Content>

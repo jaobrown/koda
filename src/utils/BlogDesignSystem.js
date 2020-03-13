@@ -21,7 +21,20 @@ export const Head3 = styled.h3`
   text-align: left !important;
   font-family: "Majesti", "serif";
 `
-export const Head4 = styled.h4``
+export const Head4 = styled.h4`
+  margin-left: ${props => props.mx || "0"};
+  margin-right: ${props => props.mx || "0"};
+  font-size: ${props => props.fontSize || "1.1rem"};
+  font-family: ${props => props.fontFamily || `'Soin Sans', 'sans serif'`};
+  font-weight: ${props => props.fontWeight || "normal"};
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: ${props => props.mb || "1rem;"};
+  color: ${props => props.color};
+  text-align: ${props => props.textAlign || "left"};
+  font-display: fallback;
+  max-width: ${props => props.maxWidth || "auto"};
+`
 export const Head5 = styled.h5``
 export const Head6 = styled.h6``
 export const Body = styled.p`

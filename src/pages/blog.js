@@ -126,7 +126,7 @@ const BlogPage = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title="Blog" />
+      <SEO title="Blog" image="kodastudio.jpg" />
       <Nav />
       <Grid>
         {blogPosts.edges.map((post, key) => {

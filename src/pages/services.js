@@ -149,7 +149,7 @@ const ServicesPage = () => {
 
   return (
     <Layout>
-      <SEO title="Services" />
+      <SEO title="Services" image="kodastudio.jpg" />
       <Nav />
 
       {/* //* Begin Hero */}

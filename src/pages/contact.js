@@ -6,7 +6,7 @@ import { InstagramCTA, NewsletterSignUp, ContactLayout } from "../layouts"
 
 const ContactPage = () => (
   <Layout>
-    <SEO title="Contact" />
+    <SEO title="Contact"  image="kodastudio.jpg" />
     <Nav />
     <ContactLayout />
     <NewsletterSignUp />

@@ -100,7 +100,7 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Home" image="kodastudio.jpg"/>
       <Nav />
 
       {/* //* Begin hero */}

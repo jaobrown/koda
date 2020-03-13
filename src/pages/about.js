@@ -49,7 +49,7 @@ const AboutPage = () => {
 
   return (
     <Layout>
-      <SEO title="About" />
+      <SEO title="About" image="kodastudio.jpg" />
       <Nav />
 
       {/* //* Begin Hero */}

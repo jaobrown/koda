@@ -115,7 +115,7 @@ const WorkPage = ({ data }) => {
   const workItems = { ...data.allMdx }
   return (
     <Layout>
-      <SEO title="Work" />
+      <SEO title="Work" image="kodastudio.jpg" />
       <Nav />
       <Grid>
         {workItems.edges.map((work, key) => (

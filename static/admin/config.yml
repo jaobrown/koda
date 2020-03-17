@@ -7,10 +7,14 @@ public_folder: /images
 collections:
   - name: blog
     label: Blog
-    folder: blog
+    folder: src/content/blog
     create: true
+    slug: "{{slug}}"
     fields:
-      - { name: path, label: Path }
-      - { name: date, label: Date, widget: datetime }
       - { name: title, label: Title }
+      - { name: categories, label: Categories}
+      - { name: bannerImage, label: Banner Image, widget: "image"}
+      - { name: thumbnail, label: Thumbnail Image, widget: "image"}
+      - { name: socialImage, label: Social Sharing Image, widget: "image"}
+      - { name: date, label: Date, widget: datetime }
       - { name: body, label: Body, widget: markdown }

@@ -99,9 +99,12 @@ function SEO({
           name: `twitter:description`,
           content: seoProperties.metaDescription,
         },
+        {
+          name="p:domain_verify",
+          content: `6f2af878a484b44dde35ce82f44afc86`
+        }
       ].concat(meta)}
     >
-      <meta name="p:domain_verify" content="6f2af878a484b44dde35ce82f44afc86" />
     </Helmet>
   )
 }

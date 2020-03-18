@@ -8,11 +8,12 @@ import { SEO, below, Heading2, Text } from "../utils"
 import { NewsletterSignUp } from "../layouts"
 
 const Grid = styled.section`
+  position: relative;
+  height: min-content;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 5%;
-  grid-row-gap: 5%;
-  padding: 5rem 10vw 7rem 10vw;
+  padding: 2rem 10vw 7rem 10vw;
 
   ${below.md`
     grid-template-columns: repeat(2, 1fr);
@@ -21,7 +22,6 @@ const Grid = styled.section`
   ${below.sm`
     grid-template-columns: 1fr;
     grid-column-gap: 0;
-    grid-row-gap: 2%;
   `}
 `
 
@@ -31,12 +31,7 @@ const StyledLink = styled(Link)`
 `
 
 const BlogPost = styled.article`
-  ${below.sm`
-    &:last-of-type {
-      margin-bottom: 2rem;
-    }
-  `}
-
+margin-top: 3rem;
   &:hover {
     h2 {
       border-top: 3px solid #7c2f27;
@@ -135,10 +130,7 @@ const BlogPage = ({ data }) => {
             post.node.frontmatter.slug
           }`
           return (
-            <StyledLink
-              key={key}
-              to={`/blog/${categoryAndSlug}/`}
-            >
+            <StyledLink key={key} to={`/blog/${categoryAndSlug}/`}>
               <BlogPost key={key}>
                 <BlogPostImg
                   fluid={post.node.frontmatter.thumbnail.childImageSharp.fluid}

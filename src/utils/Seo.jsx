@@ -10,7 +10,16 @@ import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang, meta, title, pathName, siteUrl, image, defaultImage }) {
+function SEO({
+  description,
+  lang,
+  meta,
+  title,
+  pathName,
+  siteUrl,
+  image,
+  defaultImage,
+}) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -29,7 +38,8 @@ function SEO({ description, lang, meta, title, pathName, siteUrl, image, default
 
   const seoProperties = {
     metaDescription: description || site.siteMetadata.defaultDescription,
-    image: `${site.siteMetadata.siteUrl}${`/images/${image}` || site.siteMetadata.defaultImage}`,
+    image: `${site.siteMetadata.siteUrl}${`/images/${image}` ||
+      site.siteMetadata.defaultImage}`,
     url: `${site.siteMetadata.siteUrl}${pathName || "/"}`,
   }
 
@@ -90,7 +100,9 @@ function SEO({ description, lang, meta, title, pathName, siteUrl, image, default
           content: seoProperties.metaDescription,
         },
       ].concat(meta)}
-    />
+    >
+      <meta name="p:domain_verify" content="6f2af878a484b44dde35ce82f44afc86" />
+    </Helmet>
   )
 }
 

@@ -105,7 +105,7 @@ export const Footer = () => {
           </svg>
         </a>
         <a
-          href="https://www.pinterest.com/kodastudio"
+          href="https://www.pinterest.com/kodastudioco/"
           target="_blank"
           rel="noopener noreferrer"
           style={{ textDecoration: "none" }}

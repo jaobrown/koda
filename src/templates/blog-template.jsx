@@ -74,9 +74,10 @@ const Content = styled.article`
 
 const BlogPostTemplate = ({ data: { mdx } }) => {
   const { title, socialImage } = mdx.frontmatter
+  const currentPath = typeof window !== `undefined` ? window.location.pathname : null
   return (
     <Layout>
-      <SEO title={title} image={socialImage} description={mdx.excerpt} />
+      <SEO title={title} image={socialImage} description={mdx.excerpt} pathName={currentPath}/>
       <Nav />
       <MDXProvider
         components={{

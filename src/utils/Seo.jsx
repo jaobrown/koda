@@ -50,6 +50,12 @@ function SEO({
       }}
       title={title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
+      link={[
+        {
+          rel: `canonical`,
+          href: seoProperties.url
+        }
+      ]}
       meta={[
         {
           name: `description`,

@@ -52,7 +52,8 @@ export const Body = styled.p`
 `
 export const Ordered = styled.ol`
   margin-bottom: 3rem;
-  list-style-position: inside;
+  list-style-position: outside;
+  padding-left: 1rem;
 `
 export const Unordered = styled.ul`
   margin-bottom: 3rem;
